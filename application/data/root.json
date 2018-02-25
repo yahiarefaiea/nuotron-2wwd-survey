@@ -1,0 +1,24 @@
+{
+  "lang": "en",
+  "dir": "ltr",
+  "title": "Nucubuc Survey",
+  "author": "Yahia Refaiea",
+  "description": "Nucubuc has come to an end",
+
+  "url": "https://nucubuc.yahiarefaiea.com/survey/",
+  "social": [
+    {
+      "platform": "facebook",
+      "title": "Facebook (@Nucubuc)",
+      "url": "https://facebook.com/Nucubuc/"
+    }, {
+      "platform": "instagram",
+      "title": "Instagram (@Nucubuc)",
+      "url": "https://instagram.com/Nucubuc/"
+    }, {
+      "platform": "twitter",
+      "title": "Twitter (@Nucubuc)",
+      "url": "https://twitter.com/Nucubuc/"
+    }
+  ]
+}

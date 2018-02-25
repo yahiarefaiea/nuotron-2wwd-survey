@@ -1,0 +1,11 @@
+# RULES GENERATED FROM:
+# http://www.visiospark.com/mod-rewrite-rule-generator/
+
+Options -Indexes
+RewriteEngine on
+
+# REDIRECT '404'
+ErrorDocument 404 https://nucubuc.yahiarefaiea.com/survey/
+
+# REDIRECT 'INDEX.HTML'
+RewriteRule ^index\.html$ /? [L,R=302]
