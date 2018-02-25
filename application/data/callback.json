@@ -1,0 +1,10 @@
+{
+  "success": [
+    ["Nucubuc has", "come to an end ."],
+    ["Well, Thanks !", "We received your feedback ."],
+    ["Don’t forget to share", "the survey with your friends !"]
+  ],
+  "error": [
+    ["whoops, something went wrong ..", "please try again later ."]
+  ]
+}
