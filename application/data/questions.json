@@ -70,6 +70,56 @@
         ]
       }
     }, {
+      "name": "value",
+      "question": [
+        "If you had a website you wanted to build..",
+        "What is the one thing that can make you",
+        "want us to build it for you?"
+      ],
+      "answer": {
+        "type": "textarea",
+        "placeholder": "We’ve innovative ideas?"
+      }
+    }, {
+      "name": "nonValue",
+      "question": [
+        "And what was the one thing that made",
+        "you don't?"
+      ],
+      "answer": {
+        "type": "textarea",
+        "placeholder": "Our pricing?"
+      }
+    }, {
+      "name": "mistake",
+      "question": [
+        "We all do mistakes.. But, what was the",
+        "biggest mistake you think we did?"
+      ],
+      "answer": {
+        "type": "textarea",
+        "placeholder": "Our marketing?"
+      }
+    }, {
+      "name": "expectation",
+      "question": [
+        "What did you expect from Nucubuc's",
+        "team to do?"
+      ],
+      "answer": {
+        "type": "textarea",
+        "placeholder": "Send people to Mars?"
+      }
+    }, {
+      "name": "expectationNow",
+      "question": [
+        "And what do you expect now?"
+      ],
+      "answer": {
+        "type": "textarea",
+        "placeholder": "Change the world?"
+      }
+    }, {
 
     }
   ]
