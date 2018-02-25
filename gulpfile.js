@@ -59,7 +59,10 @@ gulp.task('pug', function() {
     .pipe(pug({
       pretty: true,
       data: {
-        root: JSON.parse(fs.readFileSync(root+'/data/root.json'))
+        root: JSON.parse(fs.readFileSync(root+'/data/root.json')),
+        present: JSON.parse(fs.readFileSync(root+'/data/present.json')),
+        callback: JSON.parse(fs.readFileSync(root+'/data/callback.json')),
+        questions: JSON.parse(fs.readFileSync(root+'/data/questions.json'))
       }
      }))
     .pipe(gulp.dest(dest));
@@ -70,7 +73,8 @@ gulp.task('mails', function() {
     .pipe(pug({
       pretty: true,
       data: {
-        root: JSON.parse(fs.readFileSync(root+'/data/root.json'))
+        root: JSON.parse(fs.readFileSync(root+'/data/root.json')),
+        questions: JSON.parse(fs.readFileSync(root+'/data/questions.json'))
       }
      }))
     .pipe(gulp.dest(dest+'/'+mails));
