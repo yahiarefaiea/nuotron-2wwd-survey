@@ -1,0 +1,76 @@
+{
+  "q": "Question",
+  "before": "previous",
+  "next": "next",
+  "submit": "Submit everything",
+
+  "list": [
+    {
+      "name": "feeling",
+      "question": [
+        "Overall, how are you feeling about",
+        "Nucubuc?"
+      ],
+      "answer": {
+        "type": "range",
+        "options": [
+          "bad",
+          "unhappy",
+          "natural",
+          "satisfied",
+          "amazed"
+        ]
+      }
+    }, {
+      "name": "spelling",
+      "question": [
+        "How did you spell Nucubuc for the first",
+        "time?"
+      ],
+      "answer": {
+        "type": "input",
+        "placeholder": "Nokbok?"
+      }
+    }, {
+      "name": "impressionFirst",
+      "question": [
+        "And what was your first impression when",
+        "you heard or saw Nucubuc?"
+      ],
+      "answer": {
+        "type": "radio",
+        "options": [
+          "good",
+          "bad"
+        ]
+      }
+    }, {
+      "name": "impressionNow",
+      "question": [
+        "Is that impression changed about it",
+        "now?"
+      ],
+      "answer": {
+        "type": "radio",
+        "options": [
+          "yep",
+          "nope"
+        ]
+      }
+    }, {
+      "name": "impressionChanged",
+      "question": [
+        "Is it changed for good or for bad?"
+      ],
+      "answer": {
+        "type": "radio",
+        "options": [
+          "good",
+          "bad"
+        ]
+      }
+    }, {
+
+    }
+  ]
+}
