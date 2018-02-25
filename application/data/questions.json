@@ -120,7 +120,46 @@
         "placeholder": "Change the world?"
       }
     }, {
-
+      "name": "messageNucubuc",
+      "question": [
+        "Do you have any message or advice you",
+        "wish to tell us about?"
+      ],
+      "answer": {
+        "type": "textarea",
+        "placeholder": "Want us to drop our pricing a bit?"
+      }
+    }, {
+      "name": "messageYahia",
+      "question": [
+        "What about a direct message to Yahia?",
+        "Do you think I'm an asshole?"
+      ],
+      "answer": {
+        "type": "textarea",
+        "placeholder": "No? You love me?"
+      }
+    }, {
+      "name": "contact",
+      "question": [
+        "Will you tell us a bit about yourself? It's",
+        "optional.. you can leave these blank."
+      ],
+      "answer": {
+        "type": "inputs",
+        "inputs": [
+          {
+            "name": "fullName",
+            "placeholder": "Your full name"
+          }, {
+            "name": "email",
+            "placeholder": "Your email address"
+          }, {
+            "name": "job",
+            "placeholder": "What do you do"
+          }
+        ]
+      }
     }
   ]
 }
