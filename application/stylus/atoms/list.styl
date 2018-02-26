@@ -5,13 +5,13 @@ ul, ol, li
   padding: 0
 
 ul, ol
-  .blocks
+  &.blocks
     display: block
     > li
       display: block
       position: relative
       width: 100%
-    .inline
+    &.inline
       &, &:after
         @extend .clear
       > li
