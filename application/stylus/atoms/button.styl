@@ -28,6 +28,8 @@ buttonDisabled()
   padding: button-padding
   border: button-border
   border-radius: button-radius
+  &, &:hover, &:focus
+    outline: none
 
   font-family: button-family
   font-size: button-font
@@ -43,10 +45,12 @@ buttonDisabled()
 
   background-color: button-bg
   color: button-color
-  &:hover, &:focus
-    buttonHover()
   &.disabled
     buttonDisabled()
+
+  &, &.disabled
+    &:hover, &:focus
+      buttonHover()
 
   //  HOVER EFFECT
   &:after
@@ -60,7 +64,7 @@ buttonDisabled()
     height: button-height
     background-color: rgba(255, 255, 255, .5)
   &.disabled:after
-    background-color: rgba(0, 0, 0, .5)
+    background-color: rgba(0, 0, 0, .25)
   &:focus:after
     {align}: 0
     width: 100%
