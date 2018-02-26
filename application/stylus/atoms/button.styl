@@ -17,7 +17,7 @@ buttonDisabled()
   background-color: border-default
   color: text-light-alt
 
-.button, button
+.button
   cursor: pointer
   overflow: hidden
   display: block
@@ -47,3 +47,22 @@ buttonDisabled()
     buttonHover()
   &.disabled
     buttonDisabled()
+
+  //  HOVER EFFECT
+  &:after
+    content: ''
+    z-index: 1
+    position: absolute
+    display: block
+    top: 0
+    {align}: 50%
+    width: 0
+    height: button-height
+    background-color: rgba(255, 255, 255, .5)
+  &.disabled:after
+    background-color: rgba(0, 0, 0, .5)
+  &:focus:after
+    {align}: 0
+    width: 100%
+    transition: transition
+    background-color: transparent
