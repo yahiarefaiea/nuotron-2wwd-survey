@@ -20,3 +20,9 @@ text-light-alt= #aaa
 
 selection-bg= magenta
 selection-color= white
+
+easing= cubic-bezier(0.190,1.000,0.220,1.000)
+duration= .5s
+transition= all duration easing
+hasTransition(x=1, delay=0, y=0)
+  transition: all ((duration*x)+delay) easing unit(delay+y, 's')
