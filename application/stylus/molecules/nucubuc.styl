@@ -1,0 +1,15 @@
+nucubuc-width= baseline*3
+
+symbol(a, b, c)
+  top: unit(a, px)
+  left: unit(b, px)
+  background-color: c
+symbolRotate(min, max)
+  delay= 0
+  for a in min..max
+    delay= (delay+step)*pattern
+    &:nth-child({a})
+      animation: rotate+a (duration*3) easing unit(delay, 's') infinite
+      @keyframes rotate{a}
+        100%
+          transform: rotate(360deg)
