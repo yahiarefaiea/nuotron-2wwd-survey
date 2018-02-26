@@ -2,13 +2,9 @@ heading-color= text-dark
 heading1-height= baseline*1.25
 small-height= baseline*.75
 
-outline= 1px dashed
-outline-color= text-dark
-hasOutline()
-  &, &:hover
-    outline: outline transparent
-  &:focus
-    outline: outline outline-color
+link-color= text-dark
+link-height= 10px
+link-bg= rgba(0, 0, 0, .2)
 
 //  HEADING
 h1, h2
@@ -40,3 +36,22 @@ a
   hasOutline()
   &, &:hover
     text-decoration: none
+  &.link
+    display: inline-block
+    position: relative
+    &:before
+      content: ''
+      z-index: -1
+      display: block
+      position: absolute
+      bottom: 15%
+      {align}: 0
+      width: 100%
+      height: link-height
+      transition: transition
+      transform: translateY(translate)
+    &:hover, &:focus
+      color: link-color
+      &:before
+        background-color: link-bg
+        transform: translateY(0)
