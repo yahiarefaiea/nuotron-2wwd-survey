@@ -8,6 +8,15 @@ button-family= inherit
 button-font= font-default
 button-weight= weight-bold
 
+button-bg= border-dark
+button-color= text-default
+buttonHover()
+  background-color: magenta
+  color: white
+buttonDisabled()
+  background-color: border-default
+  color: text-light-alt
+
 .button, button
   cursor: pointer
   overflow: hidden
@@ -31,3 +40,10 @@ button-weight= weight-bold
   text-decoration: none
   text-transform: capitalize
   transition: transition
+
+  background-color: button-bg
+  color: button-color
+  &:hover, &:focus
+    buttonHover()
+  &.disabled
+    buttonDisabled()
