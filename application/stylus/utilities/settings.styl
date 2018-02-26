@@ -33,5 +33,13 @@ hasOutline()
 easing= cubic-bezier(0.190,1.000,0.220,1.000)
 duration= .5s
 transition= all duration easing
+step= .03
+pattern= 1.16
 hasTransition(x=1, delay=0, y=0)
   transition: all ((duration*x)+delay) easing unit(delay+y, 's')
+mixinTransition(min, max)
+  delay= 0
+  for a in min..max
+    delay= (delay+step)*pattern
+    &:nth-child({a})
+      transition: all (duration+delay) easing unit(delay, 's')
