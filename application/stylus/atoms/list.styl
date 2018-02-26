@@ -1,0 +1,19 @@
+ul, ol, li
+  list-style: none
+  list-style-type: none
+  margin: 0
+  padding: 0
+
+ul, ol
+  .blocks
+    display: block
+    > li
+      display: block
+      position: relative
+      width: 100%
+    .inline
+      &, &:after
+        @extend .clear
+      > li
+        float: align
+        width: auto
