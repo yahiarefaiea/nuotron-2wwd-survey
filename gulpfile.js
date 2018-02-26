@@ -4,7 +4,6 @@ var gulp = require('gulp'),
     runSequence = require('run-sequence'),
     browserSync = require('browser-sync'),
     pkg = require('./package.json'),
-    data = require('./data/root.json'),
     banner = require('gulp-banner'),
     concat = require('gulp-concat'),
     uglify = require('gulp-uglify'),
@@ -37,7 +36,7 @@ var gulp = require('gulp'),
       ' *  \n'+
       ' *  Last update on: <%= new Date().getUTCFullYear() %>/'+
       '<%= new Date().getUTCMonth()+1 %>/<%= new Date().getUTCDate() %>\n'+
-      ' *  ©<%= new Date().getFullYear() %> <%= data.author %>. all rights reserved.\n'+
+      ' *  ©<%= new Date().getFullYear() %> Yahia Refaiea. all rights reserved.\n'+
       ' *  Released under the <%= pkg.license %> license.\n'+
       ' */\n\n';
 
