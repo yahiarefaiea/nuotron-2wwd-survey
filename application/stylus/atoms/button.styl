@@ -8,8 +8,9 @@ button-family= inherit
 button-font= font-default
 button-weight= weight-bold
 
-button-bg= border-dark
-button-color= text-default
+buttonNormal()
+  background-color: border-dark
+  color: text-default
 buttonHover()
   background-color: magenta
   color: white
@@ -43,14 +44,14 @@ buttonDisabled()
   text-transform: capitalize
   transition: transition
 
-  background-color: button-bg
-  color: button-color
+  buttonNormal()
+  &:hover, &:focus
+    buttonHover()
+
   &.disabled
     buttonDisabled()
-
-  &, &.disabled
     &:hover, &:focus
-      buttonHover()
+      buttonNormal()
 
   //  HOVER EFFECT
   &:after
@@ -65,8 +66,19 @@ buttonDisabled()
     background-color: rgba(255, 255, 255, .5)
   &.disabled:after
     background-color: rgba(0, 0, 0, .25)
+<<<<<<< current
   &:focus:after
     {align}: 0
     width: 100%
     transition: transition
     background-color: transparent
+=======
+  &:active:after
+    animation: buttonActive duration easing infinite
+    @keyframes buttonActive
+      100%
+        {align}: 0
+        width: 100%
+        transition: transition
+        background-color: transparent
+>>>>>>> before discard
