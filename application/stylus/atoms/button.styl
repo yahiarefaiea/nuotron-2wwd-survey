@@ -1,0 +1,33 @@
+button-width= baseline*3.75
+button-height= baseline*1.25
+button-padding= 0 baseline/2
+button-border= none
+button-radius= 3px
+
+button-family= inherit
+button-font= font-default
+button-weight= weight-bold
+
+.button, button
+  cursor: pointer
+  overflow: hidden
+  display: block
+  position: relative
+  width: button-width
+  height: button-height
+  line-height: button-height - 2px
+  padding: button-padding
+  border: button-border
+  border-radius: button-radius
+
+  font-family: button-family
+  font-size: button-font
+  font-weight: button-weight
+
+  white-space: nowrap
+  vertical-align: middle
+  text-align: center
+  letter-spacing: normal
+  text-decoration: none
+  text-transform: capitalize
+  transition: transition
