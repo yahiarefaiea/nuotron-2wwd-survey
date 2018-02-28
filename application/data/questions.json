@@ -1,8 +1,8 @@
 {
-  "q": "Question",
+  "q": "question",
   "before": "previous",
   "next": "next",
-  "submit": "Submit everything",
+  "submit": "submit everything",
 
   "list": [
     {
