@@ -1,5 +1,6 @@
 nucubuc-width= baseline*3
 nucubuc-origin= nucubuc-width*2.3
+nLetterPathLength= 73px
 
 symbol(a, b, c)
   top: unit(a, px)
@@ -70,7 +71,6 @@ symbolRotate(min, max)
     stroke-linecap: round
 
 //  N LETTER
-nLetterPathLength= 73px
 #nLetter
   stroke-width: 8
   stroke-dasharray: nLetterPathLength
@@ -88,10 +88,7 @@ nLetterPathLength= 73px
   @keyframes nLetterOut
     100%
       opacity: 0
-      stroke-dasharray: nLetterPathLength
       stroke-dashoffset: nLetterPathLength
 .waiting.page #nLetter
   opacity: 0
-  stroke-dasharray: nLetterPathLength
-  stroke-dashoffset: nLetterPathLength
   animation: none
