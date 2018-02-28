@@ -29,7 +29,7 @@ buttonDisabled()
   padding: button-padding
   border: button-border
   border-radius: button-radius
-  &, &:hover, &:focus
+  &, &:hover
     outline: none
 
   font-family: button-family
@@ -45,12 +45,12 @@ buttonDisabled()
   transition: transition
 
   buttonNormal()
-  &:hover, &:focus
+  &:hover
     buttonHover()
 
   &.disabled
     buttonDisabled()
-    &:hover, &:focus
+    &:hover
       buttonNormal()
 
   //  FOCUS EFFECT
