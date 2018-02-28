@@ -69,29 +69,29 @@ symbolRotate(min, max)
     stroke: #fff
     stroke-linecap: round
 
-//  SVG N
-nPathLength= 73px
-#nucubuc .svgs svg .n
+//  N LETTER
+nLetterPathLength= 73px
+#nLetter
   stroke-width: 8
-  stroke-dasharray: nPathLength
-  stroke-dashoffset: -(nPathLength)
+  stroke-dasharray: nLetterPathLength
+  stroke-dashoffset: -(nLetterPathLength)
   opacity: 0
-  animation: n (duration*3) easing forwards
-  @keyframes n
+  animation: nLetterIn (duration*3) easing forwards
+  @keyframes nLetterIn
     100%
       opacity: 1
       stroke-dashoffset: 0
-.waiting #nucubuc .svgs svg .n
+.waiting #nLetter
   stroke-dashoffset: 0
   opacity: 1
-  animation: n2 (duration*1.5) easing forwards
-  @keyframes n2
+  animation: nLetterOut (duration*1.5) easing forwards
+  @keyframes nLetterOut
     100%
       opacity: 0
-      stroke-dasharray: nPathLength
-      stroke-dashoffset: nPathLength
-.waiting.page #nucubuc .svgs svg .n
+      stroke-dasharray: nLetterPathLength
+      stroke-dashoffset: nLetterPathLength
+.waiting.page #nLetter
   opacity: 0
-  stroke-dasharray: nPathLength
-  stroke-dashoffset: nPathLength
+  stroke-dasharray: nLetterPathLength
+  stroke-dashoffset: nLetterPathLength
   animation: none
