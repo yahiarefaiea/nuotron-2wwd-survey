@@ -35,10 +35,7 @@ $(document).ready(function() {
       iterationClear()
       setTimeout(function() {
 
-        //  wrapper
-        setTimeout(function() {
-          $('body').removeClass('page')
-        }, 4500)
+        $('body').removeClass('page')
 
       }, 1500)
     }, 200)
