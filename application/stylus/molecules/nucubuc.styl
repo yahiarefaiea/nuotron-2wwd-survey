@@ -68,7 +68,30 @@ symbolRotate(min, max)
     fill: none
     stroke: #fff
     stroke-linecap: round
-    stroke-linejoin: round
-    stroke-miterlimit: 10
-    .n
-      stroke-width: 8
+
+//  SVG N
+nPathLength= 73px
+#nucubuc .svgs svg .n
+  stroke-width: 8
+  stroke-dasharray: nPathLength
+  stroke-dashoffset: -(nPathLength)
+  opacity: 0
+  animation: n (duration*3) easing forwards
+  @keyframes n
+    100%
+      opacity: 1
+      stroke-dashoffset: 0
+.waiting #nucubuc .svgs svg .n
+  stroke-dashoffset: 0
+  opacity: 1
+  animation: n2 (duration*1.5) easing forwards
+  @keyframes n2
+    100%
+      opacity: 0
+      stroke-dasharray: nPathLength
+      stroke-dashoffset: nPathLength
+.waiting.page #nucubuc .svgs svg .n
+  opacity: 0
+  stroke-dasharray: nPathLength
+  stroke-dashoffset: nPathLength
+  animation: none
