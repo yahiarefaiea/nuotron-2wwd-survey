@@ -1,10 +1,10 @@
 function runPresent() {
   $('.wrapper').addClass('present')
-  timeForEach = 1500
+  var timeForEach = 1500
 
   function next() {
-    item = '#present li'
-    current = $(item+'.current')
+    var item = '#present li'
+    var current = $(item+'.current')
 
     if(!$(item).hasClass('current')) {
       $(item+':first-child').addClass('current')
@@ -19,7 +19,7 @@ function runPresent() {
   }
 
   next()
-  interval = setInterval(function() {
+  var interval = setInterval(function() {
     next()
   }, timeForEach)
 

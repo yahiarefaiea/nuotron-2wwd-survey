@@ -1,10 +1,10 @@
 $(document).ready(function() {
 
-  paragraphs = $('p.spans')
+  var paragraphs = $('p.spans')
 
   for (i = 0; i < paragraphs.length; i++) {
-    paragraph = $(paragraphs[i])
-    spans = paragraph.text().split(' ')
+    var paragraph = $(paragraphs[i])
+    var spans = paragraph.text().split(' ')
     paragraph.empty().removeAttr('class')
 
     $.each(spans, function(i, span) {

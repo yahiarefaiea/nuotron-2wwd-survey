@@ -1,8 +1,8 @@
 //  ITERATION COUNT
 function iterationCount() {
   $('body').addClass('waiting')
-  x= 1,
-  iteration= setInterval(function() {
+  var x= 1
+  var iteration= setInterval(function() {
     x= ++x
   }, 1500)   //  .5s * 3 = 1.5s
 }
