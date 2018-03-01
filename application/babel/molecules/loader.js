@@ -36,6 +36,7 @@ $(document).ready(function() {
       setTimeout(function() {
 
         $('body').removeClass('page')
+        runPresent()
 
       }, 1500)
     }, 200)
