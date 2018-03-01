@@ -2,6 +2,6 @@ ul#present
   each text, index in present.list
     li(id=`p${index+1}`)
       each line in text
-        div: p= line
+        p.spans= line
       if(index+1==6)
         a.button(id=present.start href='#')= present.start
