@@ -31,8 +31,8 @@ small, .small
 //  ANCHOR
 a
   cursor: pointer
-  transition: transition
   color: inherit
+  hasTransition()
   hasOutline()
   &, &:hover
     text-decoration: none
@@ -48,8 +48,8 @@ a
       {align}: 0
       width: 100%
       height: link-height
-      transition: transition
       transform: translateY(translate)
+      hasTransition()
     &:hover, &:focus
       color: link-color
       &:before

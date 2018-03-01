@@ -6,13 +6,13 @@ symbol(a, b, c)
   top: unit(a, px)
   left: unit(b, px)
   background-color: c
-symbolRotate(min, max)
-  delay= 0
-  for a in min..max
-    delay= (delay+step)*pattern
-    &:nth-child({a})
-      animation: rotate+a (duration*3) easing unit(delay, 's') infinite
-      @keyframes rotate{a}
+symbolRotate(min, max, delay=0)
+  d= 0
+  for i in min..max
+    d= (d+step)*pattern
+    &:nth-child({i})
+      animation: rotate+i (duration*3) easing unit(delay+d, 's') infinite
+      @keyframes rotate{i}
         100%
           transform: rotate(360deg)
 
@@ -24,7 +24,7 @@ symbolRotate(min, max)
   height: nucubuc-width
   margin-top: -(nucubuc-width/2)
   margin-left: -(nucubuc-width/2)
-  hasTransition: 3
+  hasTransition: duration*3
 .waiting #nucubuc
   margin-left: -(nucubuc-origin/2)
 
