@@ -6,18 +6,21 @@ function runPresent() {
     item = '#present li'
     current = $(item+'.current')
 
-    // if(!$(item).hasClass('current')) {
-    //   $(item+':first-child').addClass('current')
-    // } else {
-    //   current.removeAttr('class').next().addClass('current')
-    //
-    //   if(current.next().is('#p6')) {
-    //     $('.wrapper').removeClass('present').addClass('survey start')
-    //     clearInterval(interval)
-    //   }
-    // }
+    if(!$(item).hasClass('current')) {
+      $(item+':first-child').addClass('current')
+    } else {
+      current.removeAttr('class').next().addClass('current')
+
+      if(current.next().is('#p6')) {
+        clearInterval(interval)
+        $('.wrapper').removeClass('present').addClass('survey start')
+      }
+    }
   }
 
-  interval = setInterval(next(), timeForEach)
+  next()
+  interval = setInterval(function() {
+    next()
+  }, timeForEach)
 
 }
