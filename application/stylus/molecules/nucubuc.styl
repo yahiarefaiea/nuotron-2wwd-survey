@@ -17,23 +17,19 @@ symbolRotate(min, max, delay=0)
           transform: rotate(360deg)
 
 #nucubuc
-  position: absolute
-  top: 50%
-  {align}: 50%
+  makeAbsolute: 50%, 50%
   width: nucubuc-width
   height: nucubuc-width
   margin-top: -(nucubuc-width/2)
-  margin-left: -(nucubuc-width/2)
+  margin-{align}: -(nucubuc-width/2)
   hasTransition: duration*3
 .waiting #nucubuc
-  margin-left: -(nucubuc-origin/2)
+  margin-{align}: -(nucubuc-origin/2)
 
 #nucubuc div,
 #nucubuc svg
   display: block
-  position: absolute
-  top: 0
-  left: 0
+  makeAbsolute()
 
 //  SYMBOL
 #nucubuc .symbol
