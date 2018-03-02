@@ -32,8 +32,10 @@ hasOutline()
 
 makeAbsolute(tp=0, al=0, btm=auto, alt=auto)
   position: absolute
-  top: tp
-  {align}: al
+  if(tp!=auto)
+    top: tp
+  if(al!=auto)
+    {align}: al
   if(btm!=auto)
     bottom: btm
   if(alt!=auto)
