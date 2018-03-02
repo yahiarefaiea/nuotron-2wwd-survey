@@ -30,6 +30,15 @@ hasOutline()
   &:focus
     outline: outline outline-color
 
+makeAbsolute(tp=0, al=0, btm=auto, alt=auto)
+  position: absolute
+  top: tp
+  {align}: al
+  if(btm!=auto)
+    bottom: btm
+  if(alt!=auto)
+    {align-alt}: alt
+
 step= .03
 pattern= 1.16
 duration= .5s
