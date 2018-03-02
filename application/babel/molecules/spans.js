@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-  var paragraphs = $('p.spans')
+  var paragraphs = $('.spans')
 
   for (i = 0; i < paragraphs.length; i++) {
     var paragraph = $(paragraphs[i])
