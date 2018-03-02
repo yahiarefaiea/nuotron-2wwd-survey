@@ -1,7 +1,9 @@
 .spans > span
   display: inline-block
+  opacity: 0
   hasTransition()
 .current .spans > span
+  opacity: 1
   transform: translateY(0) !important
   multiTransition: 1, 15, step
 
