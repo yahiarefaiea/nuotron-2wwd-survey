@@ -5,7 +5,7 @@ $(document).ready(function() {
   for (i = 0; i < paragraphs.length; i++) {
     var paragraph = $(paragraphs[i])
     var spans = paragraph.text().split(' ')
-    paragraph.empty().removeAttr('class')
+    paragraph.empty()
 
     $.each(spans, function(i, span) {
       paragraph.append($('<span>').text(span))
