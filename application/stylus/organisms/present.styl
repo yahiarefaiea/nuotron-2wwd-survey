@@ -1,6 +1,22 @@
 #present
   makeAbsolute: 50%, 0
   nucubucMargin(presentHeight)
+  hasTransition(duration*3)
   li
     makeAbsolute()
     text-align: center
+.survey #present
+  {align}: 100% - surveyWidth
+  width: surveyWidth
+
+#start
+  width: baseline*1.5
+  opacity: 0
+  transform: translateX(-50%)
+  hasTransition(duration*3, duration)
+  makeAbsolute: baseline*2 + 10px, 50%
+  .button
+    width: 100%
+.start #start
+  width: button-width
+  opacity: 1
