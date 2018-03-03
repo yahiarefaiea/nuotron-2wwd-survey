@@ -1,11 +1,27 @@
 {
   "start": "start",
   "list": [
-    ["Hey .."],
-    ["We’re all happy that you decided", "to help us .."],
-    ["We wish we knew you before .."],
-    ["But .."],
-    ["Nucubuc has come to an end .."],
-    ["Hit the button to start the survey .."]
+    {
+      "time": 2000,
+      "text": ["Hey .."]
+    }, {
+      "time": 2000,
+      "text": [
+        "We’re all happy that you decided",
+        "to help us .."
+      ]
+    }, {
+      "time": 2000,
+      "text": ["We wish we knew you before .."]
+    }, {
+      "time": 2000,
+      "text": ["But .."]
+    }, {
+      "time": 2000,
+      "text": ["Nucubuc has come to an end .."]
+    }, {
+      "time": 2000,
+      "text": ["Hit the button to start the survey .."]
+    }
   ]
 }
