@@ -1,6 +1,7 @@
 nucubuc-width= baseline*3
 nucubuc-origin= nucubuc-width*2.3
 nLetterPathLength= 73px
+nucubuc-margin= baseline*1.5
 
 symbol(a, b, c)
   top: unit(a, px)
@@ -20,7 +21,7 @@ symbolRotate(min, max, delay=0)
   makeAbsolute: 50%, 50%
   width: nucubuc-width
   height: nucubuc-width
-  margin-top: -(nucubuc-width/2)
+  margin-top: -(presentHeight/2)
   margin-{align}: -(nucubuc-width/2)
   hasTransition: duration*3
 .waiting #nucubuc
