@@ -10,13 +10,15 @@
   width: surveyWidth
 
 #start
+  display: none
   width: baseline*1.5
   opacity: 0
   transform: translateX(-50%)
-  hasTransition(duration*3, duration)
+  hasTransition(duration*3)
   makeAbsolute: baseline*2 + 10px, 50%
   .button
     width: 100%
 .start #start
+  display: block
   width: button-width
   opacity: 1

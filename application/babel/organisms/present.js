@@ -13,7 +13,12 @@ function runPresent() {
 
       if(current.next().is('#p6')) {
         clearInterval(interval)
-        $('.wrapper').removeClass('present').addClass('survey start')
+        $('.wrapper').removeClass('present').addClass('survey')
+        $('#start').css('display', 'block')
+        
+        setTimeout(function() {
+          $('.wrapper').addClass('start')
+        }, 500)
       }
     }
   }
