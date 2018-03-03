@@ -1,7 +1,7 @@
 ul#present.blocks
-  each text, index in present.list
-    li(id=`p${index+1}`)
-      each line in text
+  each item, index in present.list
+    li(id=`p${index+1}` data-time=item.time)
+      each line in item.text
         h2.spans= line
       if(index+1==6)
         div(id=present.start): a.button(href='#')= present.start
