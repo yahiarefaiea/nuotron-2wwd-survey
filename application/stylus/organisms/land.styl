@@ -4,28 +4,27 @@ purple= #9f6eaf
 magentaAlt= #863b6c
 
 #land
-  width: 100%
-  height: 100%
-  makeAbsolute()
-  .background
-    makeAbsolute(0, 0, 0, surveyWidth)
-    > div
-      makeAbsolute(0, 0, 0, 100%)
-      multiTransition: 1, 4, durationAlt
-      &:nth-child(1)
-        background-color: yellow
-      &:nth-child(2)
-        background-color: green
-      &:nth-child(3)
-        background-color: purple
-      &:nth-child(4)
-        background-color: magenta
-        &:after
-          content: ''
-          display: block
-          makeAbsolute(100%, 0, 0, 0)
-          transition: inherit
-          background-image: linear-gradient(transparent, magentaAlt)
+  makeAbsolute: 0, 0, 0, 0
+
+#land .background
+  makeAbsolute: 0, 0, 0, surveyWidth
+  > div
+    makeAbsolute: 0, 0, 0, 100%
+    multiTransition: 1, 4, durationAlt
+    &:nth-child(1)
+      background-color: yellow
+    &:nth-child(2)
+      background-color: green
+    &:nth-child(3)
+      background-color: purple
+    &:nth-child(4)
+      background-color: magenta
+      &:after
+        content: ''
+        display: block
+        makeAbsolute: 100%, 0, 0, 0
+        transition: inherit
+        background-image: linear-gradient(transparent, magentaAlt)
 .survey #land .background > div
   {align-alt}: 0
   &:nth-child(4):after
