@@ -45,14 +45,14 @@ step= .03
 pattern= 1.16
 duration= .5s
 easing= cubic-bezier(0.190,1.000,0.220,1.000)
-hasTransition(duration=duration, delay=0, d=0)
-  transition: all (duration+d) easing unit(delay+d, 's')
-multiTransition(min, max, delay=0)
+hasTransition(dur=duration, dly=0, d=0)
+  transition: all (dur+d) easing unit(dly+d, 's')
+multiTransition(min, max, dur=duration, dly=0)
   d= 0
   for i in min..max
     d= (d+step)*pattern
     &:nth-child({i})
-      hasTransition: duration, delay, d
+      hasTransition: dur, dly, d
 
 surveyWidth= 60%
 presentHeight= 182px
