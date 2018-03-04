@@ -14,7 +14,7 @@ symbolRotate(min, max, delay=0)
   for i in min..max
     d= (d+step)*pattern
     &:nth-child({i})
-      animation: rotate+i (duration*3) easing unit(delay+d, 's') infinite
+      animation: rotate+i durationAlt easing unit(delay+d, 's') infinite
       @keyframes rotate{i}
         100%
           transform: rotate(360deg)
@@ -25,7 +25,7 @@ symbolRotate(min, max, delay=0)
   height: nucubuc-width
   margin-top: -(presentHeight/2)
   margin-{align}: -(nucubuc-width/2)
-  hasTransition: duration*3
+  hasTransition: durationAlt
 .waiting #nucubuc
   margin-{align}: -(nucubuc-origin/2)
 .survey #nucubuc
@@ -76,7 +76,7 @@ symbolRotate(min, max, delay=0)
   stroke-dasharray: nLetterPathLength
   stroke-dashoffset: -(nLetterPathLength)
   opacity: 0
-  animation: nLetterIn (duration*3) easing forwards
+  animation: nLetterIn durationAlt easing forwards
   @keyframes nLetterIn
     100%
       opacity: 1
@@ -84,7 +84,7 @@ symbolRotate(min, max, delay=0)
 .waiting #nLetter
   stroke-dashoffset: 0
   opacity: 1
-  animation: nLetterOut (duration*1.5) easing forwards
+  animation: nLetterOut (durationAlt/2) easing forwards
   @keyframes nLetterOut
     100%
       opacity: 0
