@@ -1,7 +1,5 @@
-yellow= #fff685
-green= #7ecbb6
-purple= #9f6eaf
-magentaAlt= #863b6c
+landColors= (#fff685 #7ecbb6 #9f6eaf magenta)
+// colors:   yellow  green   purple  magenta
 
 #land
   makeAbsolute: 0, 0, 0, 0
@@ -11,20 +9,15 @@ magentaAlt= #863b6c
   > div
     makeAbsolute: 0, 0, 0, 100%
     multiTransition: 1, 4, durationAlt
-    &:nth-child(1)
-      background-color: yellow
-    &:nth-child(2)
-      background-color: green
-    &:nth-child(3)
-      background-color: purple
-    &:nth-child(4)
-      background-color: magenta
-      &:after
-        content: ''
-        display: block
-        makeAbsolute: 100%, 0, 0, 0
-        transition: inherit
-        background-image: linear-gradient(transparent, magentaAlt)
+    for child in (0..3)
+      &:nth-child({child+1})
+        background-color: landColors[child]
+    &:nth-child(4):after
+      content: ''
+      display: block
+      makeAbsolute: 100%, 0, 0, 0
+      transition: inherit
+      background-image: linear-gradient(transparent, #863b6c) // transparent, magentaAlt
 .survey #land .background > div
   {align-alt}: 0
   &:nth-child(4):after
