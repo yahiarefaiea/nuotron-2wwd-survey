@@ -2,10 +2,13 @@
   display: inline-block
   opacity: 0
   hasTransition()
+  cursor: default
 .current .spans > span
+  z-index: 1
   opacity: 1
   transform: translateY(0) !important
   multiTransition: 1, 15, step
+  cursor: auto
 
 h2.spans > span
   transform: translateY(baseline)
