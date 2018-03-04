@@ -1,11 +1,8 @@
 function runPresent() {
   $('.wrapper').addClass('present')
   var item = '#present li',
-      current, time
-  var x=0
+      current
   function next() {
-    x++
-    console.log(x)
     if(!$(item).hasClass('current')) {
       current = $(item+':first-child')
       current.addClass('current')
