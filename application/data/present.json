@@ -2,25 +2,24 @@
   "start": "start",
   "list": [
     {
-      "time": 300,
+      "time": 1.5,
       "text": ["Hey .."]
     }, {
-      "time": 3000,
+      "time": 2.5,
       "text": [
         "We’re all happy that you decided",
         "to help us .."
       ]
     }, {
-      "time": 2000,
+      "time": 2.5,
       "text": ["We wish we knew you before .."]
     }, {
-      "time": 1700,
+      "time": 1.5,
       "text": ["But .."]
     }, {
-      "time": 1000,
+      "time": 2.5,
       "text": ["Nucubuc has come to an end .."]
     }, {
-      "time": 600,
       "text": ["Hit the button to start the survey .."]
     }
   ]

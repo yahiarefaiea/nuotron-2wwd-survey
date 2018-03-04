@@ -1,7 +1,7 @@
 function runPresent() {
   $('.wrapper').addClass('present')
   var item = '#present li',
-      current
+      current, time
   function next() {
     if(!$(item).hasClass('current')) {
       current = $(item+':first-child')
@@ -20,7 +20,9 @@ function runPresent() {
         return
       }
     }
-    setTimeout(next, current.attr('data-time'))
+
+    time = 1000 * current.attr('data-time')
+    setTimeout(next, time)
   }
   next()
 }
