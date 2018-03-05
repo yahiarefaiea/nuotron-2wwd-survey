@@ -25,11 +25,11 @@ selection-color= white
 //  OUTLINE
 outline= 1px dashed
 outline-color= text-dark
-hasOutline()
+hasOutline(clr= outline-color)
   &, &:hover
     outline: outline transparent
   &:focus
-    outline: outline outline-color
+    outline: outline clr
 
 //  ABSOLUTE
 makeAbsolute(tp=0, al=0, btm=auto, alt=auto)
