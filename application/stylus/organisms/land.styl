@@ -1,8 +1,12 @@
+landPaddingVert= baseline*2
+landPaddingHorz= baseline*2.25
 landColors= (#fff685 #7ecbb6 #9f6eaf magenta)
 // colors:   yellow  green   purple  magenta
 
 #land
   makeAbsolute: 0, 0, 0, 0
+  a
+    hasOutline: #fff
 
 //  BACKGROUND
 #land .background
@@ -23,3 +27,7 @@ landColors= (#fff685 #7ecbb6 #9f6eaf magenta)
   {align-alt}: 0
   &:nth-child(4):after
     top: 0
+
+//  NUCUBUC FLAT
+#nucubucFlat
+  makeAbsolute: landPaddingVert, landPaddingHorz
