@@ -28,15 +28,13 @@ symbolRotate(min, max, delay=0)
   margin-top: -(presentHeight/2)
   margin-{align}: -(nucubuc-width/2)
   hasTransition: durationAlt
+  div, svg
+    display: block
+    makeAbsolute()
 .waiting #nucubuc
   margin-{align}: -(nucubuc-origin/2)
 .survey #nucubuc
   {align}: 50% + ((100% - surveyWidth)/2)
-
-#nucubuc div,
-#nucubuc svg
-  display: block
-  makeAbsolute()
 
 //  SYMBOL
 #nucubuc .symbol
