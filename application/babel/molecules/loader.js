@@ -12,6 +12,7 @@ $(document).ready(function() {
       iterationClear()
       setTimeout(function() {
 
+        //  CALLBACK
         $('body').removeClass('page')
         runPresent()
 

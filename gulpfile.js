@@ -68,6 +68,7 @@ gulp.task('pug', function() {
     .pipe(gulp.dest(dest));
 });
 
+//  MAILS
 gulp.task('mails', function() {
   return gulp.src(root+'/pug/mails/*.pug')
     .pipe(pug({
@@ -88,8 +89,7 @@ var babelSrc = [
   root+'/babel/molecules/spans.js',
   root+'/babel/molecules/nucubuc.js',
   root+'/babel/organisms/present.js',
-  root+'/babel/molecules/loader.js',
-  // root+'/babel/templates/soon.js'
+  root+'/babel/molecules/loader.js'
 ];
 gulp.task('babel', function() {
   return gulp.src(babelSrc)

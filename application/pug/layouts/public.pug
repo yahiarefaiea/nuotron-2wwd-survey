@@ -1,10 +1,10 @@
 doctype html
 html(lang=root.lang, dir=root.dir)
   
-  //##  HEAD  ##
+  //- HEAD
   head
     
-    //  TITLE AND META TAGS
+    //- TITLE AND META TAGS
     block title
       title= root.title
     meta(charset="UTF-8")
@@ -15,15 +15,15 @@ html(lang=root.lang, dir=root.dir)
       meta(property="og:url", content=root.url)
       meta(property="og:image", content=root.url+"includes/images/opengraph.png")
     
-    //  INCLUDES
+    //- INCLUDES
     link(rel="icon", type="image/png", href="includes/images/favicon.png")
     link(rel="stylesheet", href="includes/stylesheets/nuc.lite.css")
     script(src="includes/javascripts/nuc.lite.js")
   
-  //##  BODY  ##
+  //- BODY
   body.waiting.page
     
-    //  CONTENT
+    //- CONTENT
     block content
   
     img(src="includes/images/nucubuc-logo.png", style="display: none",
