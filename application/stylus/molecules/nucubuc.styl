@@ -1,6 +1,6 @@
 nucubuc-width= baseline*3
 nucubuc-origin= nucubuc-width*2.3
-nLetterPathLength= 73px
+letterPathLength= 73px
 nucubuc-margin= baseline*1.5
 
 nucubucMargin(container)
@@ -64,33 +64,30 @@ symbolRotate(min, max, delay=0)
   symbolRotate: 1, 4
 
 //  SVGS
-#nucubuc .svgs
-  width: nucubuc-width
-  height: nucubuc-width
-  svg
-    fill: none
-    stroke: #fff
-    stroke-linecap: round
+#nucubuc svg
+  fill: none
+  stroke: #fff
+  stroke-linecap: round
 
-//  N LETTER
-#nLetter
+//  MAIN (LETTER)
+#nucubuc .main
   stroke-width: 8
-  stroke-dasharray: nLetterPathLength
-  stroke-dashoffset: -(nLetterPathLength)
+  stroke-dasharray: letterPathLength
+  stroke-dashoffset: -(letterPathLength)
   opacity: 0
-  animation: nLetterIn durationAlt easing forwards
-  @keyframes nLetterIn
+  animation: letterIn durationAlt easing forwards
+  @keyframes letterIn
     100%
       opacity: 1
       stroke-dashoffset: 0
-.waiting #nLetter
+.waiting #nucubuc .main
   stroke-dashoffset: 0
   opacity: 1
-  animation: nLetterOut (durationAlt/2) easing forwards
-  @keyframes nLetterOut
+  animation: letterOut (durationAlt/2) easing forwards
+  @keyframes letterOut
     100%
       opacity: 0
-      stroke-dashoffset: nLetterPathLength
-.waiting.page #nLetter
+      stroke-dashoffset: letterPathLength
+.waiting.page #nucubuc .main
   opacity: 0
   animation: none
