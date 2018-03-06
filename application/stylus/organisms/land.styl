@@ -30,12 +30,12 @@ landColors= (#fff685 #7ecbb6 #9f6eaf magenta)
 
 //  Z-INDEX
 #nucubucFlat,
-#land .link,
+#land .reach,
 #land .text,
 #land .social
   z-index: -1
 .survey #nucubucFlat,
-.survey #land .link,
+.survey #land .reach,
 .survey #land .text,
 .survey #land .social
     z-index: 2
@@ -44,9 +44,14 @@ landColors= (#fff685 #7ecbb6 #9f6eaf magenta)
 #nucubucFlat
   makeAbsolute: landPaddingVert, landPaddingHorz
 
-//  LINK
-#land .link
+//  REACH
+#land .reach
   makeAbsolute: landPaddingVert, auto, auto, surveyWidth
   margin-{align-alt}: landPaddingHorz
-  line-height: nucubucFlat-height
-  color: #fff
+  opacity: 0
+  hasTransition: durationAlt, duration
+  .link
+    line-height: nucubucFlat-height
+    color: #fff
+.survey #land .reach
+  opacity: 1
