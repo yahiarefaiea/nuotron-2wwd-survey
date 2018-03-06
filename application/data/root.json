@@ -17,13 +17,13 @@
       "title": "Facebook (@Nucubuc)",
       "url": "https://facebook.com/Nucubuc/"
     }, {
-      "platform": "instagram",
-      "title": "Instagram (@Nucubuc)",
-      "url": "https://instagram.com/Nucubuc/"
-    }, {
       "platform": "twitter",
       "title": "Twitter (@Nucubuc)",
       "url": "https://twitter.com/Nucubuc/"
+    }, {
+      "platform": "instagram",
+      "title": "Instagram (@Nucubuc)",
+      "url": "https://instagram.com/Nucubuc/"
     }
   ]
 }
