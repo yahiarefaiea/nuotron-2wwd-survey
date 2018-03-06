@@ -1,0 +1,21 @@
+social-height= baseline
+social-gap= baseline/2
+
+.social li
+  margin-{align-alt}: social-gap
+  opacity: 0
+  multiTransition: 1, 3, durationAlt, duration
+  &:last-child
+    margin-{align-alt}: 0
+  a, a svg
+    display: block
+    width: social-height
+    height: social-height
+  a svg
+    fill: rgba(0, 0, 0, .3)
+    hasTransition()
+  a:hover svg,
+  a:focus svg
+    fill: #fff
+.survey .social li
+  opacity: 1
