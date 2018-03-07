@@ -31,6 +31,20 @@ hasOutline(clr= outline-color)
   &:focus
     outline: outline clr
 
+//  FOCUS EFFECT
+focusEffect(clr= rgba(255, 255, 255, .5))
+  &:after
+    content: ''
+    z-index: 1
+    display: block
+    makeAbsolute: 0, 50%, 0, 50%
+    background-color: clr
+  &:focus:after
+    {align}: 0
+    {align-alt}: 0
+    background-color: transparent
+    hasTransition()
+
 //  ABSOLUTE
 makeAbsolute(tp=0, al=0, btm=auto, alt=auto)
   position: absolute

@@ -43,6 +43,10 @@ buttonDisabled()
   text-transform: capitalize
   hasTransition()
 
+  focusEffect()
+  &.disabled:not(:focus):after
+    background-color: rgba(0, 0, 0, .25)
+
   buttonNormal()
   &:hover
     buttonHover()
@@ -51,18 +55,3 @@ buttonDisabled()
     buttonDisabled()
     &:hover
       buttonNormal()
-
-  //  FOCUS EFFECT
-  &:after
-    content: ''
-    z-index: 1
-    display: block
-    makeAbsolute: 0, 50%, 0, 50%
-    background-color: rgba(255, 255, 255, .5)
-  &.disabled:after
-    background-color: rgba(0, 0, 0, .25)
-  &:focus:after
-    {align}: 0
-    {align-alt}: 0
-    background-color: transparent
-    hasTransition()
