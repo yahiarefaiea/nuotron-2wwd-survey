@@ -1,0 +1,3 @@
+ul#navigation.blocks.inline
+  each question, index in questions.list
+    li: a(href=`#${question.name}` title=`${questions.q} ${index+1}`)
