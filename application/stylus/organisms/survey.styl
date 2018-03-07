@@ -21,6 +21,8 @@ navigationHeight= 8px
     width: (100%/surveyItems)
     height: navigationHeight
     padding: 0 navigationGap
+    multiTransition: 1, surveyItems, durationAlt
+    opacity: 0
     a
       display: block
       width: 100%
@@ -35,3 +37,5 @@ navigationHeight= 8px
 
 .questions #navigation
   z-index: auto
+  li
+    opacity: 1
