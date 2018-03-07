@@ -1,2 +1,30 @@
+surveyPaddingTop= baseline*2
+surveyPaddingBottom= baseline
+surveyPaddingHorz= baseline*2.25
+surveyItems= 13
+
+navigationGap= 4px
+navigationHeight= 8px
+
 #survey
   makeAbsolute: 0, (100% - surveyWidth), 0, 0
+
+//  NAVIGATION
+#navigation
+  display: block
+  makeAbsolute: surveyPaddingTop, (surveyPaddingHorz - navigationGap), auto, (surveyPaddingHorz - navigationGap)
+  li
+    width: (100%/surveyItems)
+    height: navigationHeight
+    padding: 0 navigationGap
+    a
+      display: block
+      width: 100%
+      height: 100%
+      border-radius: 3px
+      background-color: border-dark
+      focusEffect()
+      &:not(:focus), &:hover
+        outline: outline transparent
+      &:hover
+        background-color: magenta
