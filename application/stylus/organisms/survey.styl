@@ -9,8 +9,12 @@ navigationHeight= 8px
 #survey
   makeAbsolute: 0, (100% - surveyWidth), 0, 0
 
+#survey .background
+  makeAbsolute: 0, 0, 0, 0
+
 //  NAVIGATION
 #navigation
+  z-index: -1
   display: block
   makeAbsolute: surveyPaddingTop, (surveyPaddingHorz - navigationGap), auto, (surveyPaddingHorz - navigationGap)
   li
@@ -28,3 +32,6 @@ navigationHeight= 8px
         outline: outline transparent
       &:hover
         background-color: magenta
+
+.questions #navigation
+  z-index: auto
