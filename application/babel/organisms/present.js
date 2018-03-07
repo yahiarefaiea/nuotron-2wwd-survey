@@ -32,3 +32,20 @@ function runPresent() {
   }
   next()
 }
+
+//  START SURVEY
+function startSurvey() {
+  $('.wrapper').removeClass('start').addClass('questions')
+  $('#present li').removeAttr('class')
+  setTimeout(function() {
+    $('#start').removeAttr('style')
+  }, 500)
+}
+
+//  DOCUMENT READY
+$(document).ready(function() {
+  $('#start').on('click', function(e) {
+    if($('.wrapper').hasClass('survey')) startSurvey()
+    e.preventDefault()
+  })
+})
