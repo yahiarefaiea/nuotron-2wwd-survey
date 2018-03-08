@@ -1,8 +1,10 @@
 {
   "q": "Question",
-  "before": "previous",
-  "next": "next",
-  "submit": "submit everything",
+  "previous": "Previous",
+  "previousTitle": "Previous Question (Ctrl + P)",
+  "next": "Next",
+  "nextTitle": "Next Question (Ctrl + N)",
+  "submit": "Submit Everything",
 
   "list": [
     {
