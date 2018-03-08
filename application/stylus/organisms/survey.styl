@@ -17,9 +17,16 @@ ellipseHeight= 32px
 #survey .background
   makeAbsolute: 0 0 0 0
 
+//  Z-INDEX
+#navigation,
+#pagination
+  z-index: -1
+.questions #navigation,
+.questions #pagination
+  z-index: auto
+
 //  NAVIGATION
 #navigation
-  z-index: -1
   display: block
   makeAbsolute: surveyPaddingTop (surveyPaddingHorz - navigationGap) auto (surveyPaddingHorz - navigationGap)
   li
@@ -42,10 +49,8 @@ ellipseHeight= 32px
     &.current a,
     &.achieved a
       background-color: magenta
-.questions #navigation
-  z-index: auto
-  li
-    opacity: 1
+.questions #navigation li
+  opacity: 1
 
 //  PAGINATION
 #pagination
