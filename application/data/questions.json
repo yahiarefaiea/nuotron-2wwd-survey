@@ -1,9 +1,9 @@
 {
   "q": "Question",
   "previous": "Previous",
-  "previousTitle": "Previous Question (Ctrl + P)",
+  "previousTitle": "Previous Question <b>(Ctrl + P)</b>",
   "next": "Next",
-  "nextTitle": "Next Question (Ctrl + N)",
+  "nextTitle": "Next Question <b>(Ctrl + N)</b>",
   "submit": "Submit Everything",
 
   "list": [
