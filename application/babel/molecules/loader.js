@@ -14,6 +14,11 @@ $(document).ready(function() {
 
         //  CALLBACK
         $('body').removeClass('page')
+        tippy('[title]', {
+          arrow: false,
+          theme: 'nucubuc',
+          followCursor: true
+        })
         runPresent()
 
       }, 1500)
