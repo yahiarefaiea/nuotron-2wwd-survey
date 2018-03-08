@@ -45,7 +45,7 @@ function startSurvey() {
 //  DOCUMENT READY
 $(document).ready(function() {
   $('#start').on('click', function(e) {
-    if($('.wrapper').hasClass('survey')) startSurvey()
+    if($('.wrapper').hasClass('survey start')) startSurvey()
     e.preventDefault()
   })
 })
