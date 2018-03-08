@@ -37,7 +37,7 @@ focusEffect(clr= rgba(255, 255, 255, .5))
     content: ''
     z-index: 1
     display: block
-    makeAbsolute: 0, 50%, 0, 50%
+    makeAbsolute: 0 50% 0 50%
     background-color: clr
   &:focus:after
     {align}: 0
@@ -70,7 +70,7 @@ multiTransition(min, max, dur=duration, dly=0)
   for i in min..max
     d= (d+step)*pattern
     &:nth-child({i})
-      hasTransition: dur, dly, d
+      hasTransition: dur dly d
 
 //  DIMENSIONS
 surveyWidth= 60%

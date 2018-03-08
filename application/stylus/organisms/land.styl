@@ -10,17 +10,17 @@ landColors= (#fff685 #7ecbb6 #9f6eaf magenta)
 
 //  BACKGROUND
 #land .background
-  makeAbsolute: 0, 0, 0, surveyWidth
+  makeAbsolute: 0 0 0 surveyWidth
   > div
-    makeAbsolute: 0, 0, 0, 100%
-    multiTransition: 1, 4, durationAlt
+    makeAbsolute: 0 0 0 100%
+    multiTransition: 1 4 durationAlt
     for child in (0..3)
       &:nth-child({child+1})
         background-color: landColors[child]
     &:nth-child(4):after
       content: ''
       display: block
-      makeAbsolute: 100%, 0, 0, 0
+      makeAbsolute: 100% 0 0 0
       transition: inherit
       background-image: linear-gradient(transparent, magenta-alt)
 .survey #land .background > div
@@ -42,14 +42,14 @@ landColors= (#fff685 #7ecbb6 #9f6eaf magenta)
 
 //  NUCUBUC FLAT
 #land #nucubucFlat
-  makeAbsolute: landPaddingVert, (landPaddingHorz - nucubucFlat-margin)
+  makeAbsolute: landPaddingVert (landPaddingHorz - nucubucFlat-margin)
 
 //  REACH
 #land .reach
-  makeAbsolute: landPaddingVert, auto, auto, surveyWidth
+  makeAbsolute: landPaddingVert auto auto surveyWidth
   margin-{align-alt}: landPaddingHorz
   opacity: 0
-  hasTransition: durationAlt, duration
+  hasTransition: durationAlt duration
   .link
     line-height: nucubucFlat-height
     color: #fff
@@ -58,4 +58,4 @@ landColors= (#fff685 #7ecbb6 #9f6eaf magenta)
 
 //  SOCIAL
 #land .social
-  makeAbsolute: auto, landPaddingHorz, ((landPaddingVert - social-height)/2)
+  makeAbsolute: auto landPaddingHorz ((landPaddingVert - social-height)/2)

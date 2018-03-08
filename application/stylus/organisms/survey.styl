@@ -11,22 +11,22 @@ numberHeight= baseline*1.5
 ellipseHeight= 32px
 
 #survey
-  makeAbsolute: 0, (100% - surveyWidth), 0, 0
+  makeAbsolute: 0 (100% - surveyWidth) 0 0
 
 //  BACKGROUND
 #survey .background
-  makeAbsolute: 0, 0, 0, 0
+  makeAbsolute: 0 0 0 0
 
 //  NAVIGATION
 #navigation
   z-index: -1
   display: block
-  makeAbsolute: surveyPaddingTop, (surveyPaddingHorz - navigationGap), auto, (surveyPaddingHorz - navigationGap)
+  makeAbsolute: surveyPaddingTop (surveyPaddingHorz - navigationGap) auto (surveyPaddingHorz - navigationGap)
   li
     width: (100%/surveyItems)
     height: navigationHeight
     padding: 0 navigationGap
-    multiTransition: 1, surveyItems, durationAlt
+    multiTransition: 1 surveyItems durationAlt
     opacity: 0
     a
       display: block
@@ -49,16 +49,16 @@ ellipseHeight= 32px
 
 //  PAGINATION
 #pagination
-  makeAbsolute: auto, surveyPaddingHorz, surveyPaddingBottom, surveyPaddingHorz
+  makeAbsolute: auto surveyPaddingHorz surveyPaddingBottom surveyPaddingHorz
   height: numberHeight
 #previous,
 #next
   display: block
-  makeAbsolute: ((numberHeight - ellipseHeight)/2), auto
+  makeAbsolute: ((numberHeight - ellipseHeight)/2) auto
   width: ellipseHeight
   height: ellipseHeight
   > span
-    makeAbsolute: 0, auto
+    makeAbsolute: 0 auto
     line-height: ellipseHeight
     color: text-light-alt
   .ellipse
