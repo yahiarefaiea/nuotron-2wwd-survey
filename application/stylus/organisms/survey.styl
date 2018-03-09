@@ -56,6 +56,8 @@ ellipseHeight= 32px
 #pagination
   makeAbsolute: auto surveyPaddingHorz surveyPaddingBottom surveyPaddingHorz
   height: numberHeight
+
+//  PREVIOUS & NEXT
 #previous,
 #next
   display: block
@@ -63,45 +65,46 @@ ellipseHeight= 32px
   width: ellipseHeight
   height: ellipseHeight
   > span
-    makeAbsolute: 0 auto
+    makeAbsolute: ellipseHeight auto
     line-height: ellipseHeight
     color: text-light-alt
-    margin-top: ellipseHeight
+    opacity: 0
     hasTransition: duration 0 step*pattern
   .ellipse
     makeAbsolute()
-    width: 100%
-    height: 100%
+    width: ellipseHeight
+    height: ellipseHeight
     border-radius: 50%
     background-color: border-default
+    opacity: 0
     hasTransition()
     svg
       display: block
+      makeAbsolute: 0 auto
+      width: ellipseHeight
+      height: ellipseHeight
       fill: text-light
       hasTransition()
-
-// #previous
-//   {align}: -4px
-//   > span
-//     {align}: ellipseHeight + paginationGap
-//   .ellipse svg
-//     margin-{align}: ellipseHeight
-// #next
-//   {align-alt}: -4px
-//   > span
-//     {align-alt}: ellipseHeight + paginationGap
-//   .ellipse svg
-//     margin-{align-alt}: ellipseHeight
-//     filter: drop-shadow(-(translate/2) 0 0 text-light)
-//
-// .questions:not(.feeling) #previous,
-// .questions:not(.contact) #next
-//   > span
-//     opacity: 1
-//     margin-top: 0
-//   .ellipse
-//     opacity: 1
-// .questions:not(.feeling) #previous .ellipse svg
-//   margin-{align}: 0
-// .questions:not(.contact) #next .ellipse svg
-//   margin-{align-alt}: 0
+#previous
+  {align}: -4px
+  > span
+    {align}: ellipseHeight + paginationGap
+  .ellipse svg
+    {align}: ellipseHeight
+#next
+  {align-alt}: -4px
+  > span
+    {align-alt}: ellipseHeight + paginationGap
+  .ellipse svg
+    {align-alt}: ellipseHeight
+.questions:not(.feeling) #previous,
+.questions:not(.contact) #next
+  > span
+    top: 0
+    opacity: 1
+  .ellipse
+    opacity: 1
+.questions:not(.feeling) #previous .ellipse svg
+  {align}: 0
+.questions:not(.contact) #next .ellipse svg
+  {align-alt}: 0
