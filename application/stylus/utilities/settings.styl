@@ -28,7 +28,7 @@ outline-color= text-dark
 hasOutline(clr= outline-color)
   &, &:hover
     outline: outline transparent
-  &:focus
+  &:not(:hover):focus
     outline: outline clr
 
 //  FOCUS EFFECT
