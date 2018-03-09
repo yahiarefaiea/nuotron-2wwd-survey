@@ -53,35 +53,33 @@ ellipseHeight= 32px
   opacity: 1
 
 //  PAGINATION
-// #pagination
-//   makeAbsolute: auto surveyPaddingHorz surveyPaddingBottom surveyPaddingHorz
-//   height: numberHeight
-// #previous,
-// #next
-//   display: block
-//   makeAbsolute: ((numberHeight - ellipseHeight)/2) auto
-//   width: ellipseHeight
-//   height: ellipseHeight
-//   > span
-//     makeAbsolute: 0 auto
-//     line-height: ellipseHeight
-//     color: text-light-alt
-//     opacity: .3
-//     margin-top: - ellipseHeight
-//     hasTransition: duration step
-//   .ellipse
-//     makeAbsolute()
-//     width: 100%
-//     height: 100%
-//     border-radius: 50%
-//     background-color: border-default
-//     opacity: 0
-//     hasTransition()
-//     svg
-//       display: block
-//       fill: text-light
-//       hasTransition()
-//
+#pagination
+  makeAbsolute: auto surveyPaddingHorz surveyPaddingBottom surveyPaddingHorz
+  height: numberHeight
+#previous,
+#next
+  display: block
+  makeAbsolute: ((numberHeight - ellipseHeight)/2) auto
+  width: ellipseHeight
+  height: ellipseHeight
+  > span
+    makeAbsolute: 0 auto
+    line-height: ellipseHeight
+    color: text-light-alt
+    margin-top: ellipseHeight
+    hasTransition: duration 0 step*pattern
+  .ellipse
+    makeAbsolute()
+    width: 100%
+    height: 100%
+    border-radius: 50%
+    background-color: border-default
+    hasTransition()
+    svg
+      display: block
+      fill: text-light
+      hasTransition()
+
 // #previous
 //   {align}: -4px
 //   > span
