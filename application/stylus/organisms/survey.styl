@@ -76,6 +76,14 @@ ellipseHeight= 32px
     background-color: border-default
     opacity: 0
     hasTransition()
+    &:before
+      content: ''
+      display: block
+      makeAbsolute: 50% auto
+      width: 6px
+      height: 2px
+      margin-top: -(2px/2)
+      hasTransition()
     svg
       display: block
       makeAbsolute: 0 auto
@@ -89,6 +97,8 @@ ellipseHeight= 32px
     {align}: ellipseHeight + paginationGap
   .ellipse
     {align}: 0
+    &:before
+      {align}: 100%
     svg
       {align}: ellipseHeight
 #next
@@ -97,6 +107,8 @@ ellipseHeight= 32px
     {align-alt}: ellipseHeight + paginationGap
   .ellipse
     {align-alt}: 0
+    &:before
+      {align-alt}: 100%
     svg
       {align-alt}: ellipseHeight
 .questions:not(.feeling) #previous,
@@ -106,21 +118,28 @@ ellipseHeight= 32px
     opacity: 1
   .ellipse
     opacity: 1
-  &:hover,
-  &:focus
+  &:hover
     > span
       color: text-dark
     .ellipse
       background-color: magenta
+      &:before
+        background-color: #fff
       svg
         fill: #fff
 .questions:not(.feeling) #previous
   .ellipse svg
     {align}: 0
-  &:hover .ellipse svg
-    {align}: -(translate/4)
+  &:hover .ellipse
+    &:before
+      {align}: 18px
+    svg
+      {align}: -(translate/4)
 .questions:not(.contact) #next
   .ellipse svg
     {align-alt}: 0
-  &:hover .ellipse svg
-    {align-alt}: -(translate/4)
+  &:hover .ellipse
+    &:before
+      {align-alt}: 18px
+    svg
+      {align-alt}: -(translate/4)
