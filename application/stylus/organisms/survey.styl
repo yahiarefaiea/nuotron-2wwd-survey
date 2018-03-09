@@ -104,7 +104,23 @@ ellipseHeight= 32px
     opacity: 1
   .ellipse
     opacity: 1
-.questions:not(.feeling) #previous .ellipse svg
-  {align}: 0
-.questions:not(.contact) #next .ellipse svg
-  {align-alt}: 0
+  &:hover,
+  &:focus
+    > span
+      color: text-dark
+    .ellipse
+      background-color: magenta
+      svg
+        fill: #fff
+.questions:not(.feeling) #previous
+  .ellipse svg
+    {align}: 0
+  &:hover .ellipse svg,
+  &:focus .ellipse svg
+    {align}: -(translate/4)
+.questions:not(.contact) #next
+  .ellipse svg
+    {align-alt}: 0
+  &:hover .ellipse svg,
+  &:focus .ellipse svg
+    {align-alt}: -(translate/4)
