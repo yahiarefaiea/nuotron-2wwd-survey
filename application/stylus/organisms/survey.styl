@@ -60,7 +60,7 @@ ellipseHeight= 32px
 #next
   display: block
   makeAbsolute: ((numberHeight - ellipseHeight)/2) auto
-  width: ellipseHeight
+  width: ellipseHeight + paginationGap
   height: ellipseHeight
   > span
     makeAbsolute: ellipseHeight auto
@@ -69,7 +69,7 @@ ellipseHeight= 32px
     opacity: 0
     hasTransition: duration 0 step*pattern
   .ellipse
-    makeAbsolute()
+    makeAbsolute: 0 auto
     width: ellipseHeight
     height: ellipseHeight
     border-radius: 50%
@@ -87,14 +87,18 @@ ellipseHeight= 32px
   {align}: -4px
   > span
     {align}: ellipseHeight + paginationGap
-  .ellipse svg
-    {align}: ellipseHeight
+  .ellipse
+    {align}: 0
+    svg
+      {align}: ellipseHeight
 #next
   {align-alt}: -4px
   > span
     {align-alt}: ellipseHeight + paginationGap
-  .ellipse svg
-    {align-alt}: ellipseHeight
+  .ellipse
+    {align-alt}: 0
+    svg
+      {align-alt}: ellipseHeight
 .questions:not(.feeling) #previous,
 .questions:not(.contact) #next
   > span
@@ -113,12 +117,10 @@ ellipseHeight= 32px
 .questions:not(.feeling) #previous
   .ellipse svg
     {align}: 0
-  &:hover .ellipse svg,
-  &:focus .ellipse svg
+  &:hover .ellipse svg
     {align}: -(translate/4)
 .questions:not(.contact) #next
   .ellipse svg
     {align-alt}: 0
-  &:hover .ellipse svg,
-  &:focus .ellipse svg
+  &:hover .ellipse svg
     {align-alt}: -(translate/4)
