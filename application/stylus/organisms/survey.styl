@@ -84,6 +84,12 @@ ellipseHeight= 32px
       height: 2px
       margin-top: -(2px/2)
       hasTransition()
+    &:after
+      content: ''
+      display: block
+      makeAbsolute: 50% 50% 50% 50%
+      border-radius: 50%
+      background-color: rgba(255, 255, 255, .5)
     svg
       display: block
       makeAbsolute: 0 auto
@@ -127,6 +133,10 @@ ellipseHeight= 32px
         background-color: #fff
       svg
         fill: #fff
+  &:focus .ellipse:after
+    makeAbsolute: 0 0 0 0
+    background-color: transparent
+    hasTransition()
 .questions:not(.feeling) #previous
   .ellipse svg
     {align}: 0
