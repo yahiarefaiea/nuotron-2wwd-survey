@@ -53,33 +53,57 @@ ellipseHeight= 32px
   opacity: 1
 
 //  PAGINATION
-#pagination
-  makeAbsolute: auto surveyPaddingHorz surveyPaddingBottom surveyPaddingHorz
-  height: numberHeight
-#previous,
-#next
-  display: block
-  makeAbsolute: ((numberHeight - ellipseHeight)/2) auto
-  width: ellipseHeight
-  height: ellipseHeight
-  > span
-    makeAbsolute: 0 auto
-    line-height: ellipseHeight
-    color: text-light-alt
-  .ellipse
-    makeAbsolute()
-    width: 100%
-    height: 100%
-    border-radius: 50%
-    background-color: border-default
-    svg
-      display: block
-      fill: text-light
-#previous
-  {align}: -4px
-  > span
-    {align}: ellipseHeight + paginationGap
-#next
-  {align-alt}: -4px
-  > span
-    {align-alt}: ellipseHeight + paginationGap
+// #pagination
+//   makeAbsolute: auto surveyPaddingHorz surveyPaddingBottom surveyPaddingHorz
+//   height: numberHeight
+// #previous,
+// #next
+//   display: block
+//   makeAbsolute: ((numberHeight - ellipseHeight)/2) auto
+//   width: ellipseHeight
+//   height: ellipseHeight
+//   > span
+//     makeAbsolute: 0 auto
+//     line-height: ellipseHeight
+//     color: text-light-alt
+//     opacity: .3
+//     margin-top: - ellipseHeight
+//     hasTransition: duration step
+//   .ellipse
+//     makeAbsolute()
+//     width: 100%
+//     height: 100%
+//     border-radius: 50%
+//     background-color: border-default
+//     opacity: 0
+//     hasTransition()
+//     svg
+//       display: block
+//       fill: text-light
+//       hasTransition()
+//
+// #previous
+//   {align}: -4px
+//   > span
+//     {align}: ellipseHeight + paginationGap
+//   .ellipse svg
+//     margin-{align}: ellipseHeight
+// #next
+//   {align-alt}: -4px
+//   > span
+//     {align-alt}: ellipseHeight + paginationGap
+//   .ellipse svg
+//     margin-{align-alt}: ellipseHeight
+//     filter: drop-shadow(-(translate/2) 0 0 text-light)
+//
+// .questions:not(.feeling) #previous,
+// .questions:not(.contact) #next
+//   > span
+//     opacity: 1
+//     margin-top: 0
+//   .ellipse
+//     opacity: 1
+// .questions:not(.feeling) #previous .ellipse svg
+//   margin-{align}: 0
+// .questions:not(.contact) #next .ellipse svg
+//   margin-{align-alt}: 0
