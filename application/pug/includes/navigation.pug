@@ -1,3 +1,6 @@
 ul#navigation.blocks.inline
   each question, index in questions.list
-    li: a(href=`#${question.name}` title=`${questions.q} ${index+1}`)
+    if(index+1 < 10)
+      li: a(href=`#${question.name}` title=`${questions.q} 0${index+1}`)
+    else
+      li: a(href=`#${question.name}` title=`${questions.q} ${index+1}`)
