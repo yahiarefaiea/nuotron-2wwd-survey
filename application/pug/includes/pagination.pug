@@ -1,5 +1,15 @@
 #pagination
   
+  //- CURRENTQUESTION
+  #currentQuestion
+    ul
+      each question, index in questions.list
+        if(index+1 < 10)
+          li= `0${index+1}`
+        else
+          li= index+1
+    span= `/${questions.list.length}`
+  
   //- PREVIOUS
   a#previous(href='#' title=questions.previousTitle)
     span= questions.previous
