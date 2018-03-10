@@ -4,9 +4,7 @@
   #currentQuestion
     ul
       each question, index in questions.list
-        if(index+1 == 1)
-          li.current 01
-        else if(index+1 < 10)
+        if(index+1 < 10)
           li= `0${index+1}`
         else
           li= index+1
