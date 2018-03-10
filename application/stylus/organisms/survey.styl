@@ -7,8 +7,9 @@ navigationGap= 4px
 navigationHeight= 8px
 
 paginationGap= baseline/2
-numberHeight= baseline*1.5
 ellipseHeight= 32px
+numberWidth= baseline*2.5
+numberHeight= baseline*1.5
 
 #survey
   makeAbsolute: 0 (100% - surveyWidth) 0 0
@@ -153,3 +154,37 @@ ellipseHeight= 32px
       {align-alt}: 11px
     svg
       {align-alt}: -(translate/4)
+
+//  CURRENTQUESTION
+#currentQuestion
+  makeAbsolute: 0 50%
+  width: (numberWidth/2)
+  height: numberHeight
+  border-radius: (numberHeight/2)
+  margin-{align}: -(numberWidth/4)
+  line-height: numberHeight
+  opacity: 0
+  hasTransition()
+  background-color: border-dark
+  color: text-default
+  ul
+    makeAbsolute: 0 auto auto 50%
+    margin-{align-alt}: 4px
+    li
+      makeAbsolute: 0 auto auto 0
+      text-align: align-alt
+      opacity: 0
+      transform: translateY(numberHeight)
+      hasTransition()
+      cursor: default
+      &.current
+        opacity: 1
+        transform: translateY(0)
+        cursor: auto
+  span
+    makeAbsolute: 0 50%
+    margin-{align}: -4px
+.questions #currentQuestion
+  width: numberWidth
+  margin-{align}: -(numberWidth/2)
+  opacity: 1
