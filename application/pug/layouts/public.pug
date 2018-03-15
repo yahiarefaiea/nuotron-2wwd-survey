@@ -1,5 +1,5 @@
 doctype html
-html(lang=root.lang, dir=root.dir)
+html(lang=root.lang dir=root.dir)
   
   //- HEAD
   head
@@ -8,16 +8,16 @@ html(lang=root.lang, dir=root.dir)
     block title
       title= root.title
     meta(charset="UTF-8")
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
     block meta
-      meta(name="description", content=root.description)
-      meta(name="author", content=root.author)
-      meta(property="og:url", content=root.url)
-      meta(property="og:image", content=root.url+"includes/images/opengraph.png")
+      meta(name="description" content=root.description)
+      meta(name="author" content=root.author)
+      meta(property="og:url" content=root.url)
+      meta(property="og:image" content=root.url+"includes/images/opengraph.png")
     
     //- INCLUDES
-    link(rel="icon", type="image/png", href="includes/images/favicon.png")
-    link(rel="stylesheet", href="includes/stylesheets/nuc.lite.css")
+    link(rel="icon" type="image/png" href="includes/images/favicon.png")
+    link(rel="stylesheet" href="includes/stylesheets/nuc.lite.css")
     script(src="includes/javascripts/nuc.lite.js")
   
   //- BODY
@@ -26,7 +26,5 @@ html(lang=root.lang, dir=root.dir)
     //- CONTENT
     block content
   
-    img(src="includes/images/nucubuc-logo.png", style="display: none",
-        title="Nucubuc", alt="Nucubuc")
-    img(src="includes/images/nucubuc-symbol.png", style="display: none",
-        title="Nucubuc", alt="Nucubuc")
+    img(src="includes/images/nucubuc-logo.png" style="display: none" title="Nucubuc" alt="Nucubuc")
+    img(src="includes/images/nucubuc-symbol.png" style="display: none" title="Nucubuc" alt="Nucubuc")
