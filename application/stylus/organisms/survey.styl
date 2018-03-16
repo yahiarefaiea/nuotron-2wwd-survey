@@ -20,10 +20,14 @@ numberHeight= baseline*1.5
 
 //  Z-INDEX
 #navigation,
-#pagination
+#previous,
+#next,
+#currentQuestion
   z-index: -1
 .questions #navigation,
-.questions #pagination
+.questions:not(.feeling) #previous,
+.questions:not(.contact) #next
+.questions #currentQuestion
   z-index: auto
 
 //  NAVIGATION
@@ -180,6 +184,7 @@ numberHeight= baseline*1.5
       &.current
         opacity: 1
         transform: translateY(0)
+        hasTransition: duration step
         cursor: auto
   span
     makeAbsolute: 0 50%
