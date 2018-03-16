@@ -1,8 +1,17 @@
+//- CALLBACK
+ul#callback.blocks
+  li: .h2.spans= callback.wait
+  each item in callback.error
+    li
+      each line in item
+        .h2.spans= line
+
+//- PRESENT
 ul#present.blocks
   each item, index in present.list
     li(id=`p${index+1}` data-time=item.time)
       each line in item.text
-        h2.spans= line
+        .h2.spans= line
       
       //- BUTTON
       if(index+1==present.list.length)

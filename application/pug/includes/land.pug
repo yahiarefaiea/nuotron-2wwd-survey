@@ -10,6 +10,13 @@
 
   //- REACH
   .reach: a.link(href=root.reach.url title=root.reach.text target="_blank")= root.reach.text
+  
+  //- TEXT
+  ul.text
+    each item in callback.success
+      li
+        each line in item
+          .h1.spans= line
 
   //- SOCIAL
   include social

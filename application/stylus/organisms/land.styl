@@ -63,6 +63,15 @@ landColors= (#fff685 #7ecbb6 #9f6eaf magenta)
   {align-alt}: 0
   hasTransition: durationAlt step*6
 
+//  TEXT
+#land .text
+  makeAbsolute: auto landPaddingHorz landPaddingVert
+  li
+    makeAbsolute: auto 0 0
+    white-space: nowrap
+    .h1
+      color: #fff
+
 //  SOCIAL
 #land .social
   makeAbsolute: auto landPaddingHorz ((landPaddingVert - social-height)/2)
