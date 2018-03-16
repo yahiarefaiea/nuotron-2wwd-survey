@@ -59,6 +59,8 @@ numberHeight= baseline*1.5
 #pagination
   makeAbsolute: auto surveyPaddingHorz surveyPaddingBottom surveyPaddingHorz
   height: numberHeight
+  a
+    hasOutline: transparent
 
 //  PREVIOUS & NEXT
 #previous,
@@ -124,10 +126,7 @@ numberHeight= baseline*1.5
     svg
       {align-alt}: ellipseHeight
 .questions:not(.feeling) #previous,
-.questions:not(.contact) #next
-  > span
-    top: 0
-    opacity: 1
+.questions #next
   .ellipse
     opacity: 1
   &:hover
@@ -143,6 +142,11 @@ numberHeight= baseline*1.5
     makeAbsolute: 0 0 0 0
     background-color: transparent
     hasTransition()
+.questions:not(.feeling) #previous > span,
+.questions:not(.contact) #next > span:not(.submit),
+.questions.contact #next > span.submit
+  top: 0
+  opacity: 1
 .questions:not(.feeling) #previous
   .ellipse svg
     {align}: 0
@@ -151,7 +155,7 @@ numberHeight= baseline*1.5
       {align}: 11px
     svg
       {align}: -(translate/4)
-.questions:not(.contact) #next
+.questions #next
   .ellipse svg
     {align-alt}: 0
   &:hover .ellipse
