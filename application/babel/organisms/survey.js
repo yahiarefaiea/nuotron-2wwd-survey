@@ -6,7 +6,7 @@ var survey = {
     surveyListeners()
     this.navigate($('#navigation li:first-child a').attr('href'))
     setTimeout(function() {
-      $('#start').removeAttr('style')
+      $('#present').remove()
     }, 500)
   },
   //  CHANGE HASH
