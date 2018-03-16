@@ -27,7 +27,7 @@ var survey = {
   navigate: function(target) {
     if(target == 'previous' && $('#navigation li:first-child').hasClass('current')) return
     if(target == 'next' && $('#navigation li:last-child').hasClass('current')) {
-      // $('.wrapper').removeClass(this.allQuestions.join(' ')).addClass('callback')
+      this.submit()
       return
     }
 
@@ -50,6 +50,34 @@ var survey = {
     $('.wrapper').removeClass(this.allQuestions.join(' ')).addClass(target.split('#')[1])
 
     this.changeHash(target)
+  },
+  //  SUBMIT
+  submit: function() {
+    iterationCount()
+    //  SEND REQUEST HERE
+    var status = 'success'
+    this.callback(status)
+  },
+  //  CALLBACK
+  callback: function(status) {
+    var that = this
+    $('.wrapper').addClass('callback')
+    iterationClear()
+
+    if(status == 'success') {
+      setTimeout(function() {
+        $('.wrapper').addClass('success')
+        setTimeout(function() {
+          // $('#survey, #nucubuc').remove()
+          $('.wrapper').removeClass('questions ' + that.allQuestions.join(' '))
+        }, 2000)
+      }, 3000)
+    } else {
+      // $('.wrapper').addClass('error')
+      // setTimeout(function() {
+      //   $('.wrapper').removeClass('callback error')
+      // }, 5000)
+    }
   }
 }
 

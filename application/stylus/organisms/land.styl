@@ -7,6 +7,8 @@ landColors= (#fff685 #7ecbb6 #9f6eaf magenta)
   makeAbsolute: 0, 0, 0, 0
   a
     hasOutline: #fff
+.survey.callback.success #land
+  z-index: 10
 
 //  BACKGROUND
 #land .background
@@ -27,6 +29,8 @@ landColors= (#fff685 #7ecbb6 #9f6eaf magenta)
   {align-alt}: 0
   &:nth-child(4):after
     top: 0
+.survey.callback.success #land .background > div
+  {align-alt}: -150%
 
 //  Z-INDEX
 #land #nucubucFlat,
@@ -55,6 +59,9 @@ landColors= (#fff685 #7ecbb6 #9f6eaf magenta)
     color: #fff
 .survey #land .reach
   opacity: 1
+.survey.callback.success #land .reach
+  {align-alt}: 0
+  hasTransition: durationAlt step*6
 
 //  SOCIAL
 #land .social
