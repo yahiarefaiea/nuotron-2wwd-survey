@@ -4,10 +4,20 @@ var survey = {
     $('.wrapper').removeClass('start').addClass('questions')
     $('#present li').removeAttr('class')
     surveyListeners()
+    this.questionsPush()
     this.navigate($('#navigation li:first-child a').attr('href'))
     setTimeout(function() {
       $('#present').remove()
     }, 500)
+  },
+  //  ALL QUESTIONS
+  allQuestions: [],
+  //  QUESTIONS PUSH
+  questionsPush: function() {
+    for (i = 0; i < $('#navigation li').length; i++) {
+      var name = $('#navigation li:nth-child('+(i+1)+') a').attr('href')
+      this.allQuestions.push(name.split('#')[1])
+    }
   },
   //  CHANGE HASH
   changeHash: function(hash) {
@@ -16,7 +26,10 @@ var survey = {
   //  NAVIGATE
   navigate: function(target) {
     if(target == 'previous' && $('#navigation li:first-child').hasClass('current')) return
-    if(target == 'next' && $('#navigation li:last-child').hasClass('current')) return
+    if(target == 'next' && $('#navigation li:last-child').hasClass('current')) {
+      // $('.wrapper').removeClass(this.allQuestions.join(' ')).addClass('callback')
+      return
+    }
 
     if(target == 'previous')
       target = $('#navigation .current').prev().find('a').attr('href')
@@ -34,12 +47,7 @@ var survey = {
     $('#currentQuestion li').removeAttr('class')
     $('#currentQuestion li:nth-child('+index+')').addClass('current')
 
-    var allQuestions = []
-    for (i = 0; i < $('#navigation li').length; i++) {
-      var name = $('#navigation li:nth-child('+(i+1)+') a').attr('href')
-      allQuestions.push(name.split('#')[1])
-    }
-    $('.wrapper').removeClass(allQuestions.join(' ')).addClass(target.split('#')[1])
+    $('.wrapper').removeClass(this.allQuestions.join(' ')).addClass(target.split('#')[1])
 
     this.changeHash(target)
   }
