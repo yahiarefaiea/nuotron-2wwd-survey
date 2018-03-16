@@ -21,6 +21,7 @@ function runPresent() {
 
         setTimeout(function() {
           $('.wrapper').addClass('start')
+          $('#land .text li:first-child').addClass('current')
         }, 500)
         return
       }

@@ -54,6 +54,7 @@ var survey = {
   //  SUBMIT
   submit: function() {
     iterationCount()
+    $('#callback li:nth-child(1)').addClass('current')
     //  SEND REQUEST HERE
     var status = 'success'
     this.callback(status)
@@ -64,20 +65,32 @@ var survey = {
     $('.wrapper').addClass('callback')
     iterationClear()
 
-    if(status == 'success') {
-      setTimeout(function() {
+    setTimeout(function() {
+      if(status == 'success') {
         $('.wrapper').addClass('success')
+        history.pushState('', document.title, window.location.pathname)
+
+        $('#land .text li').removeClass('current')
+        $('#land .text li:nth-child(2)').addClass('current')
         setTimeout(function() {
-          // $('#survey, #nucubuc').remove()
+          $('#land .text li').removeClass('current')
+          $('#land .text li:nth-child(3)').addClass('current')
+        }, 4000)
+
+        setTimeout(function() {
+          $('#survey, #nucubuc, #callback').remove()
           $('.wrapper').removeClass('questions ' + that.allQuestions.join(' '))
         }, 2000)
-      }, 3000)
-    } else {
-      // $('.wrapper').addClass('error')
-      // setTimeout(function() {
-      //   $('.wrapper').removeClass('callback error')
-      // }, 5000)
-    }
+      } else {
+        $('.wrapper').addClass('error')
+        $('#callback li').removeClass('current')
+        $('#callback li:nth-child(2)').addClass('current')
+        setTimeout(function() {
+          $('.wrapper').removeClass('callback error')
+          $('#callback li').removeClass('current')
+        }, 4000)
+      }
+    }, 1500)
   }
 }
 
