@@ -40,4 +40,12 @@ $(document).ready(function() {
     if($('.wrapper').hasClass('survey start')) survey.init()
     e.preventDefault()
   })
+
+  $(document).keydown(function(event) {
+    enterKey = 13
+    if(event.keyCode == enterKey && $('.wrapper').hasClass('survey start')) {
+      survey.init()
+      event.preventDefault()
+    }
+  })
 })

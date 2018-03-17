@@ -1,6 +1,7 @@
 var survey = {
   //  INITIALIZE
   init: function() {
+    $(document).off('keydown')
     $('.wrapper').removeClass('start').addClass('questions')
     $('#present li').removeAttr('class')
     surveyListeners()
@@ -82,6 +83,7 @@ var survey = {
         }, 4000)
 
         setTimeout(function() {
+          $(document).off('keydown')
           $('#survey, #nucubuc, #callback').remove()
           $('.wrapper').removeClass('submiting questions ' + that.allQuestions.join(' '))
         }, 2000)
@@ -125,13 +127,13 @@ function surveyListeners() {
     //  PREVIOUS KEY
     if(event.ctrlKey && event.keyCode == previousKey) {
       survey.navigate('previous')
-      event.preventDefault();
+      event.preventDefault()
     }
 
     //  NEXT KEY
     if(event.ctrlKey && event.keyCode == nextKey) {
       survey.navigate('next')
-      event.preventDefault();
+      event.preventDefault()
     }
   })
 }
