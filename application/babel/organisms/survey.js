@@ -53,11 +53,15 @@ var survey = {
   },
   //  SUBMIT
   submit: function() {
-    iterationCount()
-    $('#callback li:nth-child(1)').addClass('current')
-    //  SEND REQUEST HERE
-    var status = 'success'
-    this.callback(status)
+    if(!$('.wrapper').hasClass('submiting callback')) {
+      iterationCount()
+      $('#callback li:nth-child(1)').addClass('current')
+      $('.wrapper').addClass('submiting')
+
+      //  SEND REQUEST HERE
+      var status = 'success'
+      this.callback(status)
+    }
   },
   //  CALLBACK
   callback: function(status) {
@@ -79,14 +83,14 @@ var survey = {
 
         setTimeout(function() {
           $('#survey, #nucubuc, #callback').remove()
-          $('.wrapper').removeClass('questions ' + that.allQuestions.join(' '))
+          $('.wrapper').removeClass('submiting questions ' + that.allQuestions.join(' '))
         }, 2000)
       } else {
         $('.wrapper').addClass('error')
         $('#callback li').removeClass('current')
         $('#callback li:nth-child(2)').addClass('current')
         setTimeout(function() {
-          $('.wrapper').removeClass('callback error')
+          $('.wrapper').removeClass('submiting callback error')
           $('#callback li').removeClass('current')
         }, 4000)
       }
