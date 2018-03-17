@@ -1,5 +1,6 @@
 {
   "start": "Start",
+  "startHint": "- or simply hit Enter -",
   "list": [
     {
       "time": 1.5,

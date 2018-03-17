@@ -1,15 +1,17 @@
 .spans > span
   display: inline-block
   opacity: 0
+  transform: translateY(baseline)
   hasTransition()
   cursor: default
+  &:not(:last-child)
+    margin-{align-alt}: 3px
 .current .spans > span
   z-index: 1
   opacity: 1
   transform: translateY(0) !important
-  cursor: auto
-.current .spans:nth-child(1) > span
   multiTransition: 1 15 duration step
+  cursor: auto
 .current .spans:nth-child(2) > span
   multiTransition: 1 15 duration step*2
 
@@ -18,7 +20,5 @@
   &:not(:last-child)
     margin-{align-alt}: 8px
 
-.h2.spans > span
-  transform: translateY(baseline)
-  &:not(:last-child)
-    margin-{align-alt}: 4px
+.h2.spans > span:not(:last-child)
+  margin-{align-alt}: 4px
