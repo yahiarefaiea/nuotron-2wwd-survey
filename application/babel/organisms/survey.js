@@ -76,11 +76,15 @@ var survey = {
         history.pushState('', document.title, window.location.pathname)
 
         $('#land .text li').removeClass('current')
-        $('#land .text li:nth-child(2)').addClass('current')
         setTimeout(function() {
-          $('#land .text li').removeClass('current')
-          $('#land .text li:nth-child(3)').addClass('current')
-        }, 4000)
+          $('#land .text li:nth-child(2)').addClass('current')
+          setTimeout(function() {
+            $('#land .text li').removeClass('current')
+            setTimeout(function() {
+              $('#land .text li:nth-child(3)').addClass('current')
+            }, 150)
+          }, 4000)
+        }, 150)
 
         setTimeout(function() {
           $(document).off('keydown')
