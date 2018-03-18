@@ -44,6 +44,9 @@ var survey = {
     item.prevAll().addClass('achieved')
     item.nextAll().removeClass('achieved')
 
+    $('#questions > li').removeAttr('class')
+    $('#questions > li[data-name="'+target.split('#')[1]+'"]').addClass('current')
+
     var index = item.index() + 1
     $('#currentQuestion li').removeAttr('class')
     $('#currentQuestion li:nth-child('+index+')').addClass('current')

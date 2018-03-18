@@ -1,0 +1,46 @@
+ul#questions.blocks
+  each question, index in questions.list
+    li(data-name=question.name)
+      
+      //- NUMBER
+      if(index+1 < 10)
+        small.spans=`${questions.q} 0${index+1}`
+      else
+        small.spans=`${questions.q} ${index+1}`
+      
+      //- Q
+      ul.q
+        each q in question.question
+          li.spans= q
+      
+      //- MOVEMENT
+      //- #movement
+      //-   div
+      //-   div
+      
+      //- ANSWER
+      .answer
+      
+        //- INPUT
+        if(question.answer.type=='input')
+          input(type='text' name=question.name placeholder=question.answer.placeholder)
+        
+        //- RANGE
+        //- else if(question.answer.type=='range')
+        //-   input(type='range' name=question.name)
+        
+        //- RADIO
+        //- else if(question.answer.type=='radio')
+        //-   each option in question.answer.options
+        //-     label
+        //-       .button= option
+        //-       input(type='radio' name=question.name value=option)
+        
+        //- TEXTAREA
+        //- else if(question.answer.type=='textarea')
+        //-   textarea(name=question.name placeholder=question.answer.placeholder)
+        
+        //- INPUTS
+        //- if(question.answer.type=='inputs')
+        //-   each input in question.answer.inputs
+        //-     input(type='text' name=input.name placeholder=input.placeholder)
