@@ -1,6 +1,39 @@
 questions-width= baseline*9.75
+questionsHeights= (feelingHeight spellingHeight impressionFirstHeight impressionNowHeight impressionChangedHeight valueHeight nonValueHeight mistakeHeight expectationHeight expectationNowHeight messageNucubucHeight messageYahiaHeight contactHeight)
 
 #questions
   makeAbsolute: 50% 50%
   width: questions-width
-  background-color: yellow
+  margin-{align}: -(questions-width/2)
+  &:before
+    content: ''
+    z-index: -1
+    display: block
+    makeAbsolute()
+    width: 100%
+    height: contactHeight + input-height
+    margin-top: -(contactHeight/2)
+
+  > li
+    makeAbsolute()
+    z-index: -2
+    .small
+      margin-bottom: baseline*.25
+    .q
+      font-weight: weight-bold
+      color: text-dark-alt
+    .answer
+      opacity: 0
+      margin-top: baseline*.75
+      transform: translateY(input-height)
+      hasTransition()
+    &.current
+      z-index: auto
+      .answer
+        opacity: 1
+        transform: translateY(0)
+        hasTransition: duration step*6
+
+    for child in (0..12)
+      &:nth-child({child+1})
+        nucubucMargin: questionsHeights[child]
