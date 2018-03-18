@@ -1,0 +1,48 @@
+input-height= baseline*1.25
+input-padding= 0
+input-border= none
+input-radius= 0
+
+input-family= inherit
+input-font= inherit
+input-weight= inherit
+
+input-bg= transparent
+input-color= text-dark
+input-placeholder= text-light
+
+form
+  margin: 0
+
+input
+  display: block
+  width: 100%
+  height: input-height
+  margin: 0
+  padding: input-padding
+  border: input-border
+  border-radius: input-radius
+
+  font-family: input-family
+  font-size: input-font
+  font-weight: input-weight
+  line-height: input-height
+  vertical-align: middle
+
+  hasTransition()
+  background-color: input-bg
+  color: input-color
+
+  &,
+  &:hover,
+  &:focus
+    outline: 0
+    box-shadow: none
+  
+  +placeholder()
+    color: input-placeholder
+    opacity: 1 !important
+
+  //  YELLOW BACKGROUND CHROME
+  &:-webkit-autofill
+    -webkit-box-shadow: inset 0 0 0 1000px background
