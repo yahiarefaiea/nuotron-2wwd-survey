@@ -4,19 +4,14 @@ ul#questions.blocks
       
       //- NUMBER
       if(index+1 < 10)
-        small.spans=`${questions.q} 0${index+1}`
+        .small.spans=`${questions.q} 0${index+1}`
       else
-        small.spans=`${questions.q} ${index+1}`
+        .small.spans=`${questions.q} ${index+1}`
       
       //- Q
       ul.q
         each q in question.question
           li.spans= q
-      
-      //- MOVEMENT
-      //- #movement
-      //-   div
-      //-   div
       
       //- ANSWER
       .answer

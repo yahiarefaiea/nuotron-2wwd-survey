@@ -58,7 +58,6 @@ numberHeight= baseline*1.5
 //  PAGINATION
 #pagination
   makeAbsolute: auto surveyPaddingHorz surveyPaddingBottom surveyPaddingHorz
-  height: numberHeight
   a
     hasOutline: transparent
 
@@ -66,7 +65,7 @@ numberHeight= baseline*1.5
 #previous,
 #next
   display: block
-  makeAbsolute: ((numberHeight - ellipseHeight)/2) auto
+  makeAbsolute: auto auto ((numberHeight - ellipseHeight)/2)
   width: ellipseHeight + paginationGap
   height: ellipseHeight
   > span
@@ -166,7 +165,7 @@ numberHeight= baseline*1.5
 
 //  CURRENTQUESTION
 #currentQuestion
-  makeAbsolute: 0 50%
+  makeAbsolute: auto 50% 0
   width: (numberWidth/2)
   height: numberHeight
   border-radius: (numberHeight/2)
