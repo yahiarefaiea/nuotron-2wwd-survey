@@ -77,3 +77,33 @@ textarea
       {align-alt}: 0
 .fields .field:not(:last-child)
   margin-bottom: baseline*.75
+
+//  INPUT HIDDEN
+.inputHidden
+  overflow: hidden
+  position: absolute
+  margin: -1px
+  padding: 0
+  border: 0
+  width: 1px
+  height: 1px
+  opacity: 0
+  visibility: hidden
+  clip: rect(0 0 0 0)
+
+//  RADIO
+.radio
+  display: block
+  input
+    @extend .inputHidden
+  .button
+    margin: 0 auto
+    buttonDisabled()
+    focusEffect(rgba(0, 0, 0, .25))
+    &:hover
+      buttonNormal()
+  input:checked ~ .button
+    buttonHover()
+    hasTransition: duration step*3
+    &:after
+      background-color: transparent

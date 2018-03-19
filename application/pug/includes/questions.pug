@@ -27,11 +27,12 @@ ul#questions.blocks
         //-   input(type='range' name=question.name)
         
         //- RADIO
-        //- else if(question.answer.type=='radio')
-        //-   each option in question.answer.options
-        //-     label
-        //-       .button= option
-        //-       input(type='radio' name=question.name value=option)
+        else if(question.answer.type=='radio')
+          ul.blocks.inline.halves
+            each option in question.answer.options
+              li: label.radio
+                input(type='radio' name=question.name value=option)
+                .button(tabindex)= option
         
         //- TEXTAREA
         else if(question.answer.type=='textarea')
