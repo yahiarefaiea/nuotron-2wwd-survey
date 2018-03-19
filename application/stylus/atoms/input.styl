@@ -59,9 +59,10 @@ textarea
 
 //  FIELD
 .field
+  position: relative
   border-bottom: input-border solid border-dark
   .effect
-    makeAbsolute: auto 30% 0 30%
+    makeAbsolute: auto 30% (- input-border) 30%
     height: input-border
     hasTransition()
   input, textarea
@@ -74,3 +75,5 @@ textarea
     &:focus ~ .effect
       {align}: 0
       {align-alt}: 0
+.fields .field:not(:last-child)
+  margin-bottom: baseline*.75

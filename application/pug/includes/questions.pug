@@ -40,6 +40,9 @@ ul#questions.blocks
             .effect
         
         //- INPUTS
-        //- if(question.answer.type=='inputs')
-        //-   each input in question.answer.inputs
-        //-     input(type='text' name=input.name placeholder=input.placeholder)
+        if(question.answer.type=='inputs')
+          .fields
+            each input in question.answer.inputs
+              .field
+                input(type='text' name=input.name placeholder=input.placeholder)
+                .effect
