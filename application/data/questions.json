@@ -16,11 +16,11 @@
       "answer": {
         "type": "range",
         "options": [
-          "bad",
-          "unhappy",
-          "natural",
-          "satisfied",
-          "amazed"
+          "Bad",
+          "Unhappy",
+          "Natural",
+          "Satisfied",
+          "Amazed"
         ]
       }
     }, {
@@ -42,8 +42,8 @@
       "answer": {
         "type": "radio",
         "options": [
-          "good",
-          "bad"
+          "Good",
+          "Bad"
         ]
       }
     }, {
@@ -55,8 +55,8 @@
       "answer": {
         "type": "radio",
         "options": [
-          "yep",
-          "nope"
+          "Yep",
+          "Nope"
         ]
       }
     }, {
@@ -67,8 +67,8 @@
       "answer": {
         "type": "radio",
         "options": [
-          "good",
-          "bad"
+          "Good",
+          "Bad"
         ]
       }
     }, {
@@ -139,7 +139,7 @@
       ],
       "answer": {
         "type": "textarea",
-        "placeholder": "No? You love me?"
+        "placeholder": "No? You love me, Don't you?"
       }
     }, {
       "name": "contact",
