@@ -18,7 +18,9 @@ ul#questions.blocks
       
         //- INPUT
         if(question.answer.type=='input')
-          input(type='text' name=question.name placeholder=question.answer.placeholder)
+          .field
+            input(type='text' name=question.name placeholder=question.answer.placeholder)
+            .effect
         
         //- RANGE
         //- else if(question.answer.type=='range')
@@ -33,7 +35,9 @@ ul#questions.blocks
         
         //- TEXTAREA
         else if(question.answer.type=='textarea')
-          textarea(name=question.name placeholder=question.answer.placeholder)
+          .field
+            textarea(name=question.name placeholder=question.answer.placeholder)
+            .effect
         
         //- INPUTS
         //- if(question.answer.type=='inputs')

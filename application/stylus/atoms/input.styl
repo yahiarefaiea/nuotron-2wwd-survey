@@ -1,6 +1,6 @@
 input-height= baseline*1.25
 input-padding= 0
-input-border= none
+input-border= 3px
 input-radius= 0
 
 input-family= inherit
@@ -14,13 +14,14 @@ input-placeholder= text-light
 form
   margin: 0
 
+//  INPUT AND TEXTAREA
 input, textarea
   display: block
   width: 100%
   height: input-height
   margin: 0
   padding: input-padding
-  border: input-border
+  border: none
   border-radius: input-radius
 
   font-family: input-family
@@ -47,6 +48,7 @@ input, textarea
   &:-webkit-autofill
     -webkit-box-shadow: inset 0 0 0 1000px background
 
+//  TEXTAREA
 textarea
   resize: none
   box-sizing: content-box
@@ -54,3 +56,21 @@ textarea
   height: baseline*4 + 1px
   line-height: baseline
   padding-bottom: baseline*.25 - 1px
+
+//  FIELD
+.field
+  border-bottom: input-border solid border-dark
+  .effect
+    makeAbsolute: auto 30% 0 30%
+    height: input-border
+    hasTransition()
+  input, textarea
+    &:hover ~ .effect,
+    &:focus ~ .effect
+      background-color: magenta
+    &:hover ~ .effect
+      {align}: 20%
+      {align-alt}: 20%
+    &:focus ~ .effect
+      {align}: 0
+      {align-alt}: 0
