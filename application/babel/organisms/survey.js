@@ -26,38 +26,40 @@ var survey = {
   },
   //  NAVIGATE
   navigate: function(target) {
-    if(target == 'previous' && $('#navigation li:first-child').hasClass('current')) return
-    if(target == 'next' && $('#navigation li:last-child').hasClass('current')) {
-      this.submit()
-      return
+    if(!$('.wrapper').hasClass('submiting')) {
+      if(target == 'previous' && $('#navigation li:first-child').hasClass('current')) return
+      if(target == 'next' && $('#navigation li:last-child').hasClass('current')) {
+        this.submit()
+        return
+      }
+
+      if(target == 'previous')
+        target = $('#navigation .current').prev().find('a').attr('href')
+      else if(target == 'next')
+        target = $('#navigation .current').next().find('a').attr('href')
+
+      item = $('#navigation a[href="'+target+'"]').parent()
+
+      $('#navigation li').removeAttr('class')
+      item.addClass('current')
+      item.prevAll().addClass('achieved')
+      item.nextAll().removeClass('achieved')
+
+      $('#questions > li').removeAttr('class')
+      $('#questions > li[data-name="'+target.split('#')[1]+'"]').addClass('current')
+
+      var index = item.index() + 1
+      $('#currentQuestion li').removeAttr('class')
+      $('#currentQuestion li:nth-child('+index+')').addClass('current')
+
+      $('.wrapper').removeClass(this.allQuestions.join(' ')).addClass(target.split('#')[1])
+
+      this.changeHash(target)
     }
-
-    if(target == 'previous')
-      target = $('#navigation .current').prev().find('a').attr('href')
-    else if(target == 'next')
-      target = $('#navigation .current').next().find('a').attr('href')
-
-    item = $('#navigation a[href="'+target+'"]').parent()
-
-    $('#navigation li').removeAttr('class')
-    item.addClass('current')
-    item.prevAll().addClass('achieved')
-    item.nextAll().removeClass('achieved')
-
-    $('#questions > li').removeAttr('class')
-    $('#questions > li[data-name="'+target.split('#')[1]+'"]').addClass('current')
-
-    var index = item.index() + 1
-    $('#currentQuestion li').removeAttr('class')
-    $('#currentQuestion li:nth-child('+index+')').addClass('current')
-
-    $('.wrapper').removeClass(this.allQuestions.join(' ')).addClass(target.split('#')[1])
-
-    this.changeHash(target)
   },
   //  SUBMIT
   submit: function() {
-    if(!$('.wrapper').hasClass('submiting callback')) {
+    if(!$('.wrapper').hasClass('submiting')) {
       iterationCount()
       $('#callback li:nth-child(1)').addClass('current')
       $('#questions > li').removeClass('current')
