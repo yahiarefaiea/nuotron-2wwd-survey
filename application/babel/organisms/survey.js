@@ -60,6 +60,7 @@ var survey = {
     if(!$('.wrapper').hasClass('submiting callback')) {
       iterationCount()
       $('#callback li:nth-child(1)').addClass('current')
+      $('#questions > li').removeClass('current')
       $('.wrapper').addClass('submiting')
 
       //  SEND REQUEST HERE
@@ -101,6 +102,7 @@ var survey = {
         setTimeout(function() {
           $('.wrapper').removeClass('submiting callback error')
           $('#callback li').removeClass('current')
+          $('#questions > li:last-child').addClass('current')
         }, 4000)
       }
     }, 1500)
