@@ -1,5 +1,5 @@
 questions-width= baseline*9.75
-questionsHeights= (feelingHeight spellingHeight impressionFirstHeight impressionNowHeight impressionChangedHeight valueHeight nonValueHeight mistakeHeight expectationHeight expectationNowHeight messageNucubucHeight messageYahiaHeight contactHeight)
+questionsHeights= feelingHeight, spellingHeight, impressionFirstHeight, impressionNowHeight, impressionChangedHeight, valueHeight, nonValueHeight, mistakeHeight, expectationHeight, expectationNowHeight, messageNucubucHeight, messageYahiaHeight, contactHeight
 
 #questions
   makeAbsolute: 50% 50%
@@ -17,14 +17,17 @@ questionsHeights= (feelingHeight spellingHeight impressionFirstHeight impression
   > li
     makeAbsolute()
     z-index: -2
+    for question, i in questionsHeights
+      &:nth-child({i+1})
+        nucubucMargin: question
     .small
       margin-bottom: baseline*.25
     .q
+      margin-bottom: baseline*.75
       font-weight: weight-bold
       color: text-dark-alt
     .answer
       opacity: 0
-      margin-top: baseline*.75
       transform: translateY(input-height)
       hasTransition()
     &.current
@@ -32,8 +35,4 @@ questionsHeights= (feelingHeight spellingHeight impressionFirstHeight impression
       .answer
         opacity: 1
         transform: translateY(0)
-        hasTransition: duration step*6
-
-    for child in (0..12)
-      &:nth-child({child+1})
-        nucubucMargin: questionsHeights[child]
+        hasTransition: duration 0 step*6
