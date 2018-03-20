@@ -129,7 +129,6 @@ textarea
   border: none
   border-radius: (range-height/2)
   background-color: range-track-color
-  hasTransition()
 .range-thumb
   width: range-thumb-normal
   height: range-thumb-normal
@@ -159,42 +158,42 @@ textarea
     cursor: grabbing
 
   //  TRACK
-  &::-webkit-slider-runnable-track,
-  &::-moz-range-track,
-  &::-ms-track
-    @extend .range-track
-  &::-ms-track
-    background-color: transparent
-    color: transparent
-    border: solid transparent
-    border-width: (range-thumb-normal/2) 0
+  // &::-webkit-slider-runnable-track,
+  // &::-moz-range-track,
+  // &::-ms-track
+  //   @extend .range-track
+  // &::-ms-track
+  //   background-color: transparent
+  //   color: transparent
+  //   border: solid transparent
+  //   border-width: (range-thumb-normal/2) 0
 
-   PROGRESS
-  &::-moz-range-progress
-    @extend .range-track
-    background-color: range-progress-color
-  &::-ms-fill-upper
-    background-color: range-track-color
-  &::-ms-fill-lower
-    background-color: range-progress-color
+  // PROGRESS
+  // &::-moz-range-progress
+  //   @extend .range-track
+  //   background-color: range-progress-color
+  // &::-ms-fill-upper
+  //   background-color: range-track-color
+  // &::-ms-fill-lower
+  //   background-color: range-progress-color
 
-   THUMB
-  &::-moz-range-thumb,
-  &::-webkit-slider-thumb,
-  &::-ms-thumb
-    @extend .range-thumb
-  &::-webkit-slider-thumb
-    appearance: none
-    margin-top: ((range-height - range-thumb-normal)/2)
-  &::-ms-thumb
-    margin-top: 0
-  &:hover
-    &::-moz-range-thumb,
-    &::-webkit-slider-thumb,
-    &::-ms-thumb
-      @extend .range-hover
-  &:active
-    &::-moz-range-thumb,
-    &::-webkit-slider-thumb,
-    &::-ms-thumb
-      @extend .range-active
+  // THUMB
+  // &::-moz-range-thumb,
+  // &::-webkit-slider-thumb,
+  // &::-ms-thumb
+  //   @extend .range-thumb
+  // &::-webkit-slider-thumb
+  //   appearance: none
+  //   margin-top: ((range-height - range-thumb-normal)/2)
+  // &::-ms-thumb
+  //   margin-top: 0
+  // &:hover
+  //   &::-moz-range-thumb,
+  //   &::-webkit-slider-thumb,
+  //   &::-ms-thumb
+  //     @extend .range-hover
+  // &:active
+  //   &::-moz-range-thumb,
+  //   &::-webkit-slider-thumb,
+  //   &::-ms-thumb
+  //     @extend .range-active
