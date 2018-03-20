@@ -73,6 +73,17 @@ multiTransition(min, max, dur=duration, dly=0)
     &:nth-child({i})
       hasTransition: dur dly d
 
+//  GRABBABLE
+grabbable()
+  cursor: move
+  cursor: grab
+  cursor: -moz-grab
+  cursor: -webkit-grab
+  &:active
+    cursor: grabbing
+    cursor: -moz-grabbing
+    cursor: -webkit-grabbing
+
 //  DIMENSIONS
 surveyWidth= 60%
 presentHeight= 182px
