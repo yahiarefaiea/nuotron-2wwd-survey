@@ -23,8 +23,9 @@ ul#questions.blocks
             .effect
         
         //- RANGE
-        //- else if(question.answer.type=='range')
-        //-   input(type='range' name=question.name)
+        else if(question.answer.type=='range')
+          .range
+            input(type='range' name=question.name min='1' max=question.answer.options.length)
         
         //- RADIO
         else if(question.answer.type=='radio')
