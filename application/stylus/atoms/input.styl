@@ -17,9 +17,13 @@ range-height= 6px
 range-track-color= border-dark
 range-progress-color= magenta
 
-range-thumb-size= 16px
-range-thumb-size-hover= 24px
-range-thumb-size-active= 34px
+range-thumb-normal= 16px
+range-thumb-hover= 24px
+range-thumb-active= 34px
+
+range-thumb-shadow-normal= 0 0 0 7px rgba(198, 87, 160, .21)
+range-thumb-shadow-hover= 0 0 0 10px rgba(198, 87, 160, .28)
+range-thumb-shadow-active= 0 0 0 14px rgba(198, 87, 160, .28)
 
 form
   margin: 0
@@ -117,3 +121,80 @@ textarea
     hasTransition: duration step*3
     &:after
       background-color: transparent
+
+//  RANGE TRACK AND THUMB
+.range-track
+  width: 100%
+  height: range-height
+  border: none
+  border-radius: (range-height/2)
+  background-color: range-track-color
+  hasTransition()
+.range-thumb
+  width: range-thumb-normal
+  height: range-thumb-normal
+  border: 0
+  border-radius: 50%
+  hasTransition()
+  box-shadow: range-thumb-shadow-normal
+  background-color: range-progress-color
+.range-hover
+  width: range-thumb-hover
+  height: range-thumb-hover
+  box-shadow: range-thumb-shadow-hover
+  cursor: grab
+.range-active
+  width: range-thumb-active
+  height: range-thumb-active
+  box-shadow: range-thumb-shadow-active
+  cursor: grabbing
+
+//  RANGE
+.range input
+  width: 100%
+  height: range-height + range-margin*2
+  appearance: none
+  cursor: pointer
+  &:active
+    cursor: grabbing
+
+  //  TRACK
+  &::-webkit-slider-runnable-track,
+  &::-moz-range-track,
+  &::-ms-track
+    @extend .range-track
+  &::-ms-track
+    background-color: transparent
+    color: transparent
+    border: solid transparent
+    border-width: (range-thumb-normal/2) 0
+
+   PROGRESS
+  &::-moz-range-progress
+    @extend .range-track
+    background-color: range-progress-color
+  &::-ms-fill-upper
+    background-color: range-track-color
+  &::-ms-fill-lower
+    background-color: range-progress-color
+
+   THUMB
+  &::-moz-range-thumb,
+  &::-webkit-slider-thumb,
+  &::-ms-thumb
+    @extend .range-thumb
+  &::-webkit-slider-thumb
+    appearance: none
+    margin-top: ((range-height - range-thumb-normal)/2)
+  &::-ms-thumb
+    margin-top: 0
+  &:hover
+    &::-moz-range-thumb,
+    &::-webkit-slider-thumb,
+    &::-ms-thumb
+      @extend .range-hover
+  &:active
+    &::-moz-range-thumb,
+    &::-webkit-slider-thumb,
+    &::-ms-thumb
+      @extend .range-active

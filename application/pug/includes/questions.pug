@@ -25,7 +25,10 @@ ul#questions.blocks
         //- RANGE
         else if(question.answer.type=='range')
           .range
-            input(type='range' name=question.name min='1' max=question.answer.options.length)
+            input(type='range' name=question.name value='4' min='1' max=question.answer.options.length)
+            ul
+              each option in question.answer.options
+                li= option
         
         //- RADIO
         else if(question.answer.type=='radio')
