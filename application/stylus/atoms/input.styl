@@ -130,9 +130,16 @@ rangeThumb()
   hasTransition()
   box-shadow: range-thumb-shadow
   background-color: range-progress-color
+rangeLongShadow(color)
+  size= -((range-thumb-size - range-height)/2)
+  val= -8px 0 0 size color
+  for i in (9..(273 - 8 - 3))
+    val= val, unit(- i, 'px') 0 0 size color
+  return val
 
 //  RANGE
 .range input
+  overflow: hidden
   width: 100%
   height: range-height + range-margin*2
   appearance: none
@@ -154,6 +161,7 @@ rangeThumb()
     rangeThumb()
     appearance: none
     margin-top: ((range-height - range-thumb-size)/2)
+    box-shadow: range-thumb-shadow, rangeLongShadow(range-progress-color)
 
   //  MS
   &::-ms-track
