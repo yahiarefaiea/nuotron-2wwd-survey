@@ -93,7 +93,7 @@ textarea
   margin-bottom: baseline*.75
 
 //  INPUT HIDDEN
-.inputHidden
+inputHidden()
   overflow: hidden
   position: absolute
   margin: -1px
@@ -109,7 +109,7 @@ textarea
 .radio
   display: block
   input
-    @extend .inputHidden
+    inputHidden()
   .button
     margin: 0 auto
     buttonDisabled()
@@ -123,13 +123,13 @@ textarea
       background-color: transparent
 
 //  RANGE TRACK AND THUMB
-.range-track
+rangeTrack()
   width: 100%
   height: range-height
   border: none
   border-radius: (range-height/2)
   background-color: range-track-color
-.range-thumb
+rangeThumb()
   width: range-thumb-normal
   height: range-thumb-normal
   border: 0
@@ -137,12 +137,12 @@ textarea
   hasTransition()
   box-shadow: range-thumb-shadow-normal
   background-color: range-progress-color
-.range-hover
+rangeHover()
   width: range-thumb-hover
   height: range-thumb-hover
   box-shadow: range-thumb-shadow-hover
   cursor: grab
-.range-active
+rangeActive()
   width: range-thumb-active
   height: range-thumb-active
   box-shadow: range-thumb-shadow-active
