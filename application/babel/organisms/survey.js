@@ -38,7 +38,8 @@ var survey = {
       else if(target == 'next')
         target = $('#navigation .current').next().find('a').attr('href')
 
-      item = $('#navigation a[href="'+target+'"]').parent()
+      var item = $('#navigation a[href="'+target+'"]').parent()
+      var question = $('#questions > li[data-name="'+target.split('#')[1]+'"]')
 
       $('#navigation li').removeAttr('class')
       item.addClass('current')
@@ -46,13 +47,24 @@ var survey = {
       item.nextAll().removeClass('achieved')
 
       $('#questions > li').removeAttr('class')
-      $('#questions > li[data-name="'+target.split('#')[1]+'"]').addClass('current')
+      question.addClass('current')
 
       var index = item.index() + 1
       $('#currentQuestion li').removeAttr('class')
       $('#currentQuestion li:nth-child('+index+')').addClass('current')
 
       $('.wrapper').removeClass(this.allQuestions.join(' ')).addClass(target.split('#')[1])
+
+      //  BLUR AND FOCUS
+      $('*').blur()
+      if(question.find('input[type=text], textarea').length) {
+        setTimeout(function() {
+          if(question.find('input[type=text], textarea').length == 1)
+            question.find('input[type=text], textarea').focus()
+          else
+            question.find('.field:first-child').find('input[type=text], textarea').focus()
+        }, 500)
+      }
 
       this.changeHash(target)
     }
