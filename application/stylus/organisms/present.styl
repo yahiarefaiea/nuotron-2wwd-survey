@@ -20,14 +20,19 @@
   width: baseline*1.5
   opacity: 0
   transform: translateX(-50%)
-  hasTransition: durationAlt
   makeAbsolute: baseline*2 + 10px 50%
   .button
     width: 100%
-.start #start
+.start #start,
+.questions #start
   display: block
   width: button-width
   opacity: 1
+  hasTransition: durationAlt
+.questions #start
+  display: none
+  hasTransition()
+  opacity: 0
 
 //  START HINT
 #startHint
