@@ -145,17 +145,10 @@ function surveyListeners() {
 
   //  KEYS
   $(document).keydown(function(event) {
-    previousKey = 37, nextKey = 39
-
-    //  PREVIOUS KEY
-    if(event.ctrlKey && event.keyCode == previousKey) {
-      survey.navigate('previous')
-      event.preventDefault()
-    }
-
-    //  NEXT KEY
-    if(event.ctrlKey && event.keyCode == nextKey) {
-      survey.navigate('next')
+    var tabKey = 9
+    if(event.keyCode == tabKey) {
+      if(event.shiftKey) survey.navigate('previous')
+      else if(!$('#navigation li:last-child').hasClass('current')) survey.navigate('next')
       event.preventDefault()
     }
   })
