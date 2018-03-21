@@ -17,6 +17,8 @@ range-track-color= border-dark
 range-progress-color= magenta
 range-thumb-size= 16px
 range-thumb-shadow= 0 0 0 7px rgba(198, 87, 160, .21)
+range-label-height= baseline*.75
+range-label-margin= baseline*.25
 
 form
   margin: 0
@@ -173,3 +175,30 @@ input[type=range]
   &::-ms-thumb
     rangeThumb()
     margin-top: 0
+
+//  RANGE ELEMENT
+.range
+  padding-bottom: range-label-height + range-label-margin + range-margin
+  ul
+    makeAbsolute: auto 0 range-label-height 0
+    li
+      makeAbsolute: range-label-height 0
+      line-height: range-label-height
+      font-weight: weight-bold
+      color: range-progress-color
+      opacity: 0
+      hasTransition()
+      cursor: default
+      &:last-child
+        {align}: auto
+        {align-alt}: 0
+      &:not(:first-child):not(:last-child)
+        transform: translateX(-50%)
+      for i in ((5 - 4)..(5 - 1))
+        &:nth-child({i})
+          {align}: (100%/(5 - 1))*(i - 1)
+      &.current
+        top: 0
+        opacity: 1
+        hasTransition: duration step
+        cursor: auto
