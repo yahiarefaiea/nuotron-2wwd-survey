@@ -35,8 +35,13 @@ var survey = {
 
       if(target == 'previous')
         target = $('#navigation .current').prev().find('a').attr('href')
-      else if(target == 'next')
+      else if(target == 'next') {
         target = $('#navigation .current').next().find('a').attr('href')
+        if($('.wrapper').hasClass('impressionNow')
+        && $('#questions > li[data-name="impressionNow"] input:checked').val() == 'Nope') {
+          target = '#value'
+        }
+      }
 
       var item = $('#navigation a[href="'+target+'"]').parent()
       var question = $('#questions > li[data-name="'+target.split('#')[1]+'"]')
