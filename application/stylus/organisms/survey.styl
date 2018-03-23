@@ -79,9 +79,9 @@ numberHeight= baseline*1.5
 #previous,
 #next
   display: block
-  makeAbsolute: auto auto ((numberHeight - ellipseHeight)/2)
-  width: ellipseHeight + paginationGap
-  height: ellipseHeight
+  makeAbsolute: auto auto 0
+  width: numberHeight
+  height: numberHeight
   > span
     makeAbsolute: ellipseHeight auto
     line-height: ellipseHeight
@@ -91,8 +91,8 @@ numberHeight= baseline*1.5
     hasTransition: duration 0 step*pattern
   .ellipse
     makeAbsolute: 0 auto
-    width: ellipseHeight
-    height: ellipseHeight
+    width: numberHeight
+    height: numberHeight
     border-radius: 50%
     background-color: border-default
     opacity: 0
@@ -101,7 +101,7 @@ numberHeight= baseline*1.5
       content: ''
       display: block
       makeAbsolute: 50% auto
-      width: 11px
+      width: 15px
       height: 2px
       margin-top: -(2px/2)
       hasTransition()
@@ -114,12 +114,12 @@ numberHeight= baseline*1.5
     svg
       display: block
       makeAbsolute: 0 auto
-      width: ellipseHeight
-      height: ellipseHeight
+      width: numberHeight
+      height: numberHeight
       fill: text-light
       hasTransition()
 #previous
-  {align}: -4px
+  {align-alt}: numberHeight + paginationGap - 4px
   > span
     {align}: ellipseHeight + paginationGap
   .ellipse
@@ -138,6 +138,27 @@ numberHeight= baseline*1.5
       {align-alt}: 100%
     svg
       {align-alt}: ellipseHeight
+@media (max-width: gamma - 1)
+  #previous,
+  #next
+    overflow: hidden
+@media (min-width: gamma)
+  #previous,
+  #next
+    bottom: ((numberHeight - ellipseHeight)/2)
+    width: ellipseHeight + paginationGap
+    height: ellipseHeight
+    .ellipse
+      width: ellipseHeight
+      height: ellipseHeight
+      &:before
+        width: 11px
+      svg
+        width: ellipseHeight
+        height: ellipseHeight
+  #previous
+    {align}: -4px
+    {align-alt}: auto
 .questions:not(.feeling) #previous,
 .questions #next
   .ellipse
@@ -155,17 +176,18 @@ numberHeight= baseline*1.5
     makeAbsolute: 0 0 0 0
     background-color: transparent
     hasTransition()
-.questions:not(.feeling) #previous > span,
-.questions:not(.contact) #next > span:not(.submit),
-.questions.contact #next > span.submit
-  top: 0
-  opacity: 1
+@media (min-width: gamma)
+  .questions:not(.feeling) #previous > span,
+  .questions:not(.contact) #next > span:not(.submit),
+  .questions.contact #next > span.submit
+    top: 0
+    opacity: 1
 .questions:not(.feeling) #previous
   .ellipse svg
     {align}: 0
   &:hover .ellipse
     &:before
-      {align}: 11px
+      {align}: 15px
     svg
       {align}: -(translate/4)
 .questions #next
@@ -173,9 +195,14 @@ numberHeight= baseline*1.5
     {align-alt}: 0
   &:hover .ellipse
     &:before
-      {align-alt}: 11px
+      {align-alt}: 15px
     svg
       {align-alt}: -(translate/4)
+@media (min-width: gamma)
+  .questions:not(.feeling) #previous:hover .ellipse:before
+    {align}: 11px
+  .questions #next:hover .ellipse:before
+    {align-alt}: 11px
 
 //  CURRENTQUESTION
 #currentQuestion
@@ -186,7 +213,7 @@ numberHeight= baseline*1.5
   margin-{align}: -4px
   line-height: numberHeight
   opacity: 0
-  hasTransition: durationAlt
+  hasTransition()
   background-color: border-dark
   color: text-default
   ul
