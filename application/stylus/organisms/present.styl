@@ -6,9 +6,10 @@
   li
     makeAbsolute()
     text-align: center
-.survey #present,
-.survey #callback
-  {align}: 100% - surveyWidth
+@media (min-width: delta)
+  .survey #present,
+  .survey #callback
+    {align}: 100% - surveyWidth
 #callback
   z-index: -1
 .callback #callback
@@ -41,3 +42,8 @@
   transform: translateX(-50%)
 .current #startHint > span
   multiTransition: 1 15 duration step+duration
+@media (max-width: delta - 1)
+  .current #startHint > span
+    z-index: auto
+    opacity: 0
+    transform: translateY(baseline) !important
