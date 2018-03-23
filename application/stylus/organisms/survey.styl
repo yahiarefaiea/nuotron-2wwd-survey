@@ -12,7 +12,11 @@ numberWidth= baseline*2.5
 numberHeight= baseline*1.5
 
 #survey
-  makeAbsolute: 0 (100% - surveyWidth) 0 0
+  makeAbsolute: 0 0 0 0
+  hasTransition: durationAlt
+@media (min-width: delta)
+  #survey
+    {align}: 100% - surveyWidth
 
 //  BACKGROUND
 #survey .background
@@ -33,7 +37,8 @@ numberHeight= baseline*1.5
 //  NAVIGATION
 #navigation
   display: block
-  makeAbsolute: surveyPaddingTop (surveyPaddingHorz - navigationGap) auto (surveyPaddingHorz - navigationGap)
+  makeAbsolute: surveyPaddingTop (baseline - navigationGap) auto (baseline - navigationGap)
+  hasTransition: durationAlt
   li
     width: (100%/surveyItems)
     height: navigationHeight
@@ -54,12 +59,21 @@ numberHeight= baseline*1.5
       background-color: magenta
 .questions #navigation li
   opacity: 1
+@media (min-width: beta)
+  #navigation
+    {align}: surveyPaddingHorz - navigationGap
+    {align-alt}: surveyPaddingHorz - navigationGap
 
 //  PAGINATION
 #pagination
-  makeAbsolute: auto surveyPaddingHorz surveyPaddingBottom surveyPaddingHorz
+  makeAbsolute: auto baseline surveyPaddingBottom baseline
+  hasTransition: durationAlt
   a
     hasOutline: transparent
+@media (min-width: beta)
+  #pagination
+    {align}: surveyPaddingHorz
+    {align-alt}: surveyPaddingHorz
 
 //  PREVIOUS & NEXT
 #previous,
@@ -165,14 +179,14 @@ numberHeight= baseline*1.5
 
 //  CURRENTQUESTION
 #currentQuestion
-  makeAbsolute: auto 50% 0
+  makeAbsolute: auto 0 0
   width: (numberWidth/2)
   height: numberHeight
   border-radius: (numberHeight/2)
-  margin-{align}: -(numberWidth/4)
+  margin-{align}: -4px
   line-height: numberHeight
   opacity: 0
-  hasTransition()
+  hasTransition: durationAlt
   background-color: border-dark
   color: text-default
   ul
@@ -195,5 +209,10 @@ numberHeight= baseline*1.5
     margin-{align}: -4px
 .questions #currentQuestion
   width: numberWidth
-  margin-{align}: -(numberWidth/2)
   opacity: 1
+@media (min-width: gamma)
+  #currentQuestion
+    margin-{align}: -(numberWidth/4)
+  .questions #currentQuestion
+    {align}: 50%
+    margin-{align}: -(numberWidth/2)
