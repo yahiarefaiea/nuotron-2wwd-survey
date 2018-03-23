@@ -114,15 +114,17 @@ var survey = {
         survey.changeReactions($('#questions > li[data-name="feeling"] input').val())
 
       //  BLUR AND FOCUS
-      $('*').blur()
-      if(question.find('input[type=text], textarea').length) {
-        setTimeout(function() {
-          if(question.find('input[type=text], textarea').length == 1)
-            question.find('input[type=text], textarea').focus()
-          else
-            question.find('.field:first-child').find('input[type=text], textarea').focus()
-        }, 500)
-      }
+      setTimeout(function() {
+        $('*').blur()
+        if(question.find('input[type=text], textarea').length) {
+          setTimeout(function() {
+            if(question.find('input[type=text], textarea').length == 1)
+              question.find('input[type=text], textarea').focus()
+            else
+              question.find('.field:first-child').find('input[type=text], textarea').focus()
+          }, 200)
+        }
+      }, 500)
 
       this.changeHash(target)
     }
