@@ -55,6 +55,20 @@ var survey = {
     var mouth = $('#nucubuc .mouth')
     var leftEye = $('#nucubuc .leftEye')
     var rightEye = $('#nucubuc .rightEye')
+
+    function createAnimation(obj, to) {
+      var animate = obj.find('animate')
+      animate.attr({
+        from: obj.attr('d'),
+        to: to
+      })
+      animate[0].beginElement()
+      obj.attr('d', to)
+    }
+
+    createAnimation(mouth, reaction.mouth)
+    createAnimation(leftEye, reaction.leftEye)
+    createAnimation(rightEye, reaction.rightEye)
   },
   //  CHANGE HASH
   changeHash: function(hash) {
