@@ -36,7 +36,7 @@ ul#questions.blocks
             each option in question.answer.options
               li: label.radio
                 input(type='radio' name=question.name value=option)
-                .button(tabindex)= option
+                .button(tabindex='0')= option
         
         //- TEXTAREA
         else if(question.answer.type=='textarea')
