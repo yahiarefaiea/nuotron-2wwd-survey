@@ -1,6 +1,7 @@
 {
   "start": "Start",
-  "startHint": "- or simply hit Enter -",
+  "startHintSmall": "- or simply hit Enter -",
+  "startHintLarge": "- better to use a larger screen -",
   "list": [
     {
       "time": 1.5,

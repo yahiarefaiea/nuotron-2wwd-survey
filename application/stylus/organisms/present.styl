@@ -36,14 +36,24 @@
   opacity: 0
 
 //  START HINT
-#startHint
+#startHintSmall,
+#startHintLarge
   @extend .small
   makeAbsolute: (baseline*2 + 10px + button-height + (baseline/2)) 50%
   transform: translateX(-50%)
-.current #startHint > span
-  multiTransition: 1 15 duration step+duration
+  > span
+    multiTransition: 1 15
 @media (max-width: delta - 1)
-  .current #startHint > span
+  .current #startHintSmall > span
     z-index: auto
     opacity: 0
     transform: translateY(baseline) !important
+  .current #startHintLarge > span
+    multiTransition: 1 15 duration step+duration
+@media (min-width: delta)
+  .current #startHintLarge > span
+    z-index: auto
+    opacity: 0
+    transform: translateY(baseline) !important
+  .current #startHintSmall > span
+    multiTransition: 1 15 duration step+duration
