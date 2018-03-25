@@ -59,6 +59,10 @@ landColors= (#fff685 #7ecbb6 #9f6eaf magenta)
 //  NUCUBUC FLAT
 #land #nucubucFlat
   makeAbsolute: landPaddingVert (landPaddingHorz - nucubucFlat-margin)
+@media (max-width: beta - 1)
+  .survey.callback.success #land #nucubucFlat
+    {align}: 50%
+    transform: translateX(-50%)
 
 //  REACH
 #land .reach
@@ -76,6 +80,12 @@ landColors= (#fff685 #7ecbb6 #9f6eaf magenta)
 @media (min-width: delta)
   .survey #land .reach
     opacity: 1
+@media (max-width: beta - 1)
+  .survey.callback.success #land .reach
+    top: landPaddingVert + nucubucFlat-height + nucubucFlat-margin
+    {align-alt}: 50%
+    margin-{align-alt}: 0
+    transform: translateX(50%)
 
 //  TEXT
 #land .text
@@ -94,7 +104,19 @@ landColors= (#fff685 #7ecbb6 #9f6eaf magenta)
     z-index: auto
     opacity: 0
     transform: translateY(heading1-height) !important
+@media (max-width: beta - 1)
+  .survey.callback.success #land .text
+    {align}: 50%
+    li
+      text-align: center
+      transform: translateX(-50%)
+      .h1
+        font-size: font-heading2
 
 //  SOCIAL
 #land .social
   makeAbsolute: auto landPaddingHorz ((landPaddingVert - social-height)/2)
+@media (max-width: beta - 1)
+  .survey.callback.success #land .social
+    {align}: 50%
+    transform: translateX(-50%)
