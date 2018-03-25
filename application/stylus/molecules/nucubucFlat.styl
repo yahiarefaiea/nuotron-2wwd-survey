@@ -20,9 +20,13 @@ bPathLength= 47
   margin-{align}: - translate
   border-radius: 50%
   hasTransition: durationAlt duration
-.survey #nucubucFlat .symbol
+.survey.callback.success #nucubucFlat .symbol
   margin-{align}: 0
   background-color: rgba(0, 0, 0, .3)
+@media (min-width: delta)
+  .survey #nucubucFlat .symbol
+    margin-{align}: 0
+    background-color: rgba(0, 0, 0, .3)
 
 //  SVG
 #nucubucFlat svg
@@ -50,6 +54,10 @@ bPathLength= 47
   &:nth-child(5)
     stroke-dasharray: bPathLength
     stroke-dashoffset: bPathLength
-.survey #nucubucFlat svg path
+.survey.callback.success #nucubucFlat svg path
   opacity: 1
   stroke-dashoffset: 0
+@media (min-width: delta)
+  .survey #nucubucFlat svg path
+    opacity: 1
+    stroke-dashoffset: 0

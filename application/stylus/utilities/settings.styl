@@ -72,12 +72,16 @@ durationAlt= duration*3
 easing= cubic-bezier(0.190,1.000,0.220,1.000)
 hasTransition(dur=duration, dly=0, d=0)
   transition: all (dur+d) easing unit(dly+d, 's')
-multiTransition(min, max, dur=duration, dly=0)
+multiTransition(min, max, dur=duration, dly=0, last=false)
   d= 0
   for i in min..max
     d= (d+step)*pattern
-    &:nth-child({i})
-      hasTransition: dur dly d
+    if(last!=true)
+      &:nth-child({i})
+        hasTransition: dur dly d
+    if(last==true)
+      &:nth-last-child({i})
+        hasTransition: dur dly d
 
 //  GRABBABLE
 grabbable()
