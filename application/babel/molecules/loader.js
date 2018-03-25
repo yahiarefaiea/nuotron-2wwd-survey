@@ -14,12 +14,33 @@ $(document).ready(function() {
 
         //  CALLBACK
         $('body').removeClass('page')
+        runPresent()
+
+        var tipSelector = document.querySelector('[title]')
+        var tipSelectorAll = document.querySelectorAll('[title]')
+        var tipSelectorLength = $('[title]').length
+
         tippy('[title]', {
           arrow: false,
           theme: 'nucubuc',
           followCursor: true
         })
-        runPresent()
+
+        function runTippy() {
+          for (var i = 0; i < tipSelectorLength; i++) {
+            if($(window).width() > 991)
+              tipSelectorAll[i]._tippy.enable()
+            else
+              tipSelectorAll[i]._tippy.disable()
+          }
+        }
+
+        var resizeTimer
+        runTippy()
+        $(window).on('resize', function(e) {
+          clearTimeout(resizeTimer)
+          resizeTimer = setTimeout(runTippy, 250)
+        })
 
       }, 1500)
     }, 200)
