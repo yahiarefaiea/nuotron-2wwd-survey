@@ -25,12 +25,19 @@ landColors= (#fff685 #7ecbb6 #9f6eaf magenta)
       makeAbsolute: 100% 0 0 0
       transition: inherit
       background-image: linear-gradient(transparent, magenta-alt)
-.survey #land .background > div
-  {align-alt}: 0
-  &:nth-child(4):after
-    top: 0
 .survey.callback.success #land .background > div
   {align-alt}: -150%
+  multiTransition: 1 4 durationAlt
+  &:nth-child(4):after
+    top: 0
+@media (max-width: delta - 1)
+  .survey #land .background > div
+    multiTransition: 1 4 durationAlt 0 true
+@media (min-width: delta)
+  .survey #land .background > div
+    {align-alt}: 0
+    &:nth-child(4):after
+      top: 0
 
 //  Z-INDEX
 #land #nucubucFlat,
@@ -42,7 +49,12 @@ landColors= (#fff685 #7ecbb6 #9f6eaf magenta)
 .survey #land .reach,
 .survey #land .text,
 .survey #land .social
-    z-index: 2
+  z-index: 2
+.survey.callback.success #land
+  visibility: visible
+@media (max-width: delta - 1)
+  .survey #land
+    visibility: hidden
 
 //  NUCUBUC FLAT
 #land #nucubucFlat
@@ -57,11 +69,13 @@ landColors= (#fff685 #7ecbb6 #9f6eaf magenta)
   .link
     line-height: nucubucFlat-height
     color: #fff
-.survey #land .reach
-  opacity: 1
 .survey.callback.success #land .reach
   {align-alt}: 0
+  opacity: 1
   hasTransition: durationAlt 0 step*6
+@media (min-width: delta)
+  .survey #land .reach
+    opacity: 1
 
 //  TEXT
 #land .text
@@ -71,6 +85,15 @@ landColors= (#fff685 #7ecbb6 #9f6eaf magenta)
     white-space: nowrap
     .h1
       color: #fff
+.survey.callback.success #land .text .current .spans > span
+  z-index: 1
+  opacity: 1
+  transform: translateY(0) !important
+@media (max-width: delta - 1)
+  .survey #land .text .current .spans > span
+    z-index: auto
+    opacity: 0
+    transform: translateY(heading1-height) !important
 
 //  SOCIAL
 #land .social
