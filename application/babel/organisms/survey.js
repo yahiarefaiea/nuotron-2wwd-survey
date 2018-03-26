@@ -129,6 +129,11 @@ var survey = {
       this.changeHash(target)
     }
   },
+  //  PREPARED DATA
+  preparedData: [],
+  //  PREPARE
+  prepare: function() {
+  },
   //  SUBMIT
   submit: function() {
     if(!$('.wrapper').hasClass('submiting')) {
@@ -137,9 +142,33 @@ var survey = {
       $('#questions > li').removeClass('current')
       $('.wrapper').addClass('submiting')
 
-      //  SEND REQUEST HERE
-      var status = 'success'
-      this.callback(status)
+      //  DEAR JOUD <3
+      //  SEND REQUEST HERE AND PASS IN THE FOLLOWING STATEMENTS:
+
+      //  01. Use this method to prepare the
+      //      JSON object that contains the data
+      this.prepare()
+
+      //  02. Now, this property contains all the
+      //      data, make sure to include it in the
+      //      request somewhere
+      var data = this.preparedData
+      console.log(data)
+
+      //  03. Create the Ajax request body then => {
+
+        //  3.1. Create status in the response with the
+        //       values of 'error' or 'success'.
+        //       Try to switch between the status values
+        //       to have an idea about what should
+        //       exactly happens
+        var status = 'error'
+
+        //  3.2. Call this method when you're all
+        //       done, and pass in the status
+        this.callback(status)
+
+      //  }
     }
   },
   //  CALLBACK
