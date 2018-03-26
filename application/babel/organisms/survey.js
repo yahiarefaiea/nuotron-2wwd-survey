@@ -133,6 +133,46 @@ var survey = {
   preparedData: [],
   //  PREPARE
   prepare: function() {
+    //  CLEAR EVERYTHING IN THE ARRAY
+    this.preparedData = []
+
+    //  LOOP THROUGH THE QUESTIONS
+    for (var i = 0; i < $('#questions > li').length; i++) {
+      var question = $('#questions > li:nth-child('+(i+1)+')')
+
+      var q = ''
+      for (var g = 0; g < question.find('.q span').length; g++) {
+        // q += document.querySelectorAll('#questions > li:nth-child('+(i+1)+') .q span')[g].innerHTML
+        q += question.find('.q span')[g].innerHTML
+        if((g+1) != question.find('.q span').length) q += ' '
+      }
+
+      var value = question.find('input[type=text], textarea, input:radio:checked, input[type=range]').val()
+
+      //  FALLBACK IF VALUE PASSED EMPTY
+      if(value == '' || value === undefined) value = 'Passed empty..'
+
+      //  HANDLING WHAT HAPPENS IF DATA NAME WAS CONTACT
+      if(question.attr('data-name') == 'contact') {
+        value = []
+        // for (var n = 0; n < question.find('.field').length; n++) {
+        //   var subQuestion = question.find('.field:nth-child('+(i+1)+')')
+        //   var subValue = subQuestion.find('input[type=text]').val()
+        //
+        //   //  FALLBACK IF VALUE PASSED EMPTY
+        //   if(subValue == '' || subValue === undefined) subValue = 'Passed empty..'
+        //   value.push(subValue)
+        // }
+      }
+
+      //  PUSH THE END VALUE
+      var questionObj = {
+        name: question.attr('data-name'),
+        question: q,
+        answer: value
+      }
+      this.preparedData.push(questionObj)
+    }
   },
   //  SUBMIT
   submit: function() {
