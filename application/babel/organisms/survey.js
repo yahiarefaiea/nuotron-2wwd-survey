@@ -142,12 +142,13 @@ var survey = {
 
       //  HANDLING QUESTIONTEXT
       var questionText = ''
-      var questionTextElement = question.find('.q span')
-      for (var j = 0; j < questionTextElement.length; j++) {
-        questionText += questionTextElement[j].innerHTML
-        if((j+1) != questionTextElement.length) questionText += ' '
+      var questionTextSpans = question.find('.q span')
+      for (var j = 0; j < questionTextSpans.length; j++) {
+        questionText += questionTextSpans[j].innerHTML
+        if((j+1) != questionTextSpans.length) questionText += ' '
       }
 
+      //  HANDLING ANSWER
       var answer = question.find('input[type=text], textarea, input:radio:checked, input[type=range]').val()
 
       //  FALLBACK IF VALUE PASSED EMPTY
@@ -166,7 +167,8 @@ var survey = {
 
           //  PUSH VALUES
           answer.push({
-            placeholder: subQuestion.find('input').attr('placeholder'),
+            name: subQuestion.find('input').attr('name'),
+            question: subQuestion.find('input').attr('placeholder'),
             answer: subAnswer
           })
         }
