@@ -1,0 +1,36 @@
+html
+  
+  //- HEAD
+  head
+    meta(http-equiv="Content-Type" content="text/html; charset=UTF-8")
+    block title
+  
+  //- BODY
+  body(style="margin: 0;")
+    
+    //- ROOT
+    table(border="0" cellpadding="0" cellspacing="0" height="100%" width="100%"
+          style="min-width: 660px; padding: 56px 50px 56px 50px; background-color: #eee;"): tr: td(align="left" valign="top")
+      
+      //- HEADER
+      table(border="0" cellpadding="0" cellspacing="0" width="100%" style="margin-bottom: 28px; padding: 0 56px 0 56px;")
+        tr: td(align="left" valign="top")
+          a(href=root.url target="_blank" style="text-decoration: none;")
+            img(src="../includes/images/mails/nucubuc.png" height="56px"
+                style="display: block; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 700; font-size: 14px; line-height: 56px; color: #727272;"
+                alt="Nucubuc Logo" title="Nucubuc Logo")
+        tr: td(align="left" valign="top" style="padding-top: 21px;")
+          span(style="display: block; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 400; font-size: 16px; line-height: 28px; color: #464646;")
+            block headline
+      
+      //- COVER
+      table(border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #c657a0;")
+        tr: td(align="center" valign="top")
+          block cover
+  
+      //- CONTENT
+      table(border="0" cellpadding="0" cellspacing="0" width="100%"
+            style="margin-bottom: 28px; padding: 28px 56px 28px 56px; background-color: #fff;")
+        tr: td(align="left" valign="top")
+          span(style="display: block; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 400; font-size: 16px; line-height: 28px; color: #464646;")
+            block content
