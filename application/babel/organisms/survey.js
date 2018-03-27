@@ -199,7 +199,7 @@ var survey = {
 
       this.prepare()
       var data = this.preparedData
-      console.log(data)
+      var that = this
       
       $.ajax({
         type: 'POST',
@@ -207,10 +207,10 @@ var survey = {
         data: {dd:JSON.stringify(data)},
         dataType: "json",
         success: function (data) {
-          this.callback('success')
+          that.callback('success')
         },
         error: function (data) {
-          this.callback('error')
+          that.callback('error')
         }
       });
     }

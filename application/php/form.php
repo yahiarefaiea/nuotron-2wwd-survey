@@ -1,6 +1,7 @@
 <?php
 	$data= json_decode($_POST["dd"]);
   $headers= "MIME-Version: 1.0\r\n";
+	$headers.= "From: Yahia Refaiea <hello@yahiarefaiea.com>";
   $headers.= "Content-Type: text/html; charset=ISO-8859-1\r\n";
 
 	//  USER VARIABLES
@@ -21,46 +22,46 @@
 
   $myMessage.= '<span style="display: block; margin-bottom: 21px;">'. $userName .' has just sent a feedback to the Nucubuc survey.</span>';
 
-  $myMessage.= '<span style="display: block; margin-bottom: 7px; font-size: 12px; line-height: 21px; color: #929292;">'. $data[0]->name .'</span>';
-  $myMessage.=                                    '<span style="display: block; margin-bottom: 21px; color: #545454;">'. $data[0]->answer .'</span>';
+  $myMessage.= '<span style="display: block; margin-bottom: 7px; font-size: 12px; line-height: 21px; color: #929292;">01. '. $data[0]->question .'</span>';
+  $myMessage.=                                        '<span style="display: block; margin-bottom: 21px; color: #545454;">'. $data[0]->answer .'</span>';
 
-  $myMessage.= '<span style="display: block; margin-bottom: 7px; font-size: 12px; line-height: 21px; color: #929292;">'. $data[1]->name .'</span>';
-  $myMessage.=                                    '<span style="display: block; margin-bottom: 21px; color: #545454;">'. $data[1]->answer .'</span>';
+  $myMessage.= '<span style="display: block; margin-bottom: 7px; font-size: 12px; line-height: 21px; color: #929292;">02. '. $data[1]->question .'</span>';
+  $myMessage.=                                        '<span style="display: block; margin-bottom: 21px; color: #545454;">'. $data[1]->answer .'</span>';
 
-  $myMessage.= '<span style="display: block; margin-bottom: 7px; font-size: 12px; line-height: 21px; color: #929292;">'. $data[2]->name .'</span>';
-  $myMessage.=                                    '<span style="display: block; margin-bottom: 21px; color: #545454;">'. $data[2]->answer .'</span>';
+  $myMessage.= '<span style="display: block; margin-bottom: 7px; font-size: 12px; line-height: 21px; color: #929292;">03. '. $data[2]->question .'</span>';
+  $myMessage.=                                        '<span style="display: block; margin-bottom: 21px; color: #545454;">'. $data[2]->answer .'</span>';
 
-  $myMessage.= '<span style="display: block; margin-bottom: 7px; font-size: 12px; line-height: 21px; color: #929292;">'. $data[3]->name .'</span>';
-  $myMessage.=                                    '<span style="display: block; margin-bottom: 21px; color: #545454;">'. $data[3]->answer .'</span>';
+  $myMessage.= '<span style="display: block; margin-bottom: 7px; font-size: 12px; line-height: 21px; color: #929292;">04. '. $data[3]->question .'</span>';
+  $myMessage.=                                        '<span style="display: block; margin-bottom: 21px; color: #545454;">'. $data[3]->answer .'</span>';
 
-  $myMessage.= '<span style="display: block; margin-bottom: 7px; font-size: 12px; line-height: 21px; color: #929292;">'. $data[4]->name .'</span>';
-  $myMessage.=                                    '<span style="display: block; margin-bottom: 21px; color: #545454;">'. $data[4]->answer .'</span>';
+  $myMessage.= '<span style="display: block; margin-bottom: 7px; font-size: 12px; line-height: 21px; color: #929292;">05. '. $data[4]->question .'</span>';
+  $myMessage.=                                        '<span style="display: block; margin-bottom: 21px; color: #545454;">'. $data[4]->answer .'</span>';
 
-  $myMessage.= '<span style="display: block; margin-bottom: 7px; font-size: 12px; line-height: 21px; color: #929292;">'. $data[5]->name .'</span>';
-  $myMessage.=                                    '<span style="display: block; margin-bottom: 21px; color: #545454;">'. $data[5]->answer .'</span>';
+  $myMessage.= '<span style="display: block; margin-bottom: 7px; font-size: 12px; line-height: 21px; color: #929292;">06. '. $data[5]->question .'</span>';
+  $myMessage.=                                        '<span style="display: block; margin-bottom: 21px; color: #545454;">'. $data[5]->answer .'</span>';
 
-  $myMessage.= '<span style="display: block; margin-bottom: 7px; font-size: 12px; line-height: 21px; color: #929292;">'. $data[6]->name .'</span>';
-  $myMessage.=                                    '<span style="display: block; margin-bottom: 21px; color: #545454;">'. $data[6]->answer .'</span>';
+  $myMessage.= '<span style="display: block; margin-bottom: 7px; font-size: 12px; line-height: 21px; color: #929292;">07. '. $data[6]->question .'</span>';
+  $myMessage.=                                        '<span style="display: block; margin-bottom: 21px; color: #545454;">'. $data[6]->answer .'</span>';
 
-  $myMessage.= '<span style="display: block; margin-bottom: 7px; font-size: 12px; line-height: 21px; color: #929292;">'. $data[7]->name .'</span>';
-  $myMessage.=                                    '<span style="display: block; margin-bottom: 21px; color: #545454;">'. $data[7]->answer .'</span>';
+  $myMessage.= '<span style="display: block; margin-bottom: 7px; font-size: 12px; line-height: 21px; color: #929292;">08. '. $data[7]->question .'</span>';
+  $myMessage.=                                        '<span style="display: block; margin-bottom: 21px; color: #545454;">'. $data[7]->answer .'</span>';
 
-  $myMessage.= '<span style="display: block; margin-bottom: 7px; font-size: 12px; line-height: 21px; color: #929292;">'. $data[8]->name .'</span>';
-  $myMessage.=                                    '<span style="display: block; margin-bottom: 21px; color: #545454;">'. $data[8]->answer .'</span>';
+  $myMessage.= '<span style="display: block; margin-bottom: 7px; font-size: 12px; line-height: 21px; color: #929292;">09. '. $data[8]->question .'</span>';
+  $myMessage.=                                        '<span style="display: block; margin-bottom: 21px; color: #545454;">'. $data[8]->answer .'</span>';
 
-  $myMessage.= '<span style="display: block; margin-bottom: 7px; font-size: 12px; line-height: 21px; color: #929292;">'. $data[9]->name .'</span>';
-  $myMessage.=                                    '<span style="display: block; margin-bottom: 21px; color: #545454;">'. $data[9]->answer .'</span>';
+  $myMessage.= '<span style="display: block; margin-bottom: 7px; font-size: 12px; line-height: 21px; color: #929292;">10. '. $data[9]->question .'</span>';
+  $myMessage.=                                        '<span style="display: block; margin-bottom: 21px; color: #545454;">'. $data[9]->answer .'</span>';
 
-  $myMessage.= '<span style="display: block; margin-bottom: 7px; font-size: 12px; line-height: 21px; color: #929292;">'. $data[10]->name .'</span>';
-  $myMessage.=                                    '<span style="display: block; margin-bottom: 21px; color: #545454;">'. $data[10]->answer .'</span>';
+  $myMessage.= '<span style="display: block; margin-bottom: 7px; font-size: 12px; line-height: 21px; color: #929292;">11. '. $data[10]->question .'</span>';
+  $myMessage.=                                        '<span style="display: block; margin-bottom: 21px; color: #545454;">'. $data[10]->answer .'</span>';
 
-  $myMessage.= '<span style="display: block; margin-bottom: 7px; font-size: 12px; line-height: 21px; color: #929292;">'. $data[11]->name .'</span>';
-  $myMessage.=                                    '<span style="display: block; margin-bottom: 21px; color: #545454;">'. $data[11]->answer .'</span>';
+  $myMessage.= '<span style="display: block; margin-bottom: 7px; font-size: 12px; line-height: 21px; color: #929292;">12. '. $data[11]->question .'</span>';
+  $myMessage.=                                        '<span style="display: block; margin-bottom: 21px; color: #545454;">'. $data[11]->answer .'</span>';
 
-  $myMessage.= '<span style="display: block; margin-bottom: 7px; font-size: 12px; line-height: 21px; color: #929292;">'. $data[12]->name .'</span>';
-  $myMessage.=                                 '<span style="display: block; margin-bottom: 21px; color: #545454;"><b>'. $data[12]->answer[0]->placeholder .':</b> '. $data[12]->answer[0]->answer .'</span>';
-  $myMessage.=                                 '<span style="display: block; margin-bottom: 21px; color: #545454;"><b>'. $data[12]->answer[1]->placeholder .':</b> '. $data[12]->answer[1]->answer .'</span>';
-  $myMessage.=                                 '<span style="display: block; margin-bottom: 21px; color: #545454;"><b>'. $data[12]->answer[2]->placeholder .':</b> '. $data[12]->answer[2]->answer .'</span>';
+  $myMessage.= '<span style="display: block; margin-bottom: 7px; font-size: 12px; line-height: 21px; color: #929292;">13. '. $data[12]->question .'</span>';
+  $myMessage.=                                     '<span style="display: block; margin-bottom: 21px; color: #545454;"><b>'. $data[12]->answer[0]->question .':</b> '. $data[12]->answer[0]->answer .'</span>';
+  $myMessage.=                                     '<span style="display: block; margin-bottom: 21px; color: #545454;"><b>'. $data[12]->answer[1]->question .':</b> '. $data[12]->answer[1]->answer .'</span>';
+  $myMessage.=                                     '<span style="display: block; margin-bottom: 21px; color: #545454;"><b>'. $data[12]->answer[2]->question .':</b> '. $data[12]->answer[2]->answer .'</span>';
 
   $myMessage.= '<span style="display: block;">Keep up the good work,<br/>Team Nucubuc</span></span></td></tr></table><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="left" valign="top" style="padding-left: 46px;"><a href="https://nucubuc.yahiarefaiea.com/survey/" target="_blank" style="display: block; text-decoration: none; width: 122px;"><img src="https://nucubuc.yahiarefaiea.com/survey/includes/images/mails/nucubuc-flat.png" height="35px" style="display: block; font-family: \'Helvetica Neue\', Helvetica, Arial, sans-serif; font-weight: 700; font-size: 14px; line-height: 35px; color: #727272;" alt="Nucubuc Logo" title="Nucubuc Logo"/></a></td><td align="right" valign="top" style="padding-top: 3px; padding-right: 46px;"><a href="https://nucubuc.yahiarefaiea.com/survey/" target="_blank" style="display: inline-block; text-decoration: none; width: 28px; margin-left: 14px;"><img src="https://nucubuc.yahiarefaiea.com/survey/includes/images/mails/website.png" height="28px" style="display: block; font-family: \'Helvetica Neue\', Helvetica, Arial, sans-serif; font-weight: 700; font-size: 12px; line-height: 28px; color: #727272;" alt="Website" title="Nucubuc on the web"/></a><a href="https://facebook.com/Nucubuc/" target="_blank" style="display: inline-block; text-decoration: none; width: 28px; margin-left: 14px;"><img src="https://nucubuc.yahiarefaiea.com/survey/includes/images/mails/facebook.png" height="28px" style="display: block; font-family: \'Helvetica Neue\', Helvetica, Arial, sans-serif; font-weight: 700; font-size: 12px; line-height: 28px; color: #727272;" alt="Facebook" title="Nucubuc on Facebook"/></a><a href="https://twitter.com/Nucubuc/" target="_blank" style="display: inline-block; text-decoration: none; width: 28px; margin-left: 14px;"><img src="https://nucubuc.yahiarefaiea.com/survey/includes/images/mails/twitter.png" height="28px" style="display: block; font-family: \'Helvetica Neue\', Helvetica, Arial, sans-serif; font-weight: 700; font-size: 12px; line-height: 28px; color: #727272;" alt="Twitter" title="Nucubuc on Twitter"/></a><a href="https://instagram.com/Nucubuc/" target="_blank" style="display: inline-block; text-decoration: none; width: 28px; margin-left: 14px;"><img src="https://nucubuc.yahiarefaiea.com/survey/includes/images/mails/instagram.png" height="28px" style="display: block; font-family: \'Helvetica Neue\', Helvetica, Arial, sans-serif; font-weight: 700; font-size: 12px; line-height: 28px; color: #727272;" alt="Instagram" title="Nucubuc on Instagram"/></a></td></tr><tr><td align="left" valign="top" style="padding-top: 3px; padding-left: 56px;"><span style="display: block; font-family: \'Helvetica Neue\', Helvetica, Arial, sans-serif; font-weight: 400; font-size: 12px; line-height: 21px; color: #929292;">This might be the last email you receive<br/>reach me out through: <a href="https://yahiarefaiea.com" target="_blank" style="color: #929292;">yahiarefaiea.com</a></span></td></tr></table></td></tr></table></td></tr></table></body></html>';
 
