@@ -26,6 +26,7 @@ var gulp = require('gulp'),
     js = 'javascripts',
     img = 'images',
     font = 'fonts',
+    php = 'php',
 
     //  BANNER COMMENT
     comment =
@@ -144,6 +145,13 @@ gulp.task('htaccess', function() {
 });
 
 
+//  PHP
+gulp.task('php', function() {
+  return gulp.src(root+'/php/**/*')
+    .pipe(gulp.dest(dest+'/'+assets+'/'+php));
+});
+
+
 //  WATCH
 gulp.task('watch', function() {
   gulp.watch([root+'/pug/**/*', root+'/data/**/*'], ['pug', 'mails', browserSync.reload]);
@@ -162,5 +170,5 @@ gulp.task('default', function() {
 
 //  RELEASE
 gulp.task('release', function() {
-  runSequence(['del', 'pug', 'mails', 'babel', 'stylus', 'fonts', 'img', 'htaccess']);
+  runSequence(['del', 'pug', 'mails', 'babel', 'stylus', 'fonts', 'img', 'htaccess', 'php']);
 });

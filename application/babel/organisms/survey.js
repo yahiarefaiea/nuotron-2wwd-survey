@@ -197,51 +197,22 @@ var survey = {
       $('#questions > li').removeClass('current')
       $('.wrapper').addClass('submiting')
 
-      //  DEAR JOUD <3
-      //  SEND REQUEST HERE AND PASS IN THE FOLLOWING STATEMENTS:
-
-      //  01. Use this method to prepare the
-      //      JSON object that contains the data
       this.prepare()
-
-      //  02. Now, this property contains all the
-      //      data, make sure to include it in the
-      //      request somewhere
       var data = this.preparedData
       console.log(data)
-
-      //  03. Create the Ajax request body then => {
-
-        //  03.0. What's going to happen in the server side?
-
-          //  03.0.1 You should create 2 variables that
-          //         contains the email body you'll be sending
-          //         plus, injecting the values from the
-          //         preparedData object
-          //         var feedbackReceived = 'Email sent for me'
-          //         var feedbackResponse = 'Email sent to ${data.contact.FullName}' (which is for the user)
-
-          //  03.0.2 Handle the request and return a status
-          //         to the ui, read `03.1 + 03.2` for more..
-
-          //  03.0.3 Send two emails..
-          //         One for me via:
-          //         me@yahiarefaiea.com
-          //         And one for the user (If he passed an email)
-          //         me@yahiarefaiea.com
-
-        //  03.1. Create status in the response with the
-        //        values of 'error' or 'success'.
-        //        Try to switch between the status values
-        //        to have an idea about what should
-        //        exactly happens
-        var status = 'error'
-
-        //  03.2. Call this method when you're all
-        //        done, and pass in the status
-        this.callback(status)
-
-      //  }
+      
+      $.ajax({
+        type: 'POST',
+        url: 'includes/php/form.php',
+        data: {dd:JSON.stringify(data)},
+        dataType: "json",
+        success: function (data) {
+          this.callback('success')
+        },
+        error: function (data) {
+          this.callback('error')
+        }
+      });
     }
   },
   //  CALLBACK
