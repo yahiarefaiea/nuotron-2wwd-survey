@@ -199,18 +199,23 @@ var survey = {
 
       this.prepare()
       var data = this.preparedData
-      var that = this
-      
+      var cb = this.callback
+
       $.ajax({
         type: 'POST',
         url: 'includes/php/form.php',
         data: {dd:JSON.stringify(data)},
         dataType: "json",
-        success: function (data) {
-          that.callback('success')
-        },
-        error: function (data) {
-          that.callback('error')
+        success: function(data) {
+          if (data.status != 'success') {
+            console.log('error')
+            console.log(data.status)
+            cb(data.status)
+            return
+          }
+          console.log('success')
+          console.log(data.status)
+          cb(data.status)
         }
       });
     }

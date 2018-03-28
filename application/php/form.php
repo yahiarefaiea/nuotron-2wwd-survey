@@ -1,7 +1,7 @@
 <?php
 	$data= json_decode($_POST["dd"]);
   $headers= "MIME-Version: 1.0\r\n";
-	$headers.= "From: Yahia Refaiea <hello@yahiarefaiea.com>";
+	$headers.= "From: Yahia Refaiea <hello@yahiarefaiea.com>\r\n";
   $headers.= "Content-Type: text/html; charset=ISO-8859-1\r\n";
 
 	//  USER VARIABLES
