@@ -18,6 +18,7 @@ function runPresent() {
       if(current.is(':last-child')) {
         $('.wrapper').removeClass('present').addClass('survey')
         $('#start').css('display', 'block')
+        Pops.init()
 
         setTimeout(function() {
           $('.wrapper').addClass('start')
