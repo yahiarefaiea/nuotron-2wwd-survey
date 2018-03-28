@@ -228,6 +228,7 @@ var survey = {
       if(status == 'success') {
         $('.wrapper').addClass('success')
         history.pushState('', document.title, window.location.pathname)
+        Pops.loveTime()
 
         $('#land .text li').removeClass('current')
         setTimeout(function() {
