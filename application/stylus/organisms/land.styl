@@ -3,6 +3,8 @@ landPaddingHorz= baseline*2.25
 landColors= (#fff685 #7ecbb6 #9f6eaf magenta)
 // colors:   yellow  green   purple  magenta
 
+popsSize= 420px
+
 #land
   makeAbsolute: 0, 0, 0, 0
   a
@@ -38,6 +40,21 @@ landColors= (#fff685 #7ecbb6 #9f6eaf magenta)
     {align-alt}: 0
     &:nth-child(4):after
       top: 0
+
+//  POPS
+#pops
+  makeAbsolute: 50% 50%
+  margin-top: -(presentHeight/2) + (nucubuc-width/2) - (popsSize/2)
+  margin-{align}: -(popsSize/2)
+  hasTransition: durationAlt step
+  opacity: 0
+.survey.callback.success #pops
+  {align}: 50%
+  opacity: 1
+@media (min-width: delta)
+  .survey #pops
+    {align}: (50% - (surveyWidth/2))
+    opacity: 1
 
 //  Z-INDEX
 #land #nucubucFlat,
