@@ -39,6 +39,8 @@ var gulp = require('gulp'),
       '<%= new Date().getUTCMonth()+1 %>/<%= new Date().getUTCDate() %>\n'+
       ' *  ©<%= new Date().getFullYear() %> Yahia Refaiea. all rights reserved.\n'+
       ' *  Released under the <%= pkg.license %> license.\n'+
+      ' *  Source code available on GitHub on:\n'+
+      ' *  https://github.com/YahiaRefaiea/nucubuc-survey/\n'+
       ' */\n\n';
 
 
