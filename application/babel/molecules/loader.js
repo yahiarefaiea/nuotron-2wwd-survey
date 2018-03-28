@@ -9,9 +9,7 @@ $(document).ready(function() {
     splashVPos: 0
   }, function() {
     setTimeout(function() {
-      iterationClear()
-      setTimeout(function() {
-
+      iterationClear(function() {
         //  CALLBACK
         $('body').removeClass('page')
         runPresent()
@@ -41,8 +39,7 @@ $(document).ready(function() {
           clearTimeout(resizeTimer)
           resizeTimer = setTimeout(runTippy, 250)
         })
-
-      }, 1500)
+      })
     }, 200)
   })
 })

@@ -195,7 +195,7 @@ var survey = {
       iterationCount()
       $('#callback li:nth-child(1)').addClass('current')
       $('#questions > li').removeClass('current')
-      $('.wrapper').addClass('submiting')
+      $('.wrapper').addClass('submiting callback')
 
       this.prepare()
       var data = this.preparedData
@@ -224,10 +224,7 @@ var survey = {
   //  CALLBACK
   callback: function(status) {
     var that = this
-    $('.wrapper').addClass('callback')
-    iterationClear()
-
-    setTimeout(function() {
+    iterationClear(function() {
       if(status == 'success') {
         $('.wrapper').addClass('success')
         history.pushState('', document.title, window.location.pathname)
@@ -258,7 +255,7 @@ var survey = {
           $('#questions > li:last-child').addClass('current')
         }, 4000)
       }
-    }, 1500)
+    })
   }
 }
 

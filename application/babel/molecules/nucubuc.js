@@ -9,7 +9,7 @@ function iterationCount() {
 }
 
 //  ITERATION CLEAR
-function iterationClear() {
+function iterationClear(callback) {
   if(x<2) x= 2  //  At least run twice
   $('#nucubuc .symbol > div')
     .attr('style', 'animation-iteration-count: '+x+'; -webkit-animation-iteration-count: '+x+';')
@@ -18,5 +18,6 @@ function iterationClear() {
     $('body').removeClass('waiting')
     $('#nucubuc .symbol > div').removeAttr('style')
     x= 1
+    callback()
   }, 1500)
 }
