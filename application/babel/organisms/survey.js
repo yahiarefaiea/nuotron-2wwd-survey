@@ -199,25 +199,26 @@ var survey = {
 
       this.prepare()
       var data = this.preparedData
-      var cb = this.callback
+      var that = this
 
       $.ajax({
         type: 'POST',
         url: 'includes/php/form.php',
-        data: {dd:JSON.stringify(data)},
-        dataType: "json",
+        data: {dd: JSON.stringify(data)},
+        dataType: 'json',
+        error: function(XMLHttpRequest, textStatus, errorThrown) {
+          // //  HTTP error (can be checked by XMLHttpRequest.status and XMLHttpRequest.statusText)
+          // if(XMLHttpRequest.readyState == 4) {}
+          // //  Network error (i.e. connection refused, access denied due to CORS, etc.)
+          // else if(XMLHttpRequest.readyState == 0) {}
+          // //  something weird is happening
+          // else {}
+          that.callback('error')
+        },
         success: function(data) {
-          if (data.status != 'success') {
-            console.log('error')
-            console.log(data.status)
-            cb(data.status)
-            return
-          }
-          console.log('success')
-          console.log(data.status)
-          cb(data.status)
+          that.callback(data.status)
         }
-      });
+      })
     }
   },
   //  CALLBACK
