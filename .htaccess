@@ -1,11 +1,5 @@
-# RULES GENERATED FROM:
-# http://www.visiospark.com/mod-rewrite-rule-generator/
-
-Options -Indexes
 RewriteEngine on
+RewriteBase /
 
-# REDIRECT '404'
-ErrorDocument 404 https://nucubuc.yahiarefaiea.com/survey/
-
-# REDIRECT 'INDEX.HTML'
-RewriteRule ^index\.html$ /? [L,R=302]
+RewriteCond %{HTTP_HOST} !^m\.
+RewriteRule ^$ http://nucubuc.yahiarefaiea.com/survey/ [R,L]
