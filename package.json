@@ -1,17 +1,18 @@
 {
-  "name": "nucubuc-survey",
+  "name": "nuotron-2wwd-survey",
   "version": "1.0.2",
-  "description": "Nucubuc has come to an end",
+  "description": "Nuotron 2 Weeks Web Design Survey",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/YahiaRefaiea/nucubuc-survey.git"
+    "url": "git+https://github.com/nuotron/nuotron-2wwd-survey.git"
   },
   "author": "Yahia Refaiea <hello@yahiarefaiea.com>",
+  "url": "http://2wwd.nuotron.co/survey/",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/YahiaRefaiea/nucubuc-survey/issues"
+    "url": "https://github.com/nuotron/nuotron-2wwd-survey/issues"
   },
-  "homepage": "https://github.com/YahiaRefaiea/nucubuc-survey#readme",
+  "homepage": "https://github.com/nuotron/nuotron-2wwd-survey#readme",
   "devDependencies": {
     "browser-sync": "^2.18.8",
     "del": "^2.2.2",
