@@ -19,7 +19,7 @@ var gulp = require('gulp'),
     root = 'application',
     dest = 'release',
     assets = 'includes',
-    file = 'nuc',
+    file = 'nuo',
     min = 'lite',
     mails = 'mails',
     css = 'stylesheets',
@@ -40,7 +40,7 @@ var gulp = require('gulp'),
       ' *  ©<%= new Date().getFullYear() %> Nuotron. all rights reserved.\n'+
       ' *  Released under the <%= pkg.license %> license.\n'+
       ' *  Source code available on GitHub on:\n'+
-      ' *  https://github.com/YahiaRefaiea/nucubuc-survey/\n'+
+      ' *  https://github.com/nuotron/nuotron-2wwd-survey/\n'+
       ' */\n\n';
 
 
@@ -92,7 +92,7 @@ var babelSrc = [
   root+'/babel/lib/tippy.all.min.js',
   root+'/babel/molecules/range.js',
   root+'/babel/molecules/spans.js',
-  root+'/babel/molecules/nucubuc.js',
+  root+'/babel/molecules/nuotron.js',
   root+'/babel/molecules/pops.js',
   root+'/babel/organisms/present.js',
   root+'/babel/organisms/survey.js',
