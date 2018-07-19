@@ -1,6 +1,6 @@
 # Nuotron 2 Weeks Web Design Survey
 
-A tiny survey we built to have feedback before starting our workshops series called `2 Weeks Web Design`.
+A tiny survey we built to have a feedback before starting our workshops series called `2 Weeks Web Design`.
 
 
 ## Used Commands
