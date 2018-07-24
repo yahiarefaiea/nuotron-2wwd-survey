@@ -2,11 +2,9 @@
   
   //- BACKGROUND
   .background
-    - for (var a = 0; a < 4; a++)
-      div
   
   //- NUCUBUC FLAT
-  include nucubucFlat
+  include nuotronFlat
 
   //- REACH
   .reach: a.link(href=root.reach.url title=root.reach.text target="_blank")= root.reach.text
@@ -17,6 +15,3 @@
       li
         each line in item
           .h1.spans= line
-
-  //- SOCIAL
-  include social
