@@ -1,9 +1,9 @@
 {
   "wait": "Wait for a second",
   "success": [
-    ["Nucubuc has", "come to an end ."],
+    ["Join our two weeks", "web design in", "September ."],
     ["Well, Thanks !", "We received your feedback ."],
-    ["Don’t forget to share", "the survey with your friends !"]
+    ["Don't forget to share", "the survey with your friends !"]
   ],
   "error": [
     ["whoops, something went wrong ..", "please try again later ."]
