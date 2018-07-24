@@ -20,7 +20,6 @@ function runPresent() {
         $('#start').css('display', 'block')
 
         setTimeout(function() {
-          Pops.init()
           $('.wrapper').addClass('start')
           $('#land .text li:first-child').addClass('current')
         }, 500)

@@ -92,7 +92,6 @@ var babelSrc = [
   root+'/babel/molecules/range.js',
   root+'/babel/molecules/spans.js',
   root+'/babel/molecules/nuotron.js',
-  root+'/babel/molecules/pops.js',
   root+'/babel/organisms/present.js',
   root+'/babel/organisms/survey.js',
   root+'/babel/molecules/loader.js'
