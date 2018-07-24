@@ -25,7 +25,6 @@ var gulp = require('gulp'),
     css = 'stylesheets',
     js = 'javascripts',
     img = 'images',
-    font = 'fonts',
     php = 'php',
 
     //  BANNER COMMENT
@@ -127,13 +126,6 @@ gulp.task('stylus', function() {
 });
 
 
-//  FONTS
-gulp.task('fonts', function() {
-  return gulp.src(root+'/font/**/*')
-    .pipe(gulp.dest(dest+'/'+assets+'/'+font));
-});
-
-
 //  IMAGES
 gulp.task('img', function() {
   return gulp.src(root+'/img/**/*')
@@ -160,18 +152,17 @@ gulp.task('watch', function() {
   gulp.watch([root+'/pug/**/*', root+'/data/**/*'], ['pug', 'mails', browserSync.reload]);
   gulp.watch(root+'/babel/**/*', ['babel', browserSync.reload]);
   gulp.watch(root+'/stylus/**/*', ['stylus', browserSync.reload]);
-  gulp.watch(root+'/font/**/*', ['fonts', browserSync.reload]);
   gulp.watch(root+'/img/**/*', ['img', browserSync.reload]);
 });
 
 
 //  DEFAULT
 gulp.task('default', function() {
-  runSequence(['del', 'pug', 'mails', 'babel', 'stylus', 'fonts', 'img', 'browserSync', 'watch']);
+  runSequence(['del', 'pug', 'mails', 'babel', 'stylus', 'img', 'browserSync', 'watch']);
 });
 
 
 //  RELEASE
 gulp.task('release', function() {
-  runSequence(['del', 'pug', 'mails', 'babel', 'stylus', 'fonts', 'img', 'htaccess', 'php']);
+  runSequence(['del', 'pug', 'mails', 'babel', 'stylus', 'img', 'htaccess', 'php']);
 });
