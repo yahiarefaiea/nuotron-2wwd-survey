@@ -1,29 +1,14 @@
 {
   "lang": "en",
   "dir": "ltr",
-  "title": "Nucubuc Survey",
+  "title": "Nuotron 2WWD Survey",
   "author": "Yahia Refaiea",
-  "description": "Nucubuc has come to an end",
+  "description": "Nuotron 2 Weeks Web Design Survey",
 
   "reach": {
-    "text": "Reach out to Yahia",
+    "text": "Need help? Talk to a human",
     "url": "https://yahiarefaiea.com"
   },
 
-  "url": "https://nucubuc.yahiarefaiea.com/survey/",
-  "social": [
-    {
-      "platform": "facebook",
-      "title": "Facebook <b>(@Nucubuc)</b>",
-      "url": "https://facebook.com/Nucubuc/"
-    }, {
-      "platform": "twitter",
-      "title": "Twitter <b>(@Nucubuc)</b>",
-      "url": "https://twitter.com/Nucubuc/"
-    }, {
-      "platform": "instagram",
-      "title": "Instagram <b>(@Nucubuc)</b>",
-      "url": "https://instagram.com/Nucubuc/"
-    }
-  ]
+  "url": "https://2wwd.nuotron.co/survey/"
 }
