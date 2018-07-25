@@ -13,11 +13,7 @@ landPaddingHorz= baseline*2.25
   makeAbsolute: 0 0 0 100%
   hasTransition: durationAlt
   background-color: dark-blue
-  &:before
-    content: ''
-    display: block
-    makeAbsolute: 0 0 0 0
-    background-image: linear-gradient(transparent, dark-blue-alt)
+  background-image: linear-gradient(dark-blue, dark-blue-alt)
   &:after
     content: ''
     display: block
@@ -34,13 +30,11 @@ landPaddingHorz= baseline*2.25
 //  Z-INDEX
 #land #nuotronFlat,
 #land .reach,
-#land .text,
-#land .social
+#land .text
   z-index: -1
 .survey #land #nuotronFlat,
 .survey #land .reach,
-.survey #land .text,
-.survey #land .social
+.survey #land .text
   z-index: 2
 .survey.callback.success #land
   visibility: visible
@@ -64,6 +58,7 @@ landPaddingHorz= baseline*2.25
   hasTransition: durationAlt duration
   .link
     line-height: nuotronFlat-height
+    white-space: nowrap
     color: #fff
 .survey.callback.success #land .reach
   {align-alt}: 0
