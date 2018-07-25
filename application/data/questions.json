@@ -100,11 +100,11 @@
         "Do you prefer any institute or location to",
         "launch our workshops in? The hall should",
         "fit around 30 participants with their",
-        "laptops."
+        "laptops. Please specify with details."
       ],
       "answer": {
-        "type": "input",
-        "placeholder": "Roman theater?"
+        "type": "textarea",
+        "placeholder": "Florence Cathedral - Florence, Italy"
       }
     }, {
       "name": "message",
