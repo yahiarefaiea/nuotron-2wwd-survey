@@ -8,159 +8,113 @@
 
   "list": [
     {
-      "name": "feeling",
+      "name": "planet",
       "question": [
-        "Overall, how are you feeling about",
-        "Nucubuc?"
+        "Men Are from Mars, Women Are from",
+        "Venus. Where are you from?"
+      ],
+      "answer": {
+        "type": "radio",
+        "options": [
+          "Mars",
+          "Venus"
+        ]
+      }
+    }, {
+      "name": "excited",
+      "question": [
+        "How much excited are you to join our 2",
+        "weeks web design?"
       ],
       "answer": {
         "type": "range",
         "options": [
-          "Bad",
-          "Unhappy",
-          "Natural",
-          "Satisfied",
-          "Amazed"
+          "Not interested",
+          "Not much",
+          "A bit",
+          "So much",
+          "Can't wait"
         ]
       }
     }, {
-      "name": "spelling",
+      "name": "reason",
       "question": [
-        "How did you spell Nucubuc for the first",
-        "time?"
-      ],
-      "answer": {
-        "type": "input",
-        "placeholder": "Nokbok?"
-      }
-    }, {
-      "name": "impressionFirst",
-      "question": [
-        "And what was your first impression when",
-        "you heard or saw Nucubuc?"
-      ],
-      "answer": {
-        "type": "radio",
-        "options": [
-          "Good",
-          "Bad"
-        ]
-      }
-    }, {
-      "name": "impressionNow",
-      "question": [
-        "Is that impression changed about it",
-        "now?"
-      ],
-      "answer": {
-        "type": "radio",
-        "options": [
-          "Yep",
-          "Nope"
-        ]
-      }
-    }, {
-      "name": "impressionChanged",
-      "question": [
-        "Is it changed for good or for bad?"
-      ],
-      "answer": {
-        "type": "radio",
-        "options": [
-          "Good",
-          "Bad"
-        ]
-      }
-    }, {
-      "name": "value",
-      "question": [
-        "If you had a website you wanted to build..",
-        "What is the one thing that can make you",
-        "want us to build it for you?"
+        "Why did you choose to join our",
+        "workshops above all others?"
       ],
       "answer": {
         "type": "textarea",
-        "placeholder": "We’ve innovative ideas?"
-      }
-    }, {
-      "name": "nonValue",
-      "question": [
-        "And what was the one thing that made",
-        "you don't?"
-      ],
-      "answer": {
-        "type": "textarea",
-        "placeholder": "Our pricing?"
-      }
-    }, {
-      "name": "mistake",
-      "question": [
-        "We all do mistakes.. But, what was the",
-        "biggest mistake you think we did?"
-      ],
-      "answer": {
-        "type": "textarea",
-        "placeholder": "Our marketing?"
+        "placeholder": "Because we do things differently?"
       }
     }, {
       "name": "expectation",
       "question": [
-        "What did you expect from Nucubuc's",
-        "team to do?"
+        "What do you expect to learn in the",
+        "workshops?"
       ],
       "answer": {
         "type": "textarea",
-        "placeholder": "Send people to Mars?"
+        "placeholder": "How to build a paper rocket?"
       }
     }, {
-      "name": "expectationNow",
+      "name": "theOneThing",
       "question": [
-        "And what do you expect now?"
+        "What is the one thing that you wish to",
+        "learn in the workshops?"
       ],
       "answer": {
         "type": "textarea",
-        "placeholder": "Change the world?"
+        "placeholder": "How to build a space ship?"
       }
     }, {
-      "name": "messageNucubuc",
+      "name": "plan",
       "question": [
-        "Do you have any message or advice you",
-        "wish to tell us about?"
+        "Which plan do you think fits you the",
+        "most?"
       ],
       "answer": {
-        "type": "textarea",
-        "placeholder": "Want us to drop our pricing a bit?"
-      }
-    }, {
-      "name": "messageYahia",
-      "question": [
-        "What about a direct message to Yahia?",
-        "Do you think I'm an asshole?"
-      ],
-      "answer": {
-        "type": "textarea",
-        "placeholder": "No? You love me, Don't you?"
-      }
-    }, {
-      "name": "contact",
-      "question": [
-        "Will you tell us a bit about yourself? It's",
-        "optional.. you can leave these blank."
-      ],
-      "answer": {
-        "type": "inputs",
-        "inputs": [
-          {
-            "name": "fullName",
-            "placeholder": "Your full name"
-          }, {
-            "name": "email",
-            "placeholder": "Your email address"
-          }, {
-            "name": "job",
-            "placeholder": "What do you do"
-          }
+        "type": "radio",
+        "options": [
+          "24 thousands 2 hours a day",
+          "32 thousands 4 hours a day",
+          "40 thousands 6 hours a day"
         ]
+      }
+    }, {
+      "name": "timing",
+      "question": [
+        "Which timing do you think fits you the",
+        "most?"
+      ],
+      "answer": {
+        "type": "radio",
+        "options": [
+          "After 12 PM",
+          "After 2 PM",
+          "After 4 PM"
+        ]
+      }
+    }, {
+      "name": "location",
+      "question": [
+        "Do you prefer any institute or location to",
+        "launch our workshops in? The hall should",
+        "fit around 30 participants with their",
+        "laptops."
+      ],
+      "answer": {
+        "type": "input",
+        "placeholder": "Roman theater?"
+      }
+    }, {
+      "name": "message",
+      "question": [
+        "Do you have any special message you",
+        "wish me to know about?"
+      ],
+      "answer": {
+        "type": "textarea",
+        "placeholder": "Huh?"
       }
     }
   ]
