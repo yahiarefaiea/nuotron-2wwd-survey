@@ -21,6 +21,15 @@
         ]
       }
     }, {
+      "name": "interests",
+      "question": [
+        "What are your interests?"
+      ],
+      "answer": {
+        "type": "input",
+        "placeholder": "Traveling, cooking, or reading?"
+      }
+    }, {
       "name": "excited",
       "question": [
         "How much excited are you to join our 2",
