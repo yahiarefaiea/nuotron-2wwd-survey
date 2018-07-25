@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  iterationCount()
+  Nuotron.wait()
 
   // JPRELOADER INIT
   $('body').jpreLoader({
@@ -9,7 +9,7 @@ $(document).ready(function() {
     splashVPos: 0
   }, function() {
     setTimeout(function() {
-      iterationClear(function() {
+      Nuotron.stop(function() {
         //  CALLBACK
         $('body').removeClass('page')
         runPresent()
@@ -20,7 +20,7 @@ $(document).ready(function() {
 
         tippy('[title]', {
           arrow: false,
-          theme: 'nucubuc',
+          theme: 'nuotron',
           followCursor: true
         })
 

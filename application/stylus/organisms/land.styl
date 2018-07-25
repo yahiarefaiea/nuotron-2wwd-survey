@@ -1,7 +1,5 @@
 landPaddingVert= baseline*2
 landPaddingHorz= baseline*2.25
-landColors= (#fff685 #7ecbb6 #9f6eaf magenta)
-// colors:   yellow  green   purple  magenta
 
 #land
   makeAbsolute: 0, 0, 0, 0
@@ -12,40 +10,34 @@ landColors= (#fff685 #7ecbb6 #9f6eaf magenta)
 
 //  BACKGROUND
 #land .background
-  makeAbsolute: 0 0 0 surveyWidth
-  > div
-    makeAbsolute: 0 0 0 100%
-    multiTransition: 1 4 durationAlt
-    for child in (0..3)
-      &:nth-child({child+1})
-        background-color: landColors[child]
-    &:nth-child(4):after
-      content: ''
-      display: block
-      makeAbsolute: 100% 0 0 0
-      transition: inherit
-      background-image: linear-gradient(transparent, magenta-alt)
-.survey.callback.success #land .background > div
-  {align-alt}: -150%
-  multiTransition: 1 4 durationAlt
-  &:nth-child(4):after
-    top: 0
-@media (max-width: delta - 1)
-  .survey #land .background > div
-    multiTransition: 1 4 durationAlt 0 true
+  makeAbsolute: 0 0 0 100%
+  hasTransition: durationAlt
+  background-color: dark-blue
+  &:before
+    content: ''
+    display: block
+    makeAbsolute: 0 0 0 0
+    background-image: linear-gradient(transparent, dark-blue-alt)
+  &:after
+    content: ''
+    display: block
+    makeAbsolute: 0 0 0 0
+    background-image: url('../images/land.png')
+    background-repeat: no-repeat
+    background-position: right bottom
+.survey.callback.success #land .background
+  {align-alt}: 0
 @media (min-width: delta)
-  .survey #land .background > div
-    {align-alt}: 0
-    &:nth-child(4):after
-      top: 0
+  .survey #land .background
+    {align-alt}: surveyWidth
 
 //  Z-INDEX
-#land #nucubucFlat,
+#land #nuotronFlat,
 #land .reach,
 #land .text,
 #land .social
   z-index: -1
-.survey #land #nucubucFlat,
+.survey #land #nuotronFlat,
 .survey #land .reach,
 .survey #land .text,
 .survey #land .social
@@ -56,11 +48,11 @@ landColors= (#fff685 #7ecbb6 #9f6eaf magenta)
   .survey #land
     visibility: hidden
 
-//  NUCUBUC FLAT
-#land #nucubucFlat
-  makeAbsolute: landPaddingVert (landPaddingHorz - nucubucFlat-margin)
+//  NUOTRON FLAT
+#land #nuotronFlat
+  makeAbsolute: landPaddingVert (landPaddingHorz - nuotronFlat-margin)
 @media (max-width: beta - 1)
-  .survey.callback.success #land #nucubucFlat
+  .survey.callback.success #land #nuotronFlat
     {align}: 50%
     transform: translateX(-50%)
 
@@ -71,7 +63,7 @@ landColors= (#fff685 #7ecbb6 #9f6eaf magenta)
   opacity: 0
   hasTransition: durationAlt duration
   .link
-    line-height: nucubucFlat-height
+    line-height: nuotronFlat-height
     color: #fff
 .survey.callback.success #land .reach
   {align-alt}: 0
@@ -82,16 +74,16 @@ landColors= (#fff685 #7ecbb6 #9f6eaf magenta)
     opacity: 1
 @media (max-width: beta - 1)
   .survey.callback.success #land .reach
-    top: landPaddingVert + nucubucFlat-height + nucubucFlat-margin
+    top: landPaddingVert + nuotronFlat-height + nuotronFlat-margin
     {align-alt}: 50%
     margin-{align-alt}: 0
     transform: translateX(50%)
 
 //  TEXT
 #land .text
-  makeAbsolute: auto landPaddingHorz landPaddingVert
+  makeAbsolute: baseline*4.5 landPaddingHorz
   li
-    makeAbsolute: auto 0 0
+    makeAbsolute: 0 0
     white-space: nowrap
     .h1
       color: #fff
@@ -112,11 +104,3 @@ landColors= (#fff685 #7ecbb6 #9f6eaf magenta)
       transform: translateX(-50%)
       .h1
         font-size: font-heading2
-
-//  SOCIAL
-#land .social
-  makeAbsolute: auto landPaddingHorz ((landPaddingVert - social-height)/2)
-@media (max-width: beta - 1)
-  .survey.callback.success #land .social
-    {align}: 50%
-    transform: translateX(-50%)

@@ -1,23 +1,61 @@
-//  ITERATION COUNT
-var x, iteration
-function iterationCount() {
-  $('body').addClass('waiting')
-  x= 1
-  iteration= setInterval(function() {
-    x= ++x
-  }, 1500)   //  .5s * 3 = 1.5s
-}
+var Nuotron = {
+  duration: 1200 * 4 - 150,
+  iteration: 0,
+  processing : false,
+  enough : false,
+  interval: null,
+  callback : null,
+  selector : '#nuotron .dot, #nuotron .dot:before',
 
-//  ITERATION CLEAR
-function iterationClear(callback) {
-  if(x<2) x= 2  //  At least run twice
-  $('#nucubuc .symbol > div')
-    .attr('style', 'animation-iteration-count: '+x+'; -webkit-animation-iteration-count: '+x+';')
-  clearInterval(iteration)
-  setTimeout(function() {
+  //  WAIT
+  wait: function() {
+    if(Nuotron.processing != true) {
+      Nuotron.processing = true
+      $('body').addClass('waiting')
+      Nuotron.waiting()
+      Nuotron.interval = setInterval(Nuotron.waiting, Nuotron.duration)
+    }
+  },
+
+  //  WAITING
+  waiting: function() {
+    if(Nuotron.enough != true) {
+      ++Nuotron.iteration
+      return
+    }
+
+    Nuotron.stopping()
+  },
+
+  //  STOP
+  stop: function(callback) {
+    if(Nuotron.processing == true) {
+      Nuotron.enough = true
+      Nuotron.callback = callback
+
+      $(Nuotron.selector).attr('style',
+      'animation-iteration-count: ' + Nuotron.iteration +
+      '; -webkit-animation-iteration-count: ' + Nuotron.iteration + ';')
+    }
+  },
+
+  //  STOPPING
+  stopping: function() {
+    clearInterval(Nuotron.interval)
+    if(typeof Nuotron.callback === 'function' && Nuotron.callback) Nuotron.callback()
+
+    setTimeout(Nuotron.reset, 200)
+  },
+
+  //  RESET
+  reset: function() {
+    Nuotron.iteration = 0
+    Nuotron.processing = false
+    Nuotron.enough = false
+    Nuotron.interval = null
+    Nuotron.callback = null
+
     $('body').removeClass('waiting')
-    $('#nucubuc .symbol > div').removeAttr('style')
-    x= 1
-    callback()
-  }, 1500)
+    $(Nuotron.selector).removeAttr('style')
+  }
 }

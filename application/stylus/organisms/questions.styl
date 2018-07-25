@@ -1,5 +1,5 @@
 questions-width= baseline*9.75
-questionsHeights= feelingHeight, spellingHeight, impressionFirstHeight, impressionNowHeight, impressionChangedHeight, valueHeight, nonValueHeight, mistakeHeight, expectationHeight, expectationNowHeight, messageNucubucHeight, messageYahiaHeight, contactHeight
+questionsHeights= feelingHeight, spellingHeight, impressionFirstHeight, impressionNowHeight, impressionChangedHeight, valueHeight, nonValueHeight, mistakeHeight, expectationHeight, expectationNowHeight, messageNuotronHeight, messageYahiaHeight, contactHeight
 
 #questions
   makeAbsolute: 50% 50%
@@ -19,7 +19,7 @@ questionsHeights= feelingHeight, spellingHeight, impressionFirstHeight, impressi
     z-index: -2
     for question, i in questionsHeights
       &:nth-child({i+1})
-        nucubucMargin: question
+        nuotronMargin: question
     .small
       margin-bottom: baseline*.25
     .q
