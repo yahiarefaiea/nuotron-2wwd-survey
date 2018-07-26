@@ -92,7 +92,7 @@ var survey = {
       if(answer == '' || answer === undefined) answer = fallback
 
       //  HANDLING WHAT HAPPENS IF DATA TYPE WAS RANGE
-      if(question.attr('data-name') == 'planet') {
+      if(question.find('.range').length) {
         list = question.find('input[type=range]').siblings('ul')
         item = list.find('li:nth-child('+answer+')')
         answer = item.text()
