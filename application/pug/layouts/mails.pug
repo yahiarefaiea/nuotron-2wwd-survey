@@ -10,65 +10,44 @@ html
     
     //- ROOT
     table(border="0" cellpadding="0" cellspacing="0" height="100%" width="100%"
-          style="padding: 56px 14px 56px 14px; background-color: #eee;"): tr: td(align="left" valign="top")
+          style="padding: 42px 14px 56px 14px; background-color: #eee;"): tr: td(align="left" valign="top")
       table(border="0" cellpadding="0" cellspacing="0"
             style="min-width: 400px; width: 100%; max-width: 560px; margin: 0 auto;"): tr: td(align="left" valign="top")
         
         //- HEADER
         table(border="0" cellpadding="0" cellspacing="0" width="100%" style="margin-bottom: 28px; padding: 0 56px 0 56px;")
-          tr: td(align="left" valign="top"): a(href=root.url target="_blank" style="display: block; text-decoration: none; width: 56px;")
-            img(src="../includes/images/mails/nuotron.png" height="56px"
-                style="display: block; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 700; font-size: 14px; line-height: 56px; color: #727272;"
+          tr: td(align="left" valign="top"): a(href=root.url target="_blank" style="display: block; text-decoration: none; width: 70px;")
+            img(src="../includes/images/mails/nuotron.png" height="70px"
+                style="display: block; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 700; font-size: 14px; line-height: 70px; color: #727272; white-space: nowrap;"
                 alt="Nuotron Logo" title="Nuotron Logo")
           tr: td(align="left" valign="top" style="padding-top: 21px;")
             span(style="display: block; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 400; font-size: 16px; line-height: 28px; color: #464646;")
               block header
         
         //- COVER
-        table(border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #c657a0;")
+        table(border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #f35635;")
           tr: td(align="center" valign="top")
             block cover
         
         //- CONTENT
         table(border="0" cellpadding="0" cellspacing="0" width="100%"
-              style="margin-bottom: 25px; padding: 28px 56px 28px 56px; background-color: #fff;")
+              style="margin-bottom: 21px; padding: 28px 56px 28px 56px; background-color: #fff;")
           tr: td(align="left" valign="top")
             span(style="display: block; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 400; font-size: 14px; line-height: 28px; color: #727272;")
               block content
         
         //- FOOTER
         table(border="0" cellpadding="0" cellspacing="0" width="100%")
-          tr
-            //- LOGO
-            td(align="left" valign="top" style="padding-left: 46px;")
-              a(href=root.url target="_blank" style="display: block; text-decoration: none; width: 122px;")
-                img(src="../includes/images/mails/nuotron-flat.png" height="35px"
-                    style="display: block; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 700; font-size: 14px; line-height: 35px; color: #727272;"
-                    alt="Nuotron Logo" title="Nuotron Logo")
-            
-            //- SOCIAL
-            //- td(align="right" valign="top" style="padding-top: 3px; padding-right: 46px;")
-            //-   a(href=root.url target="_blank" style="display: inline-block; text-decoration: none; width: 28px; margin-left: 14px;")
-            //-     img(src="../includes/images/mails/website.png" height="28px"
-            //-         style="display: block; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 700; font-size: 12px; line-height: 28px; color: #727272;"
-            //-         alt="Website" title="Nuotron on the web")
-            //-   a(href=root.social[0].url target="_blank" style="display: inline-block; text-decoration: none; width: 28px; margin-left: 14px;")
-            //-     img(src="../includes/images/mails/facebook.png" height="28px"
-            //-         style="display: block; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 700; font-size: 12px; line-height: 28px; color: #727272;"
-            //-         alt="Facebook" title="Nuotron on Facebook")
-            //-   a(href=root.social[1].url target="_blank" style="display: inline-block; text-decoration: none; width: 28px; margin-left: 14px;")
-            //-     img(src="../includes/images/mails/twitter.png" height="28px"
-            //-         style="display: block; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 700; font-size: 12px; line-height: 28px; color: #727272;"
-            //-         alt="Twitter" title="Nuotron on Twitter")
-            //-   a(href=root.social[2].url target="_blank" style="display: inline-block; text-decoration: none; width: 28px; margin-left: 14px;")
-            //-     img(src="../includes/images/mails/instagram.png" height="28px"
-            //-         style="display: block; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 700; font-size: 12px; line-height: 28px; color: #727272;"
-            //-         alt="Instagram" title="Nuotron on Instagram")
+          //- LOGO
+          tr: td(align="center" valign="top")
+            a(href=root.url target="_blank" style="display: block; text-decoration: none; width: 141px;")
+              img(src="../includes/images/mails/nuotron-flat.png" height="35px"
+                  style="display: block; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 700; font-size: 14px; line-height: 35px; color: #727272;"
+                  alt="Nuotron Logo" title="Nuotron Logo")
           
           //- CREDIT
-          tr: td(align="left" valign="top" style="padding-top: 3px; padding-left: 56px;")
+          tr: td(align="center" valign="top" style="padding-top: 3px;")
             span(style="display: block; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 400; font-size: 12px; line-height: 21px; color: #929292;")
-              |This might be the last email you receive
-              br
               |reach me out through: 
+              br
               a(href=root.reach.url target="_blank" style="color: #929292;") yahiarefaiea.com
