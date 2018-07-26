@@ -29,7 +29,7 @@ numberHeight= baseline*1.5
 #currentQuestion
   z-index: -1
 .questions #navigation,
-.questions:not(.feeling) #previous,
+.questions:not(.planet) #previous,
 .questions #next
 .questions #currentQuestion
   z-index: auto
@@ -159,7 +159,7 @@ numberHeight= baseline*1.5
   #previous
     {align}: -4px
     {align-alt}: auto
-.questions:not(.feeling) #previous,
+.questions:not(.planet) #previous,
 .questions #next
   .ellipse
     opacity: 1
@@ -177,12 +177,12 @@ numberHeight= baseline*1.5
     background-color: transparent
     hasTransition()
 @media (min-width: gamma)
-  .questions:not(.feeling) #previous > span,
-  .questions:not(.contact) #next > span:not(.submit),
-  .questions.contact #next > span.submit
+  .questions:not(.planet) #previous > span,
+  .questions:not(.message) #next > span:not(.submit),
+  .questions.message #next > span.submit
     top: 0
     opacity: 1
-.questions:not(.feeling) #previous
+.questions:not(.planet) #previous
   .ellipse svg
     {align}: 0
   &:hover .ellipse
@@ -199,7 +199,7 @@ numberHeight= baseline*1.5
     svg
       {align-alt}: -(translate/4)
 @media (min-width: gamma)
-  .questions:not(.feeling) #previous:hover .ellipse:before
+  .questions:not(.planet) #previous:hover .ellipse:before
     {align}: 11px
   .questions #next:hover .ellipse:before
     {align-alt}: 11px

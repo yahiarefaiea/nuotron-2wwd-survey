@@ -35,13 +35,8 @@ var survey = {
 
       if(target == 'previous')
         target = $('#navigation .current').prev().find('a').attr('href')
-      else if(target == 'next') {
+      else if(target == 'next')
         target = $('#navigation .current').next().find('a').attr('href')
-        if($('.wrapper').hasClass('impressionNow')
-        && $('#questions > li[data-name="impressionNow"] input:checked').val() == 'Nope') {
-          target = '#value'
-        }
-      }
 
       var item = $('#navigation a[href="'+target+'"]').parent()
       var question = $('#questions > li[data-name="'+target.split('#')[1]+'"]')
@@ -102,15 +97,15 @@ var survey = {
       var fallback = 'Passed empty..'
       if(answer == '' || answer === undefined) answer = fallback
 
-      //  HANDLING WHAT HAPPENS IF DATA NAME WAS FEELING
-      if(question.attr('data-name') == 'feeling') {
+      //  HANDLING WHAT HAPPENS IF DATA NAME WAS PLANET
+      if(question.attr('data-name') == 'planet') {
         list = question.find('input[type=range]').siblings('ul')
         item = list.find('li:nth-child('+answer+')')
         answer = item.text()
       }
 
-      //  HANDLING WHAT HAPPENS IF DATA NAME WAS CONTACT
-      if(question.attr('data-name') == 'contact') {
+      //  HANDLING WHAT HAPPENS IF DATA NAME WAS MESSAGE
+      if(question.attr('data-name') == 'message') {
         answer = []
         for (var j = 0; j < question.find('.field').length; j++) {
           var subQuestion = question.find('.field:nth-child('+(j+1)+')')
