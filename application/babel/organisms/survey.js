@@ -20,10 +20,6 @@ var survey = {
       this.allQuestions.push(name.split('#')[1])
     }
   },
-  //  CHANGE HASH
-  changeHash: function(hash) {
-    window.location.hash = hash
-  },
   //  NAVIGATE
   navigate: function(target) {
     if(!$('.wrapper').hasClass('submiting')) {
@@ -67,8 +63,6 @@ var survey = {
           }, 200)
         }
       }, 500)
-
-      this.changeHash(target)
     }
   },
   //  PREPARED DATA
