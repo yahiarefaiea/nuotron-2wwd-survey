@@ -12,7 +12,7 @@ if (isset($_POST["dd"])) {
 
 	//  MY VARIABLES
 	$myName= "Yahia Refaiea";
-	$myEmail= "me@yahiarefaiea.com";
+	$myEmail= "2wwd@nuotron.co";
 
 	if ($userName === 'Passed empty..') {
 		$userName= "";
