@@ -84,9 +84,9 @@
       "answer": {
         "type": "radio",
         "options": [
-          "24 thousands 2 hours a day",
-          "32 thousands 4 hours a day",
-          "40 thousands 6 hours a day"
+          "24, 000 s.p / 2 hours a day",
+          "32, 000 s.p / 4 hours a day",
+          "40, 000 s.p / 6 hours a day"
         ]
       }
     }, {
