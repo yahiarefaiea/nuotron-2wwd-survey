@@ -91,30 +91,11 @@ var survey = {
       var fallback = 'Passed empty..'
       if(answer == '' || answer === undefined) answer = fallback
 
-      //  HANDLING WHAT HAPPENS IF DATA NAME WAS PLANET
+      //  HANDLING WHAT HAPPENS IF DATA TYPE WAS RANGE
       if(question.attr('data-name') == 'planet') {
         list = question.find('input[type=range]').siblings('ul')
         item = list.find('li:nth-child('+answer+')')
         answer = item.text()
-      }
-
-      //  HANDLING WHAT HAPPENS IF DATA NAME WAS MESSAGE
-      if(question.attr('data-name') == 'message') {
-        answer = []
-        for (var j = 0; j < question.find('.field').length; j++) {
-          var subQuestion = question.find('.field:nth-child('+(j+1)+')')
-          var subAnswer = subQuestion.find('input[type=text]').val()
-
-          //  FALLBACK IF VALUE PASSED EMPTY
-          if(subAnswer == '' || subAnswer === undefined) subAnswer = fallback
-
-          //  PUSH VALUES
-          answer.push({
-            name: subQuestion.find('input').attr('name'),
-            question: subQuestion.find('input').attr('placeholder'),
-            answer: subAnswer
-          })
-        }
       }
 
       //  PUSH VALUES
