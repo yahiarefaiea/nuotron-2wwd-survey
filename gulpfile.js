@@ -39,7 +39,7 @@ var gulp = require('gulp'),
       ' *  ©<%= new Date().getFullYear() %> Nuotron. all rights reserved.\n'+
       ' *  Released under the <%= pkg.license %> license.\n'+
       ' *  Source code available on GitHub on:\n'+
-      ' *  https://github.com/nuotron/nuotron-2wwd-survey/\n'+
+      ' *  <%= pkg.homepage %>\n'+
       ' */\n\n';
 
 
