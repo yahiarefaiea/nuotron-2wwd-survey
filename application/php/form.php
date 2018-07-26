@@ -6,6 +6,7 @@ if (isset($_POST["dd"])) {
   $headers.= "Content-Type: text/html; charset=ISO-8859-1\r\n";
 
 	//  USER VARIABLES
+	$userName= "Someone";
 	// $userName= $data[12]->answer[0]->answer;
 	// $userEmail= $data[12]->answer[1]->answer;
   // $userSubject= "Team Nuotron - Thanks for your help";
@@ -75,29 +76,6 @@ if (isset($_POST["dd"])) {
 	if ($data[9]->answer !== 'Passed empty..') {
 	  $myMessage.= '<span style="display: block; margin-bottom: 7px; font-size: 12px; line-height: 21px; color: #929292;">10. '. $data[9]->question .'</span>';
 	  $myMessage.=                                        '<span style="display: block; margin-bottom: 21px; color: #545454;">'. $data[9]->answer .'</span>';
-	}
-
-	if ($data[10]->answer !== 'Passed empty..') {
-	  $myMessage.= '<span style="display: block; margin-bottom: 7px; font-size: 12px; line-height: 21px; color: #929292;">11. '. $data[10]->question .'</span>';
-	  $myMessage.=                                        '<span style="display: block; margin-bottom: 21px; color: #545454;">'. $data[10]->answer .'</span>';
-	}
-
-	if ($data[11]->answer !== 'Passed empty..') {
-	  $myMessage.= '<span style="display: block; margin-bottom: 7px; font-size: 12px; line-height: 21px; color: #929292;">12. '. $data[11]->question .'</span>';
-	  $myMessage.=                                        '<span style="display: block; margin-bottom: 21px; color: #545454;">'. $data[11]->answer .'</span>';
-	}
-
-	if ($data[12]->answer[0]->answer !== 'Passed empty..' || $data[12]->answer[1]->answer !== 'Passed empty..' || $data[12]->answer[2]->answer !== 'Passed empty..') {
-	  $myMessage.= '<span style="display: block; margin-bottom: 7px; font-size: 12px; line-height: 21px; color: #929292;">13. '. $data[12]->question .'</span>';
-		if ($data[12]->answer[0]->answer !== 'Passed empty..') {
-			$myMessage.= '<span style="display: block; color: #545454;"><span style="font-weight: 700; font-size: 12px; color: #929292;">'. $data[12]->answer[0]->question .':</span> '. $data[12]->answer[0]->answer .'</span>';
-		}
-		if ($data[12]->answer[1]->answer !== 'Passed empty..') {
-			$myMessage.= '<span style="display: block; color: #545454;"><span style="font-weight: 700; font-size: 12px; color: #929292;">'. $data[12]->answer[1]->question .':</span> <i><a href="mailto:'. $data[12]->answer[1]->answer .'" target="_blank" style="color: #727272;">'. $data[12]->answer[1]->answer .'</a></i></span>';
-		}
-		if ($data[12]->answer[2]->answer !== 'Passed empty..') {
-			$myMessage.= '<span style="display: block; margin-bottom: 21px; color: #545454;"><span style="font-weight: 700; font-size: 12px; color: #929292;">'. $data[12]->answer[2]->question .':</span> '. $data[12]->answer[2]->answer .'</span>';
-		}
 	}
 
   $myMessage.= '<span style="display: block;">Keep up the good work,<br/>Team Nuotron</span></span></td></tr></table><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign="top"><a href="https://2wwd.nuotron.co/survey/" target="_blank" style="display: block; text-decoration: none; width: 141px;"><img src="../includes/images/mails/nuotron-flat.png" height="35px" style="display: block; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 700; font-size: 14px; line-height: 35px; color: #727272;" alt="Nuotron Logo" title="Nuotron Logo"/></a></td></tr><tr><td align="center" valign="top" style="padding-top: 3px;"><span style="display: block; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 400; font-size: 12px; line-height: 21px; color: #929292;">reach me out through: <br/><a href="https://yahiarefaiea.com" target="_blank" style="color: #929292;">yahiarefaiea.com</a></span></td></tr></table></td></tr></table></td></tr></table></body></html>';
