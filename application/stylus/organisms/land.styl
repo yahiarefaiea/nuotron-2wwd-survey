@@ -44,7 +44,20 @@ landPaddingHorz= baseline*2.25
 
 //  NUOTRON FLAT
 #land #nuotronFlat
-  makeAbsolute: landPaddingVert (landPaddingHorz - nuotronFlat-margin)
+  makeAbsolute: landPaddingVert landPaddingHorz
+  opacity: 0
+  hasTransition: durationAlt
+  img
+    display: block
+    height: baseline*1.25
+    margin-top: -(baseline*.25)
+.survey.callback.success #land #nuotronFlat
+  opacity: 1
+  hasTransition: durationAlt duration
+@media (min-width: delta)
+  .survey #land #nuotronFlat
+    opacity: 1
+    hasTransition: durationAlt duration
 @media (max-width: beta - 1)
   .survey.callback.success #land #nuotronFlat
     {align}: 50%
@@ -57,7 +70,7 @@ landPaddingHorz= baseline*2.25
   opacity: 0
   hasTransition: durationAlt duration
   .link
-    line-height: nuotronFlat-height
+    line-height: baseline
     white-space: nowrap
     color: #fff
 .survey.callback.success #land .reach
@@ -69,7 +82,7 @@ landPaddingHorz= baseline*2.25
     opacity: 1
 @media (max-width: beta - 1)
   .survey.callback.success #land .reach
-    top: landPaddingVert + nuotronFlat-height + nuotronFlat-margin
+    top: landPaddingVert + baseline + baseline*.5
     {align-alt}: 50%
     margin-{align-alt}: 0
     transform: translateX(50%)
