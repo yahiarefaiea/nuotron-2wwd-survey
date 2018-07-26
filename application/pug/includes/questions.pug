@@ -32,7 +32,7 @@ ul#questions.blocks
         
         //- RADIO
         else if(question.answer.type=='radio')
-          if(question.name=='plan' || question.name=='timing')
+          if(question.answer.options.length > 2)
             ul.blocks.buttons-group
               each option in question.answer.options
                 li: label.radio
